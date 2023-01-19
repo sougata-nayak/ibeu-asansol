@@ -15,7 +15,7 @@ class Gallery extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, mainAxisSpacing: 8, crossAxisSpacing: 8),
+              crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
           itemCount: 27,
           itemBuilder: (context, index) => GestureDetector(
             onTap: () {

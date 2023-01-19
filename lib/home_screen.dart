@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: () {},
                   ),
                   ListTile(
-                    leading: const Icon(Icons.image_outlined),
+                    leading: const Icon(Icons.photo_library_outlined),
                     title: const Text('Gallery'),
                     onTap: () {
                       Navigator.push(
@@ -72,23 +72,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.newspaper_outlined),
+                    leading: const Icon(Icons.groups_outlined),
                     title: const Text('Committee'),
                     onTap: () {},
                   ),
                   ListTile(
-                    leading: const Icon(Icons.newspaper_outlined),
+                    leading: const Icon(Icons.account_tree_outlined),
                     title: const Text('Zonal Structure'),
                     onTap: () {},
                   ),
                   ListTile(
-                    leading: const Icon(Icons.newspaper_outlined),
+                    leading: const Icon(Icons.person_add_outlined),
                     title: const Text('New Joinees'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.call_outlined),
-                    title: const Text('Contact Us'),
                     onTap: () {},
                   ),
                 ],
