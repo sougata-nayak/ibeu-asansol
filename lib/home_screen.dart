@@ -1,4 +1,5 @@
 import 'package:befi/contact_us.dart';
+import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
@@ -61,8 +62,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.image_outlined),
-                    title: const Text('Media'),
-                    onTap: () {},
+                    title: const Text('Gallery'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Gallery()),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.newspaper_outlined),
