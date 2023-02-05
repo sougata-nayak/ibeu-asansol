@@ -10,35 +10,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> carouselImages = [
-    // Column(
-    //   crossAxisAlignment: CrossAxisAlignment.center,
-    //   mainAxisAlignment: MainAxisAlignment.center,
-    //   children: [
-    //
-    //     const SizedBox(height: 30),
-    //     const Text('Welcome To', style: TextStyle(fontSize: 30)),
-    //     const Text('Asansol Zone', style: TextStyle(fontSize: 40)),
-    //     const SizedBox(height: 20),
-    //     Text('Indian Bank',
-    //         style: TextStyle(fontSize: 28, color: Colors.red.shade500)),
-    //     Text('Employees Union',
-    //         style: TextStyle(fontSize: 28, color: Colors.red.shade500))
-    //   ],
-    // ),
     Image.asset('assets/logo.jpg'),
-    Image.asset('assets/motto.jpg'),
     Image.asset('assets/conferenceLogo.jpg'),
-    Image.asset('assets/poster_red.jpg'),
-    Image.asset('assets/poster_white.jpg'),
+    Image.asset('assets/poster_red_eng.jpg'),
+    Image.asset('assets/poster_red_ben.jpg'),
+    Image.asset('assets/poster_white_eng.jpg'),
+    Image.asset('assets/poster_white_ben.jpg'),
+    Image.asset('assets/full_logo.jpg'),
+    Image.asset('assets/motto.jpg'),
   ];
   @override
   Widget build(BuildContext context) {
     return Center(
       child: CarouselSlider.builder(
-        itemCount: 5,
+        itemCount: 8,
         itemBuilder: (context, index, realIndex) {
           return Container(
-            //color: Colors.grey.shade100,
             margin: const EdgeInsets.symmetric(horizontal: 5),
             child: carouselImages[index],
           );

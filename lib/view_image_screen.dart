@@ -27,7 +27,7 @@ class _ViewImageScreenState extends State<ViewImageScreen> {
         backgroundColor: Colors.red.shade500,
       ),
       body: PhotoViewGallery.builder(
-        itemCount: 27,
+        itemCount: 70,
         pageController: pageController,
         builder: (context, index){
           return PhotoViewGalleryPageOptions(imageProvider: AssetImage(

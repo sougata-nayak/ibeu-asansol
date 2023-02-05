@@ -16,7 +16,7 @@ class Gallery extends StatelessWidget {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
-          itemCount: 27,
+          itemCount: 70,
           itemBuilder: (context, index) => GestureDetector(
             onTap: () {
               Navigator.push(

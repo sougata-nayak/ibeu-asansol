@@ -1,8 +1,10 @@
 import 'package:befi/contact_us.dart';
 import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
+import 'package:befi/view_pdf_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 20),
                   ListTile(
-                    leading: const Icon(Icons.people_alt_outlined),
+                    leading: const Icon(Icons.handshake_outlined),
                     title: const Text('BEFI'),
                     onTap: () {},
                   ),
@@ -74,12 +76,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   ListTile(
                     leading: const Icon(Icons.groups_outlined),
                     title: const Text('Committee'),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ViewPdfScreen(name: 'Committee', asset: 'assets/committee.pdf')),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.account_tree_outlined),
                     title: const Text('Zonal Structure'),
                     onTap: () {},
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.newspaper_outlined),
+                    title: const Text('BEFI news'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ViewPdfScreen(name: 'BEFI news', asset: 'assets/befi_news.pdf')),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.person_add_outlined),

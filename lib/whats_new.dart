@@ -8,10 +8,15 @@ class WhatsNew extends StatefulWidget {
 }
 
 class _WhatsNewState extends State<WhatsNew> {
+  List<String> items = ['Event 1', 'Event 2', 'Event 3', 'Event 4'];
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Whats new'),
+    return Center(
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return Container();
+        },
+      ),
     );
   }
 }
