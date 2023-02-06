@@ -5,14 +5,11 @@ import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
 import 'package:befi/ibeu_asansol_details_screen.dart';
 import 'package:befi/index_list_screen.dart';
-import 'package:befi/list_item.dart';
 import 'package:befi/service_conditions_data.dart';
 import 'package:befi/view_pdf_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
-import 'display_info_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -93,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.file_copy_outlined),
+                    leading: const Icon(Icons.sensor_occupied_outlined),
                     title: const Text('About Us'),
                     onTap: () {
                       Navigator.push(
