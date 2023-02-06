@@ -14,6 +14,7 @@ class _WhatsNewState extends State<WhatsNew> {
     return Center(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
+          //TODO: Get some latest news
           return Container();
         },
       ),

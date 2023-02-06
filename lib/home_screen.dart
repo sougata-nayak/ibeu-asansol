@@ -1,10 +1,11 @@
 import 'package:befi/contact_us.dart';
 import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
+import 'package:befi/index_list_screen.dart';
+import 'package:befi/service_conditions_data.dart';
 import 'package:befi/view_pdf_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -45,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ListTile(
                     leading: const Icon(Icons.handshake_outlined),
                     title: const Text('BEFI'),
-                    onTap: () {},
+                    onTap: () {
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.people_alt_outlined),
@@ -55,12 +57,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   ListTile(
                     leading: const Icon(Icons.home_repair_service_outlined),
                     title: const Text('Service Condition'),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                IndexListScreen(name: 'Service Condition', data: serviceConditions)),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.file_copy_outlined),
                     title: const Text('Circulars'),
-                    onTap: () {},
+                    onTap: () {
+                      //TODO: Get circulars
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.photo_library_outlined),
@@ -80,14 +91,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewPdfScreen(name: 'Committee', asset: 'assets/committee.pdf')),
+                            builder: (context) => const ViewPdfScreen(
+                                name: 'Committee',
+                                asset: 'assets/committee.pdf')),
                       );
                     },
                   ),
                   ListTile(
                     leading: const Icon(Icons.account_tree_outlined),
                     title: const Text('Zonal Structure'),
-                    onTap: () {},
+                    onTap: () {
+                      //TODO: Get zonal structure
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.newspaper_outlined),
@@ -96,14 +111,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewPdfScreen(name: 'BEFI news', asset: 'assets/befi_news.pdf')),
+                            builder: (context) => const ViewPdfScreen(
+                                name: 'BEFI news',
+                                asset: 'assets/befi_news.pdf')),
                       );
                     },
                   ),
                   ListTile(
                     leading: const Icon(Icons.person_add_outlined),
                     title: const Text('New Joinees'),
-                    onTap: () {},
+                    onTap: () {
+                      //TODO: Get new joinees
+                    },
                   ),
                 ],
               )
