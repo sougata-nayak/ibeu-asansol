@@ -17,6 +17,7 @@ dependencies:
   photo_view: ^0.13.0
   carousel_slider: ^4.2.1
   native_pdf_view: ^6.0.0+1
+  internet_file: ^1.2.0
 
 dev_dependencies:
   flutter_test:

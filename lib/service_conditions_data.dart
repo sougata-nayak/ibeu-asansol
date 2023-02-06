@@ -1,7 +1,9 @@
 import 'package:befi/list_item.dart';
 
 List<ListItem> serviceConditions = [
-  ListItem('Basic Pay - Clerk', '''STAGE	 BASIC PAY 	INCREMENT
+  ListItem(
+      'Basic Pay - Clerk',
+      '''STAGE	 BASIC PAY 	INCREMENT
 1 	17900	1000
 2	  18900	1000
 3	  19900	1000
@@ -38,9 +40,11 @@ Note:
 a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
 b)  There shall be no change in the dates of annual increments because of the fitment.
 c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
-d)  All employees belonging to Clerical cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017'''),
-
-  ListItem('Basic Pay – Sub Staff', '''STAGE	BASIC PAY	INCREMENT
+d)  All employees belonging to Clerical cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
+      false),
+  ListItem(
+      'Basic Pay – Sub Staff',
+      '''STAGE	BASIC PAY	INCREMENT
 1	  14500	500
 2	  15000	500
 3	  15500	500
@@ -77,9 +81,11 @@ Note:
 a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
 b)  There shall be no change in the dates of annual increments because of the fitment.
 c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
-d)  All employees belonging to sub-ordinate cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017'''),
-
-  ListItem('Dearness Allowance', '''With effect from 1st November 2017, the Dearness Allowance shall be payable as per the following rates: –
+d)  All employees belonging to sub-ordinate cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
+      false),
+  ListItem(
+      'Dearness Allowance',
+      '''With effect from 1st November 2017, the Dearness Allowance shall be payable as per the following rates: –
 
 Clerical and Subordinate Staff
 
@@ -97,9 +103,11 @@ Graduation Pay/ Professional Qualification Pay,
 Special Allowance,
 Transport Allowance and
 Officiating Pay, if any, payable under this settlement in respect of both clerical and subordinate staff.
-(c)  All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.'''),
-
-  ListItem('Transport Allowance', '''With effect from 1st November 2017, Transport Allowance shall be paid as under;
+(c)  All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.''',
+      false),
+  ListItem(
+      'Transport Allowance',
+      '''With effect from 1st November 2017, Transport Allowance shall be paid as under;
 
 Note :
 
@@ -108,9 +116,11 @@ Note :
 All Clerical and Subordinate Staff	Rs. 600 per month
 with applicable DA thereon
 (i)  The Transport Allowance with applicable DA thereon shall not be reckoned for superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.
-(ii)  This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.'''),
-
-  ListItem('House Rent Allowance', '''With effect from 1st November 2017, the House Rent Allowance payable to subordinate and clerical staff shall be as under:-
+(ii)  This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.''',
+      false),
+  ListItem(
+      'House Rent Allowance',
+      '''With effect from 1st November 2017, the House Rent Allowance payable to subordinate and clerical staff shall be as under:-
 
 11th Bipartite Settlementpage12image4778688page12image4778880
 Rate as percentage of ‘Pay’ Area [No Minimum/ No Maximum]
@@ -121,16 +131,20 @@ Note:
 (1)  ‘Pay’ means as defined in Clause 6 of the Settlement hereinabove
 (2)  Where quarters are provided, HRA shall not be payable and the rent to be recovered shall be 0.2 % of the first stage of the Scales of Pay.
 (3)  All other existing provisions relating to House Rent Allowance shall remain unchanged.
-Provided further that when a workman employee is transferred out of the station other than on account of request, he/she may, in lieu of HRA as above, claim reimbursement of house rent up to 150% of HRA otherwise payable and subject to production of rent receipt.'''),
-
-  ListItem('Special Pay – Clerk', '''For Clerical Staff (w.e.f. 1.11.2017)
+Provided further that when a workman employee is transferred out of the station other than on account of request, he/she may, in lieu of HRA as above, claim reimbursement of house rent up to 150% of HRA otherwise payable and subject to production of rent receipt.''',
+      false),
+  ListItem(
+      'Special Pay – Clerk',
+      '''For Clerical Staff (w.e.f. 1.11.2017)
 
 Post	Special Pay
 Single Window Operator ‘B’	1250
 Head Cashier – II	1940
-Special Assistant	2920'''),
-
-  ListItem('Special Pay – Sub Staff', '''Post	Special Pay
+Special Assistant	2920''',
+      false),
+  ListItem(
+      'Special Pay – Sub Staff',
+      '''Post	Special Pay
 Armed Guard	590
 Bill Collector	590
 Daftary	850
@@ -138,9 +152,11 @@ Head Peon	1120
 Electrician	3090
 AC Plant Operator	3090
 Driver	3590
-Head Messenger in IOB	2470'''),
-
-  ListItem('Graduation Pay/ Professional qualification pay and fixed personal pay', '''For those workmen who hereafter reach or have already reached 20th stage of the scale and have got increments in consideration of educational qualification(s), Graduation Pay/ Professional Qualification Pay shall be payable as under:
+Head Messenger in IOB	2470''',
+      false),
+  ListItem(
+      'Graduation Pay/ Professional qualification pay and fixed personal pay',
+      '''For those workmen who hereafter reach or have already reached 20th stage of the scale and have got increments in consideration of educational qualification(s), Graduation Pay/ Professional Qualification Pay shall be payable as under:
 
 Those who are graduates and/or NDC – Rs. 625 /- p.m. after they complete 1 year
 
@@ -172,9 +188,11 @@ CLERICAL – Increment portion 1990 ,SUBSTSAFF – Increment portion 1000
 
 FPP – where Quarters not provided ,CLERICAL – Increment portion 2262 ,SUBSTAFF – Increment portion 1140
 
-FPP – where Quarters are provided ,CLERICAL – Increment portion 2043 ,SUBSTAFF – Increment portion 1030'''),
-
-  ListItem('Halting Allowance', '''With effect from 1/11/2020, halting allowance shall be payable at the following rates for the days spent on duty outside the headquarters:
+FPP – where Quarters are provided ,CLERICAL – Increment portion 2043 ,SUBSTAFF – Increment portion 1030''',
+      false),
+  ListItem(
+      'Halting Allowance',
+      '''With effect from 1/11/2020, halting allowance shall be payable at the following rates for the days spent on duty outside the headquarters:
 
 Places with population of 12 lakhs and above and States of Goa:
 
@@ -218,16 +236,20 @@ Note: In respect of State Bank of India, the above lodging rates along with othe
 
 Provided further that in such cases of reimbursement of hotel rent, boarding charges at 25% of the haling allowance shall be payable.
 
-'''),
-
-  ListItem('Special Allowance', '''With effect from 1.11.2017, workmen employees shall be paid Special Allowance as under:
+''',
+      false),
+  ListItem(
+      'Special Allowance',
+      '''With effect from 1.11.2017, workmen employees shall be paid Special Allowance as under:
 
 – 16.40 % of the Basic pay with applicable DA thereon.
 Note: The Special Allowance with applicable DA thereon shall not be reckoned for
 
-superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.'''),
-
-  ListItem('DUTIES OF SWO A', '''All members of the clerical staff who do not get any special pay as on 30th April 2010 on regular basis shall be designated as Single Window Operator A. The following duties shall inter alia form part of their normal duties:
+superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.''',
+      false),
+  ListItem(
+      'DUTIES OF SWO A',
+      '''All members of the clerical staff who do not get any special pay as on 30th April 2010 on regular basis shall be designated as Single Window Operator A. The following duties shall inter alia form part of their normal duties:
 
 (i) Acknowledgements of inward mail received.
 
@@ -249,9 +271,11 @@ a. Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/g
 
 b. Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.15,000/-
 
-c. Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.15,000/-'''),
-
-  ListItem('DUTIES OF SWO B', '''(i) Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.20,000/-
+c. Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.15,000/-''',
+      false),
+  ListItem(
+      'DUTIES OF SWO B',
+      '''(i) Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.20,000/-
 
 (ii) Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.25,000/-
 
@@ -280,8 +304,11 @@ b) Checking/verifying would mean verifying that the instrument / material checke
 
 c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
 
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.'''),
-  ListItem('DUTIES OF HEAD CASHIER II', '''Holding the bank’s cash, key and/or other valuables in safe custody jointly with an officer and being accountable for them and being responsible for the running of the cash department.
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+      false),
+  ListItem(
+      'DUTIES OF HEAD CASHIER II',
+      '''Holding the bank’s cash, key and/or other valuables in safe custody jointly with an officer and being accountable for them and being responsible for the running of the cash department.
 
 (v)Discharging/endorsing bills, cheques, etc.
 
@@ -298,9 +325,11 @@ b) Checking/verifying would mean verifying that the instrument / material checke
 
 c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
 
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.'''),
-
-  ListItem('DUTIES OF SPECIAL ASSISTANT', '''Special Assistants will be accountable and responsible for running of the department/section under them and their duties will involve looking after and checking the work of other clerk or clerks and sub-staff and will include :
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+      false),
+  ListItem(
+      'DUTIES OF SPECIAL ASSISTANT',
+      '''Special Assistants will be accountable and responsible for running of the department/section under them and their duties will involve looking after and checking the work of other clerk or clerks and sub-staff and will include :
 
 1) Passing independently, manually or online, cash instruments upto Rs.35,000/- and clearing and transfer cheques vouchers etc., (whether credits or debits) upto and including Rs.1,50,000/-. Passing will include verification of signatures and scrutiny as to the correctness of endorsements on and other particulars of such instruments. There shall be no limits for verification of signatures, passing of authenticated credit vouchers/entries and for verifying authenticated vouchers in the ledgers, books, computer print-outs etc.
 
@@ -357,9 +386,11 @@ b) Checking/verifying would mean verifying that the instrument / material checke
 
 c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
 
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.'''),
-
-  ListItem('DUTIES OF SUBSTAFF', '''All the normal and routine duties of the subordinate staff cadre and for performance of which no special pay shall be payable. In addition they shall also be required to perform the following duties.
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+      false),
+  ListItem(
+      'DUTIES OF SUBSTAFF',
+      '''All the normal and routine duties of the subordinate staff cadre and for performance of which no special pay shall be payable. In addition they shall also be required to perform the following duties.
 
 1) To take money orders, to buy stamps etc., which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
 
@@ -440,13 +471,19 @@ Persons required to drive, maintain and effect minor repairs (not requiring a te
 Semi skilled persons who under the supervision of the technician attend to routine maintenance of and minor repairs to air conditioning plants.
 
 10)LIFTMAN DUTIES:
-Persons required to operate the lifts on regular assignment.'''),
-
-  ListItem('Washing Allowance', '''With effect from 1st November 2017, washing allowance shall be payable at Rs.200/- p.m., where the washing of livery is not arranged by the bank.'''),
-
-  ListItem('Split Duty Allowance', '''In partial modification of Clause 26 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November 2017, Split Duty Allowance shall be payable at all centers at Rs 200/- per month.'''),
-
-  ListItem('Project Area Compensatory Allowance', '''In partial modification of Clause 27 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November, 2017, workmen in project areas shall be paid project area compensatory allowance as under:
+Persons required to operate the lifts on regular assignment.''',
+      false),
+  ListItem(
+      'Washing Allowance',
+      '''With effect from 1st November 2017, washing allowance shall be payable at Rs.200/- p.m., where the washing of livery is not arranged by the bank.''',
+      false),
+  ListItem(
+      'Split Duty Allowance',
+      '''In partial modification of Clause 26 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November 2017, Split Duty Allowance shall be payable at all centers at Rs 200/- per month.''',
+      false),
+  ListItem(
+      'Project Area Compensatory Allowance',
+      '''In partial modification of Clause 27 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November, 2017, workmen in project areas shall be paid project area compensatory allowance as under:
 
 Project Area Group ‘A’
 
@@ -568,9 +605,11 @@ Project Area Centres – Group B
 
 65. Renukoot (Uttar Pradesh) 
 
-Note: It is understood that as and when Central Government or any State Government may declare any other Centre as Project Area, the same would be treated accordingly. Similarly, if any Centre is treated as non-project area by them, those Centres would stand deleted from the above list. '''),
-
-  ListItem('Hill and Fuel Allowance', '''Hill and Fuel Allowance shall be payable at the following rates with effect from 1st November 2017:
+Note: It is understood that as and when Central Government or any State Government may declare any other Centre as Project Area, the same would be treated accordingly. Similarly, if any Centre is treated as non-project area by them, those Centres would stand deleted from the above list. ''',
+      false),
+  ListItem(
+      'Hill and Fuel Allowance',
+      '''Hill and Fuel Allowance shall be payable at the following rates with effect from 1st November 2017:
 
 11th Bipartite Settlement
 
@@ -580,14 +619,18 @@ b. At places situated at a height of and over 1500 meters but below 3000 meters	
 (Max. Rs.900/-p.m.)
 c. At places situated at a height of over 1000 meters but less than 1500 meters and Mercara Town	3 % of pay
 (Max. Rs. 750/-p.m.)
-Note: All other existing provisions shall remain unchanged. SBI may revise the ceiling amounts.'''),
-
-  ListItem('MEDICAL AID', '''• On declaration basis : Rs.2355 per year
+Note: All other existing provisions shall remain unchanged. SBI may revise the ceiling amounts.''',
+      false),
+  ListItem(
+      'MEDICAL AID',
+      '''• On declaration basis : Rs.2355 per year
 
 In partial modification of Clause 17 of the Bipartite Settlement dated 25th May, 2015, with effect from 1st November 2017, the reimbursement of medical expenses under medical aid scheme shall be restricted to an amount of Rs.2355 /- per annum.
-For the calendar year 2017, the reimbursement of medical expenses under the medical aid scheme shall be enhanced proportionately for two months i.e. November and December 2017.'''),
-
-  ListItem('NEW MEDICAL INSURANCE SCHEME', '''The scheme covers expenses of the officers / employees and dependent in cases he/she  shall contract      any disease or suffer from any illness (hereinafter called DISEASE) or sustain any bodily injury through accident (hereinafter called INJURY) and if such disease or injury shall require any such insured Person, upon the advice of a duly qualified Physician/Medical Specialist/Medical practitioner (hereinafter called MEDICAL PRACTITIONER) or of a duly qualified Surgeon (hereinafter called SURGEON) to incur hospitalization/domiciliary hospitalization and domiciliary treatment expenses as defined in the Scheme, for medical/surgical treatment at any Nursing Home/Hospital / Clinic (for domiciliary treatment)/ Day care Centre  which are registered with the local bodies, in India as herein defined (hereinafter called HOSPITAL) as an inpatient or otherwise as specified as per the scheme, to the extent of the sum insured + Corporate buffer.  
+For the calendar year 2017, the reimbursement of medical expenses under the medical aid scheme shall be enhanced proportionately for two months i.e. November and December 2017.''',
+      false),
+  ListItem(
+      'NEW MEDICAL INSURANCE SCHEME',
+      '''The scheme covers expenses of the officers / employees and dependent in cases he/she  shall contract      any disease or suffer from any illness (hereinafter called DISEASE) or sustain any bodily injury through accident (hereinafter called INJURY) and if such disease or injury shall require any such insured Person, upon the advice of a duly qualified Physician/Medical Specialist/Medical practitioner (hereinafter called MEDICAL PRACTITIONER) or of a duly qualified Surgeon (hereinafter called SURGEON) to incur hospitalization/domiciliary hospitalization and domiciliary treatment expenses as defined in the Scheme, for medical/surgical treatment at any Nursing Home/Hospital / Clinic (for domiciliary treatment)/ Day care Centre  which are registered with the local bodies, in India as herein defined (hereinafter called HOSPITAL) as an inpatient or otherwise as specified as per the scheme, to the extent of the sum insured + Corporate buffer.  
 
 1.1. The Scheme Covers Employee + Spouse + Dependent Children + 2 dependent Parents /parents-inlaw. 
 
@@ -1016,9 +1059,11 @@ Note:     Waiver of these Conditions 5.4 and 5.5 may be considered in extreme ca
 
 5.9   In case of rejection of claims it would go through a Committee set up of the Bank, Third Party Administrator and United India Insurance Co Ltd. unless rejected by the committee in real time the claim should not be rejected.
 
-5.10  There would be a continuity of this Scheme / benefits to the Retiring Officers / employees and their family and also to the Retired Officers / employees and their family.'''),
-
-  ListItem('LEAVE FARE CONCESSION – CLERK', '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
+5.10  There would be a continuity of this Scheme / benefits to the Retiring Officers / employees and their family and also to the Retired Officers / employees and their family.''',
+      false),
+  ListItem(
+      'LEAVE FARE CONCESSION – CLERK',
+      '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
 
 CLERK:
 
@@ -1077,9 +1122,11 @@ For the purpose of this sub-clause, travel by any approved mode of surface trans
 (iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
 (iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
 (v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
-(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.'''),
-
-  ListItem('LEAVE FARE CONCESSION – SUBSTAFF', '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
+(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
+      false),
+  ListItem(
+      'LEAVE FARE CONCESSION – SUBSTAFF',
+      '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
 
 SUBSTAFF
 
@@ -1140,9 +1187,11 @@ For the purpose of this sub-clause, travel by any approved mode of surface trans
 (iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
 (iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
 (v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
-(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.'''),
-  
-  ListItem('Definition of Family', '''In partial modification of Clause 18 of the Bipartite Settlement dated 25th May, 2015, for the purpose of medical facilities and for the purpose of leave fare concession, the expression ‘family’ of an employee shall mean –
+(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
+      false),
+  ListItem(
+      'Definition of Family',
+      '''In partial modification of Clause 18 of the Bipartite Settlement dated 25th May, 2015, for the purpose of medical facilities and for the purpose of leave fare concession, the expression ‘family’ of an employee shall mean –
 
 (i) the employee’s spouse, wholly dependent unmarried children (including step children and legally adopted children) wholly dependent physically and mentally challenged brothers/ sisters with 40% or more disability, widowed daughters and dependent divorced/ separated daughters, sisters including unmarried/ divorced/ abandoned or separated from husband/ widowed sisters, as also parents wholly dependent on the employee.
 
@@ -1152,24 +1201,30 @@ Provided that in the case of physically and mentally challenged children, they s
 
 (iii) A married female employee may include her natural / legal parents or parents-in-law under the definition of family, but not both, provided that the parents/parents-in-law are wholly dependent on her.
 
-Note: For the purpose of medical expenses reimbursement scheme, for all employees, Leave Fare Concession etc. any two of either of the dependent parents/ parents-in-law shall be covered.'''),
-
-  ListItem('OFFICIATING ALLOWANCE', '''ABH:
+Note: For the purpose of medical expenses reimbursement scheme, for all employees, Leave Fare Concession etc. any two of either of the dependent parents/ parents-in-law shall be covered.''',
+      false),
+  ListItem(
+      'OFFICIATING ALLOWANCE',
+      '''ABH:
 15% of the Basic Pay divided by No of Days of that Month gives Officiating pay for a day
 
 Head Cashier II:
-Special Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day'''),
-
-  ListItem('CASUAL LEAVE', '''12 days per year
+Special Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day''',
+      false),
+  ListItem(
+      'CASUAL LEAVE',
+      '''12 days per year
 
 An employee shall be entitled to Casual Leave upto not more than 4 days continuously but holidays and weekly offs prefixing/suffixing or falling within the period of Casual Leave will not be treated as part of Casual Leave
 
 UNAVAILED CASUAL LEAVE
 Casual leave not availed during a calendar year can be availed later as Sick Leave with full pay.
 
-Casual Leave converted into Sick Leave ( UCL) may be availed without production of medical certificate for 4 days at a time once in a year or two days at a time twice a year (in addition to availing for one day without medical certificate)'''),
-
-  ListItem('Performance Linked Incentive Scheme', '''The wages settled during wage revision at industry level are paid by all Banks uniformly, irrespective of the size of the Banks and their financial strength. In today’s challenging environment, where there is stiff competition among Banks, a genuine need is felt to allow Banks to pay their employees something extra by way of encouragement as per the profitability and financial soundness of the respective Banks. In order to inculcate a sense of competition and also to reward the performance, the concept of Productivity Linked Pay was discussed and after discussions between the parties, it is agreed to introduce Performance Linked Incentive Scheme in Public Sector Banks which will be based on Operating Profit/Net Profit of the individual bank (optional for private and foreign banks). The PLI shall be payable to all employees annually over and above the normal salary payable. The PLI matrix shall decide the amount payable to the employees (number of days of pay = Basic + DA) depending on the annual performance of the Bank. All the employees shall get the minimum number of days of pay as incentive depending on where in the matrix the Bank’s performance fits in, broadly as per Matrix as under:- 
+Casual Leave converted into Sick Leave ( UCL) may be availed without production of medical certificate for 4 days at a time once in a year or two days at a time twice a year (in addition to availing for one day without medical certificate)''',
+      false),
+  ListItem(
+      'Performance Linked Incentive Scheme',
+      '''The wages settled during wage revision at industry level are paid by all Banks uniformly, irrespective of the size of the Banks and their financial strength. In today’s challenging environment, where there is stiff competition among Banks, a genuine need is felt to allow Banks to pay their employees something extra by way of encouragement as per the profitability and financial soundness of the respective Banks. In order to inculcate a sense of competition and also to reward the performance, the concept of Productivity Linked Pay was discussed and after discussions between the parties, it is agreed to introduce Performance Linked Incentive Scheme in Public Sector Banks which will be based on Operating Profit/Net Profit of the individual bank (optional for private and foreign banks). The PLI shall be payable to all employees annually over and above the normal salary payable. The PLI matrix shall decide the amount payable to the employees (number of days of pay = Basic + DA) depending on the annual performance of the Bank. All the employees shall get the minimum number of days of pay as incentive depending on where in the matrix the Bank’s performance fits in, broadly as per Matrix as under:- 
 
 YoY Growth in Operating Profit 
 
@@ -1179,19 +1234,27 @@ YoY Growth in Operating Profit
 >15% -15 days
 *3rd and 4th slabs are payable only if the Bank has Net Profit. If a Bank has growth in Operating Profit of 5% & more, but there is no Net Profit, then minimum 2nd slab of 5 days will be payable.
 
-(The PLI will be applicable from FY-2020-21) '''),
+(The PLI will be applicable from FY-2020-21) ''',
+      false),
+  ListItem(
+      'Annual encashment of Privilege Leave',
+      '''It has been agreed that from the calendar year 2020, Privilege Leave encashment shall be permitted at the rate of 5 days for each calendar year at the time of any festival of the employee’s choice. Employees who have completed 55 years of age and above shall be entitled to encash at the rate 7 days for each calendar year, in addition to existing provisions.''',
+      false),
+  ListItem(
+      'Extraordinary Leave',
+      '''In partial modification of Clause 13.34 of Settlement dated 19th October 1966, (in case of State Bank of India, Clause 7.34 of Agreement dated 31st March 1967) and Clause 36 of Settlement dated 25th May, 2015, in exceptional circumstances, Extraordinary Leave may be sanctioned (without wages) not exceeding 3 months on any one occasion (up to 4 months in extreme medical circumstances) and upto a maximum of 24 months during the entire period of an employees’ service.
 
-  ListItem('Annual encashment of Privilege Leave', '''It has been agreed that from the calendar year 2020, Privilege Leave encashment shall be permitted at the rate of 5 days for each calendar year at the time of any festival of the employee’s choice. Employees who have completed 55 years of age and above shall be entitled to encash at the rate 7 days for each calendar year, in addition to existing provisions.'''),
+Note :- The employees will not be losing any seniority on account of availing extraordinary leave on Medical grounds.''',
+      false),
+  ListItem(
+      'Special Casual Leave',
+      '''a) With effect from the 1/11/2020, Special Casual Leave may be granted to an employee on occasions when the branch where the employee is working or the place where the employee is residing is affected by curfew, riots, prohibitory orders, natural calamities, floods, etc.
 
-  ListItem('Extraordinary Leave', '''In partial modification of Clause 13.34 of Settlement dated 19th October 1966, (in case of State Bank of India, Clause 7.34 of Agreement dated 31st March 1967) and Clause 36 of Settlement dated 25th May, 2015, in exceptional circumstances, Extraordinary Leave may be sanctioned (without wages) not exceeding 3 months on any one occasion (up to 4 months in extreme medical circumstances) and upto a maximum of 24 months during the entire period of an employees’ service.
-
-Note :- The employees will not be losing any seniority on account of availing extraordinary leave on Medical grounds.'''),
-
-  ListItem('Special Casual Leave', '''a) With effect from the 1/11/2020, Special Casual Leave may be granted to an employee on occasions when the branch where the employee is working or the place where the employee is residing is affected by curfew, riots, prohibitory orders, natural calamities, floods, etc.
-
-b) With effect from 01/11/2020, 4 days Special Casual leave shall be granted to all physically/orthopedically handicapped employees each year.'''),
-
-  ListItem('SUBSISTENCE ALLOWANCE DURING SUSPENSION', '''SUSPENSION
+b) With effect from 01/11/2020, 4 days Special Casual leave shall be granted to all physically/orthopedically handicapped employees each year.''',
+      false),
+  ListItem(
+      'SUBSISTENCE ALLOWANCE DURING SUSPENSION',
+      '''SUSPENSION
 Clause 14.3 of Settlement dt. 17-9-84:
 
 Pending or initiation of such enquiry, an employee may be suspended, but if on the conclusion of the enquiry it is decided to take no action against him he shall be deemed to have been on duty and shall be entitled to the full wages and allowances and to all other privileges for the period of suspension; and if some punishment other than dismissal is inflicted, the whole or a part of the period of suspension, may, at the discretion of the management, be treated as on duty with the right to a corresponding portion of the wages allowance, etc.
@@ -1210,20 +1273,26 @@ i. For the first 3 months 1/3 of the pay and allowances which the workmen would 
 
 ii. Thereafter 1/2 of the pay and allowances.
 
-iii. After one year full pay and allowances if the enquiry is not delayed for reasons attributable to the concerned workman or any of his representatives. Where the investigation is done by an outside agency and the said agency has come to the conclusion not be prosecute the employee, full pay and allowances will be payable after 6 months from the date of receipt of report of such agency, or one year after suspension, whichever is later and in the event the enquiry is not delayed for reasons attributable to the workman or any of his representative'''),
-
-  ListItem('SICK LEAVE', '''1 month for each year of service ( max. 18 months)
+iii. After one year full pay and allowances if the enquiry is not delayed for reasons attributable to the concerned workman or any of his representatives. Where the investigation is done by an outside agency and the said agency has come to the conclusion not be prosecute the employee, full pay and allowances will be payable after 6 months from the date of receipt of report of such agency, or one year after suspension, whichever is later and in the event the enquiry is not delayed for reasons attributable to the workman or any of his representative''',
+      false),
+  ListItem(
+      'SICK LEAVE',
+      '''1 month for each year of service ( max. 18 months)
 
 Additional 1 month per year beyond 24 years service.( max. 3 months) 
 
 Sick Leave is on half pay but can be availed with full pay by double debit in sick leave account
 
 a) In partial modification of Clause IX of Bipartite Settlement dated 17th September, 1984 and Clause 6 of Bipartite Settlement dated 28th November, 1997, an employee upon completion of 30 years of service, shall be eligible for further additional sick leave of 3 months at the rate of one month for each year of service in excess of 30 years, subject to a maximum of 720 days in entire service.
-b) In partial modification of Clause IX (4) of Bipartite Settlement dated 17th September, 1984, women employees can avail sick leave for the sickness of their children of 8 years and below subject to production of medical certificate.'''),
-
-  ListItem('SPECIAL SICK LEAVE', '''Special Sick Leave upto 30 days (full salary and over and above normal entitlement ) will be allowed once during his/her entire period of service for donation of kidney/ any other organ.'''),
-
-  ListItem('PRIVILEGE LEAVE', '''1 month for every 11 months service ( 1 day for every 11 days service)
+b) In partial modification of Clause IX (4) of Bipartite Settlement dated 17th September, 1984, women employees can avail sick leave for the sickness of their children of 8 years and below subject to production of medical certificate.''',
+      false),
+  ListItem(
+      'SPECIAL SICK LEAVE',
+      '''Special Sick Leave upto 30 days (full salary and over and above normal entitlement ) will be allowed once during his/her entire period of service for donation of kidney/ any other organ.''',
+      false),
+  ListItem(
+      'PRIVILEGE LEAVE',
+      '''1 month for every 11 months service ( 1 day for every 11 days service)
 
 Privilege Leave can be availed upto 4 times in a calendar year.( as against 3 occasions under 9th BPS).
 
@@ -1231,19 +1300,27 @@ Where however, the reasons for the request by an employee for leave on more than
 
 Privilege Leave can be applied upto not less than 10 days before the proposed date of commencement of such leave. 
 
-Privilege Leave shall be allowed to be accumulated up to a maximum of 270 days. But encashment would be allowed upto 240 days at the time of retirement.'''),
-
-  ListItem('PATERNITY LEAVE', '''Male employee with less than two surviving children shall be eligible for 15 days Paternity Leave during his wife’s confinement. This leave may be combined with any other kind of leave except Casual Leave. The leave may be availed upto 15 days before or upto 6 months from the date of delivery of the child.'''),
-
-  ListItem('Voluntary Cessation', '''In partial modification of Clause 33 of Settlement dated 2nd June, 2005, employees who have ceased to be in service of the Bank under voluntary cessation shall be eligible for PF, gratuity, Pension, and Leave encashment benefits, if otherwise eligible.With effect from 1st November, 2020 employees who cease to be in service under voluntary cessation, may be given an opportunity to represent to the management and the management may consider the same on merits.'''),
-
-  ListItem('Compensation for losses due to breakage or damage to goods on Transfer', '''With effect from 1/11/2020, compensation on transfer, shall be as under: –
+Privilege Leave shall be allowed to be accumulated up to a maximum of 270 days. But encashment would be allowed upto 240 days at the time of retirement.''',
+      false),
+  ListItem(
+      'PATERNITY LEAVE',
+      '''Male employee with less than two surviving children shall be eligible for 15 days Paternity Leave during his wife’s confinement. This leave may be combined with any other kind of leave except Casual Leave. The leave may be availed upto 15 days before or upto 6 months from the date of delivery of the child.''',
+      false),
+  ListItem(
+      'Voluntary Cessation',
+      '''In partial modification of Clause 33 of Settlement dated 2nd June, 2005, employees who have ceased to be in service of the Bank under voluntary cessation shall be eligible for PF, gratuity, Pension, and Leave encashment benefits, if otherwise eligible.With effect from 1st November, 2020 employees who cease to be in service under voluntary cessation, may be given an opportunity to represent to the management and the management may consider the same on merits.''',
+      false),
+  ListItem(
+      'Compensation for losses due to breakage or damage to goods on Transfer',
+      '''With effect from 1/11/2020, compensation on transfer, shall be as under: –
 
 Where an employee produces receipts or a statement of loss in respect of breakages subject to a maximum of: Clerical Staff : Rs.1,650/- Subordinate Staff : Rs.1,100/-
 Where no receipts/statement of loss are produced, a lumpsum payment of:
-Clerical Staff :Rs.1,100/- Subordinate Staff : Rs. 825/-'''),
-
-  ListItem('Compensation on Transfer', '''With effect from 1/11/2020, compensation on transfer, shall be as under: –
+Clerical Staff :Rs.1,100/- Subordinate Staff : Rs. 825/-''',
+      false),
+  ListItem(
+      'Compensation on Transfer',
+      '''With effect from 1/11/2020, compensation on transfer, shall be as under: –
 
 An employee on transfer shall be paid the cost actually incurred for transporting his personal effects, as under:-
 
@@ -1253,9 +1330,11 @@ Clerk: a. For married persons 3500 kg. b. For unmarried persons 2500 kg.
 
 Sub-staff: a. For married persons 2500 kg. b. For unmarried persons 1500 kg.
 
-By Road: An employee on transfer from one station to another can transport his/her personal effects by rail/road upto the stipulated weights by an IBA approved Transport Operator.'''),
-
-  ListItem('MATERNITY LEAVE', '''(A) Maternity leave, which shall be on substantive pay, shall be granted to a female employee generally for a period not exceeding 6 months on any one occasion and 12 months during the entire period of her service.
+By Road: An employee on transfer from one station to another can transport his/her personal effects by rail/road upto the stipulated weights by an IBA approved Transport Operator.''',
+      false),
+  ListItem(
+      'MATERNITY LEAVE',
+      '''(A) Maternity leave, which shall be on substantive pay, shall be granted to a female employee generally for a period not exceeding 6 months on any one occasion and 12 months during the entire period of her service.
 
 Note: (i) in case of delivery of twins, the period of Maternity Leave shall be 8 months.
 
@@ -1293,9 +1372,11 @@ Post-Partum Hemorrhage (PPH)
 
 Acute Pelvic Inflammatory Disease (Acute PID)
 
-Dysfunction Uterine Bleeding; Dysfunction (DUB)'''),
-
-  ListItem('Disciplinary Action and Procedure', '''The procedure for taking any disciplinary action against employees is well-defined and codified under the Bipartite Settlement dated 10th April, 2002 between the Union and the management (IBA).The nature of charges that can be leveled against the employees is categorized and grouped as Major Misconduct and Minor Misconduct.Types of punishments that management can impose on the employees for any proven misconduct are also defined in the Settlement.Management has to follow the set procedure and prove the charges before imposing punishment.
+Dysfunction Uterine Bleeding; Dysfunction (DUB)''',
+      false),
+  ListItem(
+      'Disciplinary Action and Procedure',
+      '''The procedure for taking any disciplinary action against employees is well-defined and codified under the Bipartite Settlement dated 10th April, 2002 between the Union and the management (IBA).The nature of charges that can be leveled against the employees is categorized and grouped as Major Misconduct and Minor Misconduct.Types of punishments that management can impose on the employees for any proven misconduct are also defined in the Settlement.Management has to follow the set procedure and prove the charges before imposing punishment.
 
 Employee has the right to be defended by the Union.
 
@@ -1348,17 +1429,21 @@ Where Enquiry Officer says that charges are proved :
 
 • Appellate Authority will pass an order either confirming or reducing or setting aside the Disciplinary Authority’s order.
 
-• Appellate Authority cannot enhance the punishment.'''),
-
-  ListItem('SPECIAL LEAVE', '''Office Bearer of AIBEA 21 days per year
+• Appellate Authority cannot enhance the punishment.''',
+      false),
+  ListItem(
+      'SPECIAL LEAVE',
+      '''Office Bearer of AIBEA 21 days per year
 
 CC Member of AIBEA 17 days per year
 
 Office Bearer of the State Federation 7 days per year
 
-In case of injuries sustained while on duty the entire period of absence for treatment will be sanctioned as Special Leave.'''),
-
-  ListItem('JOINING TIME LEAVE', '''Joining time of six days allowable under Para 511 of Sastry Award may be granted either immediately after relieving or within three months after joining the new place of posting.
+In case of injuries sustained while on duty the entire period of absence for treatment will be sanctioned as Special Leave.''',
+      false),
+  ListItem(
+      'JOINING TIME LEAVE',
+      '''Joining time of six days allowable under Para 511 of Sastry Award may be granted either immediately after relieving or within three months after joining the new place of posting.
 
 (1) Joining time shall be granted to an employee to enable him:
 
@@ -1372,11 +1457,15 @@ In case of injuries sustained while on duty the entire period of absence for tre
 
 (4) In calculating joining time admissible to an employee, the day on which he is relieved from his old post shall be excluded but public holidays following the day of his relief shall be included in the joining time.
 
-(5) An employee who does not join his post within the joining time allowed to him shall be deemed to have committed a breach of discipline.'''),
-
-  ListItem('EXTRAORDINARY LEAVE', '''Extra ordinary leave on loss of pay – 3 months at a time and 24 months in the entire service'''),
-
-  ListItem('Deployment of Clerical Staff', '''(i)A workman in the non-subordinate cadre is liable to be deployed anywhere within a ‘District’, irrespective of the distance involved.
+(5) An employee who does not join his post within the joining time allowed to him shall be deemed to have committed a breach of discipline.''',
+      false),
+  ListItem(
+      'EXTRAORDINARY LEAVE',
+      '''Extra ordinary leave on loss of pay – 3 months at a time and 24 months in the entire service''',
+      false),
+  ListItem(
+      'Deployment of Clerical Staff',
+      '''(i)A workman in the non-subordinate cadre is liable to be deployed anywhere within a ‘District’, irrespective of the distance involved.
 
 (ii)In cases necessitating deployment outside the District, the workmen concerned may be deployed to any branch/office of the bank situated outside the District upto a distance not exceeding 100 km. from his present place of posting.
 
@@ -1417,9 +1506,11 @@ SOME CLARIFICATIONS
 
 Deployment:
 
-In partial modification of Clause 32 , sub clause (x) of Schedule VI, of Settlement dated 2nd June, 2005, a workman in the non-subordinate cadre so long as he serves in the deployed center shall draw a lump sum amount of Rs. 600/- p.m. (not ranking for any other kind of benefit). This shall cease on the employees’ repatriation to the original center.'''),
-
-  ListItem('LIST OF MINOR MISCONDUCT', '''LIST OF MINOR MISCONDUCTS –  Clause 7
+In partial modification of Clause 32 , sub clause (x) of Schedule VI, of Settlement dated 2nd June, 2005, a workman in the non-subordinate cadre so long as he serves in the deployed center shall draw a lump sum amount of Rs. 600/- p.m. (not ranking for any other kind of benefit). This shall cease on the employees’ repatriation to the original center.''',
+      false),
+  ListItem(
+      'LIST OF MINOR MISCONDUCT',
+      '''LIST OF MINOR MISCONDUCTS –  Clause 7
 
 (a) absence without leave or overstaying sanctioned leave without sufficient grounds;
 
@@ -1465,9 +1556,11 @@ PUNISHMENT – An employee found guilty of minor misconduct may:
 
 (b) have an adverse remark entered against him; or
 
-(c) have his increment stopped for a period not longer than six months.'''),
-
-  ListItem('LIST OF GROSS MISCONDUCT', '''LIST OF GROSS MISCONDUCT  –  Clause 5
+(c) have his increment stopped for a period not longer than six months.''',
+      false),
+  ListItem(
+      'LIST OF GROSS MISCONDUCT',
+      '''LIST OF GROSS MISCONDUCT  –  Clause 5
 
 (a) engaging in any trade or business outside the scope of his duties except with the written permission of the bank;
 
@@ -1541,11 +1634,15 @@ Note: Specific period of rigour shall be mentioned.
 
 (g) have his special pay withdrawn; or
 
-(h) be warned or censured, or have an adverse remark entered against him;'''),
-
-  ListItem('Family Pension', '''Subject to approval by the Government, It is agreed that family pension shall be payable at the uniform rate of 30 percent of the Pay of the deceased employee and that there shall be no ceiling on family pension. It is agreed that these provisions, when approved by the Government shall apply to SBI also.'''),
-
-  ListItem('NEW PENSION SCHEME', '''Those who have joined/joining the Banks on and from 1-4-2010 will be governed by the New Defined Contributory Pension Scheme.
+(h) be warned or censured, or have an adverse remark entered against him;''',
+      false),
+  ListItem(
+      'Family Pension',
+      '''Subject to approval by the Government, It is agreed that family pension shall be payable at the uniform rate of 30 percent of the Pay of the deceased employee and that there shall be no ceiling on family pension. It is agreed that these provisions, when approved by the Government shall apply to SBI also.''',
+      false),
+  ListItem(
+      'NEW PENSION SCHEME',
+      '''Those who have joined/joining the Banks on and from 1-4-2010 will be governed by the New Defined Contributory Pension Scheme.
 
 AGE OF RETIREMENT :60 years
 
@@ -1606,9 +1703,11 @@ x. Employee has also the choice to change the investment pattern between investm
 
 y. Contribution to Tier I is non-withdrawable during service but Tier II contribution can be withdrawn at his option.
 
-z. Pension based on the Annuity purchased will be payable for lifetime of the employee/dependent parents/spouse.'''),
-
-  ListItem('PROVIDENT FUND', '''a) Employees who had joined the Banks prior to 1-4-2010 and opted to continue under Contributory PF would contribute 10% of their Pay every mnth with matching contribution from the management.
+z. Pension based on the Annuity purchased will be payable for lifetime of the employee/dependent parents/spouse.''',
+      false),
+  ListItem(
+      'PROVIDENT FUND',
+      '''a) Employees who had joined the Banks prior to 1-4-2010 and opted to continue under Contributory PF would contribute 10% of their Pay every mnth with matching contribution from the management.
 
 b) For employees who had joined before 1-4-2010 and are govered by pension scheme, only own contribution of 10% of Pay would be recovered but without any matching contribution
 
@@ -1631,9 +1730,11 @@ Gratuity under BPS : Pay x No. of years’ service
 
 3. Above 30 years, half month pay per year of service.
 
-4. No ceiling or max. on Gratuity under BPS'''),
-
-  ListItem('PENSION', '''AGE OF RETIREMENT :60 years
+4. No ceiling or max. on Gratuity under BPS''',
+      false),
+  ListItem(
+      'PENSION',
+      '''AGE OF RETIREMENT :60 years
 
 Those who joined the Banks before 1-4-2010 and had opted for pension scheme are covered by the pension Scheme in lieu of CPF.
 
@@ -1657,13 +1758,16 @@ Calculation of Pension for employees retired between 1-11-2017 and 31-8- 2018 �
 (ii)  For the period falling prior to 1st November, 2017, the actual Pay drawn by the employee plus Dearness Allowance at the rate of 47.8 percent thereon will be notionally reckoned as Pay for the purpose.
 Dearness Relief on Pension
 
-With effect from 1st November, 2017, in respect of employees who retired or died while in service on or after 1st November, 2017, Dearness Relief shall be payable at 0.07 % per slab on the Basic Pension or Family Pension or Invalid Pension or compassionate allowance as the case may be. Dearness Relief in the above manner shall be paid half yearly for every rise or fall of 4 points over 6352 points in the quarterly average of the All India Consumer Price Index for industrial workers in the series 1960=100.'''),
-
-  ListItem('WORKING HOURS', '''Clerks – 6 ½ hours
+With effect from 1st November, 2017, in respect of employees who retired or died while in service on or after 1st November, 2017, Dearness Relief shall be payable at 0.07 % per slab on the Basic Pension or Family Pension or Invalid Pension or compassionate allowance as the case may be. Dearness Relief in the above manner shall be paid half yearly for every rise or fall of 4 points over 6352 points in the quarterly average of the All India Consumer Price Index for industrial workers in the series 1960=100.''',
+      false),
+  ListItem(
+      'WORKING HOURS',
+      '''Clerks – 6 ½ hours
 
 Substaff other than Drivers and Watch and Ward – 7 hours
 
 Drivers – 7 ½ hours
 
-Watch and Ward – 8 hours'''),
+Watch and Ward – 8 hours''',
+      false),
 ];

@@ -1,3 +1,4 @@
+import 'package:befi/befi_history_data.dart';
 import 'package:befi/contact_us.dart';
 import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
@@ -47,6 +48,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     leading: const Icon(Icons.handshake_outlined),
                     title: const Text('BEFI'),
                     onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                IndexListScreen(name: 'BEFI', data: befiHistory)),
+                      );
                     },
                   ),
                   ListTile(
