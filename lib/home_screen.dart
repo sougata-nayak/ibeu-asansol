@@ -1,13 +1,18 @@
+import 'package:befi/about_us_screen.dart';
 import 'package:befi/befi_history_data.dart';
 import 'package:befi/contact_us.dart';
 import 'package:befi/gallery.dart';
 import 'package:befi/home_page.dart';
+import 'package:befi/ibeu_asansol_details_screen.dart';
 import 'package:befi/index_list_screen.dart';
+import 'package:befi/list_item.dart';
 import 'package:befi/service_conditions_data.dart';
 import 'package:befi/view_pdf_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+
+import 'display_info_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -51,15 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                IndexListScreen(name: 'BEFI', data: befiHistory)),
+                            builder: (context) => IndexListScreen(
+                                name: 'BEFI', data: befiHistory)),
                       );
                     },
                   ),
                   ListTile(
                     leading: const Icon(Icons.people_alt_outlined),
                     title: const Text('IBEU Asansol'),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const IbeuAsansolDetails()),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: const Icon(Icons.home_repair_service_outlined),
@@ -68,8 +79,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                IndexListScreen(name: 'Service Condition', data: serviceConditions)),
+                            builder: (context) => IndexListScreen(
+                                name: 'Service Condition',
+                                data: serviceConditions)),
                       );
                     },
                   ),
@@ -78,6 +90,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     title: const Text('Circulars'),
                     onTap: () {
                       //TODO: Get circulars
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.file_copy_outlined),
+                    title: const Text('About Us'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AboutUsScreen()),
+                      );
                     },
                   ),
                   ListTile(
@@ -158,6 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white,
               activeColor: Colors.white,
               onTabChange: (int index) => setState(() {
+                print('Move to tab $index');
                 currentIndex = index;
               }),
               tabs: const [

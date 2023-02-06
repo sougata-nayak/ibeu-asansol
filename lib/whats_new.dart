@@ -11,13 +11,9 @@ class _WhatsNewState extends State<WhatsNew> {
   List<String> items = ['Event 1', 'Event 2', 'Event 3', 'Event 4'];
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          //TODO: Get some latest news
-          return Container();
-        },
-      ),
+    //TODO: 11th bipartite settlement
+    return const Center(
+      child: Text('What\'s new coming soon'),
     );
   }
 }
