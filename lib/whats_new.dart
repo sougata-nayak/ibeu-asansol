@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:native_pdf_view/native_pdf_view.dart';
 
 class WhatsNew extends StatefulWidget {
   const WhatsNew({Key? key}) : super(key: key);
@@ -8,12 +9,17 @@ class WhatsNew extends StatefulWidget {
 }
 
 class _WhatsNewState extends State<WhatsNew> {
-  List<String> items = ['Event 1', 'Event 2', 'Event 3', 'Event 4'];
   @override
   Widget build(BuildContext context) {
-    //TODO: 11th bipartite settlement
-    return const Center(
-      child: Text('What\'s new coming soon'),
+    return Center(
+      child: PdfView(
+        controller: PdfController(
+            document: PdfDocument.openAsset('assets/whats_new.pdf'),
+            viewportFraction: 0.8
+        ),
+        scrollDirection: Axis.vertical,
+        pageSnapping: false,
+      ),
     );
   }
 }
