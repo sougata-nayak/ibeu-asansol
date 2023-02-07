@@ -152,8 +152,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ViewAssetPdfScreen(
-                              name: 'BEFI news', asset: 'assets/befi_news.pdf'),
+                          builder: (context) => DisplayPdfScreen(
+                            item: ListItem(
+                                'BEFI news',
+                                'https://drive.google.com/uc?export=download&id=1GGF0LhtzlFQcyvm88PYI5zn0hQF20q1_',
+                                true),
+                          ),
                         ),
                       );
                     },
