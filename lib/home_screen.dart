@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import 'display_info_screen.dart';
+import 'display_pdf_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -69,7 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const IbeuAsansolDetails()),
+                          builder: (context) => const IbeuAsansolDetails(),
+                        ),
                       );
                     },
                   ),
@@ -80,9 +82,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => IndexListScreen(
-                                name: 'Service Condition',
-                                data: serviceConditions)),
+                          builder: (context) => IndexListScreen(
+                              name: 'Service Condition',
+                              data: serviceConditions),
+                        ),
                       );
                     },
                   ),
@@ -90,7 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   //   leading: const Icon(Icons.file_copy_outlined),
                   //   title: const Text('Circulars'),
                   //   onTap: () {
-                  //     //TODO: Get circulars
                   //   },
                   // ),
                   ListTile(
@@ -128,9 +130,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.account_tree_outlined),
-                    title: const Text('Zonal Structure'),
+                    title: const Text('11th Bipartite settlement'),
                     onTap: () {
-                      //TODO: Get zonal structure
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DisplayPdfScreen(
+                            item: ListItem(
+                                '11th Bipartite settlement',
+                                'https://drive.google.com/uc?export=download&id=1NBK90DiFdxZGhdu0MaJiAnviLmLAe45Q',
+                                true),
+                          ),
+                        ),
+                      );
                     },
                   ),
                   ListTile(
@@ -140,9 +152,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewAssetPdfScreen(
-                                name: 'BEFI news',
-                                asset: 'assets/befi_news.pdf')),
+                          builder: (context) => const ViewAssetPdfScreen(
+                              name: 'BEFI news', asset: 'assets/befi_news.pdf'),
+                        ),
                       );
                     },
                   ),
