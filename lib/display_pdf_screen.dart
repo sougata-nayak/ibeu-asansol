@@ -34,8 +34,9 @@ class _DisplayPdfScreenState extends State<DisplayPdfScreen> {
       body: loading
           ? const Center(
               child: CircularProgressIndicator(
-              color: Colors.red,
-            ))
+                color: Colors.red,
+              ),
+            )
           : PdfView(
               controller: PdfController(
                   document: PdfDocument.openData(bytes), viewportFraction: 0.8),
@@ -47,6 +48,7 @@ class _DisplayPdfScreenState extends State<DisplayPdfScreen> {
 
   void getFile() async {
     bytes = await InternetFile.get(widget.item.data);
+    print('File received');
     setState(() {
       loading = false;
     });

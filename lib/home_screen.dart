@@ -6,7 +6,7 @@ import 'package:befi/home_page.dart';
 import 'package:befi/ibeu_asansol_details_screen.dart';
 import 'package:befi/index_list_screen.dart';
 import 'package:befi/service_conditions_data.dart';
-import 'package:befi/view_pdf_screen.dart';
+import 'package:befi/view_asset_pdf_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewPdfScreen(
+                            builder: (context) => const ViewAssetPdfScreen(
                                 name: 'Committee',
                                 asset: 'assets/committee.pdf')),
                       );
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewPdfScreen(
+                            builder: (context) => const ViewAssetPdfScreen(
                                 name: 'BEFI news',
                                 asset: 'assets/befi_news.pdf')),
                       );
@@ -178,7 +178,6 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white,
               activeColor: Colors.white,
               onTabChange: (int index) => setState(() {
-                print('Move to tab $index');
                 currentIndex = index;
               }),
               tabs: const [

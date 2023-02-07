@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:native_pdf_view/native_pdf_view.dart';
 
-class ViewPdfScreen extends StatelessWidget {
+class ViewAssetPdfScreen extends StatelessWidget {
   final String name;
   final String asset;
-  const ViewPdfScreen({Key? key, required this.name, required this.asset})
+  const ViewAssetPdfScreen({Key? key, required this.name, required this.asset})
       : super(key: key);
 
   @override
@@ -16,8 +16,8 @@ class ViewPdfScreen extends StatelessWidget {
       ),
       body: PdfView(
         controller: PdfController(
-          document: PdfDocument.openAsset(asset),
-          viewportFraction: 0.8
+            document: PdfDocument.openAsset(asset),
+            viewportFraction: 0.8
         ),
         scrollDirection: Axis.vertical,
         pageSnapping: false,
