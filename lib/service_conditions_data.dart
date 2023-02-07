@@ -1432,16 +1432,6 @@ Where Enquiry Officer says that charges are proved :
 • Appellate Authority cannot enhance the punishment.''',
       false),
   ListItem(
-      'SPECIAL LEAVE',
-      '''Office Bearer of AIBEA 21 days per year
-
-CC Member of AIBEA 17 days per year
-
-Office Bearer of the State Federation 7 days per year
-
-In case of injuries sustained while on duty the entire period of absence for treatment will be sanctioned as Special Leave.''',
-      false),
-  ListItem(
       'JOINING TIME LEAVE',
       '''Joining time of six days allowable under Para 511 of Sastry Award may be granted either immediately after relieving or within three months after joining the new place of posting.
 

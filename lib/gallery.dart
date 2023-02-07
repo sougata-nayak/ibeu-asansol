@@ -1,4 +1,4 @@
-import 'package:befi/view_image_screen.dart';
+import 'package:befi/view_gallery_image_screen.dart';
 import 'package:flutter/material.dart';
 
 class Gallery extends StatelessWidget {
@@ -22,7 +22,7 @@ class Gallery extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => ViewImageScreen(index: index)),
+                    builder: (context) => ViewGalleryImageScreen(index: index)),
               );
             },
             child: Card(

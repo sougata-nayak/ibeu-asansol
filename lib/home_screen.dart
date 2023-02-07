@@ -7,6 +7,7 @@ import 'package:befi/ibeu_asansol_details_screen.dart';
 import 'package:befi/index_list_screen.dart';
 import 'package:befi/service_conditions_data.dart';
 import 'package:befi/view_asset_pdf_screen.dart';
+import 'package:befi/view_image_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -82,13 +83,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     },
                   ),
-                  ListTile(
-                    leading: const Icon(Icons.file_copy_outlined),
-                    title: const Text('Circulars'),
-                    onTap: () {
-                      //TODO: Get circulars
-                    },
-                  ),
+                  // ListTile(
+                  //   leading: const Icon(Icons.file_copy_outlined),
+                  //   title: const Text('Circulars'),
+                  //   onTap: () {
+                  //     //TODO: Get circulars
+                  //   },
+                  // ),
                   ListTile(
                     leading: const Icon(Icons.sensor_occupied_outlined),
                     title: const Text('About Us'),
@@ -118,9 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewAssetPdfScreen(
-                                name: 'Committee',
-                                asset: 'assets/committee.pdf')),
+                            builder: (context) => const ViewImageScreen()),
                       );
                     },
                   ),
