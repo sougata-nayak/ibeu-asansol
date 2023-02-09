@@ -7,7 +7,6 @@ import 'package:befi/ibeu_asansol_details_screen.dart';
 import 'package:befi/index_list_screen.dart';
 import 'package:befi/list_item.dart';
 import 'package:befi/service_conditions_data.dart';
-import 'package:befi/view_asset_pdf_screen.dart';
 import 'package:befi/view_image_screen.dart';
 import 'package:befi/whats_new.dart';
 import 'package:flutter/material.dart';

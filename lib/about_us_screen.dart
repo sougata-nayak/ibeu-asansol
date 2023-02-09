@@ -17,7 +17,7 @@ class AboutUsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
-                'assets/0.jpg',
+                'assets/70.jpg',
                 height: 250,
               ),
               const SizedBox(height: 20),

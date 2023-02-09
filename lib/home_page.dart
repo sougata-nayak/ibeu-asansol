@@ -11,18 +11,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Widget> carouselImages = [
     Image.asset('assets/logo.jpg'),
-    Image.asset('assets/conferenceLogo.jpg'),
-    Image.asset('assets/poster_red_eng.jpg'),
-    Image.asset('assets/poster_red_ben.jpg'),
-    Image.asset('assets/poster_white_eng.jpg'),
-    Image.asset('assets/poster_white_ben.jpg'),
     Image.asset('assets/full_logo.jpg'),
   ];
   @override
   Widget build(BuildContext context) {
     return Center(
       child: CarouselSlider.builder(
-        itemCount: 7,
+        itemCount: 2,
         itemBuilder: (context, index, realIndex) {
           return Container(
             margin: const EdgeInsets.symmetric(horizontal: 5),
