@@ -25,6 +25,25 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
 
+  List<ListItem> bipartiteItems = [
+    ListItem(
+        '11th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1NBK90DiFdxZGhdu0MaJiAnviLmLAe45Q',
+        true),
+    ListItem(
+        '7th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1DIAGPoMxqKQjORxzOOX7mBH-469xulr9',
+        true),
+    ListItem(
+        '6th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=18O-H6Y71fYeu82Pa__lYtL19_fwKCkqY',
+        true),
+    ListItem(
+        '5th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1efHsjWj84Hmi-bznAUaiUQdIzDxWSkKu',
+        true)
+  ];
+
   final List<Widget> screens = [
     const HomePage(),
     const WhatsNew(),
@@ -88,12 +107,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     },
                   ),
-                  // ListTile(
-                  //   leading: const Icon(Icons.file_copy_outlined),
-                  //   title: const Text('Circulars'),
-                  //   onTap: () {
-                  //   },
-                  // ),
                   ListTile(
                     leading: const Icon(Icons.sensor_occupied_outlined),
                     title: const Text('About Us'),
@@ -129,17 +142,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   ListTile(
                     leading: const Icon(Icons.account_tree_outlined),
-                    title: const Text('11th Bipartite settlement'),
+                    title: const Text('Bipartite settlements'),
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DisplayPdfScreen(
-                            item: ListItem(
-                                '11th Bipartite settlement',
-                                'https://drive.google.com/uc?export=download&id=1NBK90DiFdxZGhdu0MaJiAnviLmLAe45Q',
-                                true),
-                          ),
+                          builder: (context) => IndexListScreen(
+                              name: 'Bipartite settlements',
+                              data: bipartiteItems),
                         ),
                       );
                     },
