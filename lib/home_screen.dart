@@ -31,6 +31,18 @@ class _HomeScreenState extends State<HomeScreen> {
         'https://drive.google.com/uc?export=download&id=1NBK90DiFdxZGhdu0MaJiAnviLmLAe45Q',
         true),
     ListItem(
+        '10th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1Vgh81OyA3ec37f6-CaYx8jmW43U70AsY',
+        true),
+    ListItem(
+        '9th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=17hZTOP5a_gKwR4y0a-VR2en1AEeZDXGD',
+        true),
+    ListItem(
+        '8th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1IubYpnwVTtSqO2v256tsVBf5cdzRZMjy',
+        true),
+    ListItem(
         '7th Bipartite settlement',
         'https://drive.google.com/uc?export=download&id=1DIAGPoMxqKQjORxzOOX7mBH-469xulr9',
         true),
@@ -41,6 +53,14 @@ class _HomeScreenState extends State<HomeScreen> {
     ListItem(
         '5th Bipartite settlement',
         'https://drive.google.com/uc?export=download&id=1efHsjWj84Hmi-bznAUaiUQdIzDxWSkKu',
+        true),
+    ListItem(
+        '4th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=17bhcIIv1rHk0qDVKFtiCAGc8mmHYJhvb',
+        true),
+    ListItem(
+        '1th Bipartite settlement',
+        'https://drive.google.com/uc?export=download&id=1OhpAQvRWqYQq6_GJAIrSyAV09Tr1X3Pm',
         true)
   ];
 

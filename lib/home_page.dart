@@ -12,12 +12,13 @@ class _HomePageState extends State<HomePage> {
   List<Widget> carouselImages = [
     Image.asset('assets/logo.jpg'),
     Image.asset('assets/full_logo.jpg'),
+    Image.asset('assets/logo3.jpg'),
   ];
   @override
   Widget build(BuildContext context) {
     return Center(
       child: CarouselSlider.builder(
-        itemCount: 2,
+        itemCount: 3,
         itemBuilder: (context, index, realIndex) {
           return Container(
             margin: const EdgeInsets.symmetric(horizontal: 5),
