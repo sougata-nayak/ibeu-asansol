@@ -1,16 +1,5 @@
-# befi_ibeu
+# Befi IBEU Asansol Official App
 
-Official application for BEFI - IBEU
+The main objective of this Application is to provide our employees a readily available and handy data at ease. Our bipartite settlement, our rights, and others issues will be at your fingertips. It's the very first step and a small attempt to digitalize our information resources. Your feedback and suggestions will make this application a must for bank employees.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Download the app from the Google Play Store using this [link](https://play.google.com/store/apps/details?id=com.befi.ibeuasansol).
