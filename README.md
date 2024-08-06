@@ -11,11 +11,24 @@ BEFI - IBEU is a mobile application designed to provide Indian Bank employees wi
 
 ## Screenshots
 
-![Home Screen](https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed.png)
-*Home screen showcasing the latest event information.*
+<div style="display: flex;">
+  <span style="flex: 1; margin: 5px;">
+    <img src="https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed.png" alt="Home Screen" style="height: 300px; margin: 10px"/>
+  </span>
+  <span style="flex: 1; margin: 5px;">
+    <img src="https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed-2.png" alt="Gallery" style="height: 300px; margin: 10px"/>
+  </span>
+  <span style="flex: 1; margin: 5px;">
+    <img src="https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed-3.png" alt="Gallery" style="height: 300px; margin: 10px"/>
+  </span>
+  <span style="flex: 1; margin: 5px;">
+    <img src="https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed-4.png" alt="Gallery" style="height: 300px; margin: 10px"/>
+  </span>
+  <span style="flex: 1; margin: 5px;">
+    <img src="https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed-5.png" alt="Gallery" style="height: 300px; margin: 10px"/>
+  </span>
+</div>
 
-![Gallery](https://github.com/sougata-nayak/ibeu-asansol/blob/main/screenshots/unnamed2.png)
-*Gallery section displaying photos from events.*
 
 ## Objective
 
