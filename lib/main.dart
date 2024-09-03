@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           splashIconSize: 270,
           nextScreen: const HomeScreen(),
           splashTransition: SplashTransition.scaleTransition,
-          backgroundColor: Colors.white),
+          backgroundColor: tertiaryColor),
     );
   }
 }

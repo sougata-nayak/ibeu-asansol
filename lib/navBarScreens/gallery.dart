@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:befi_ibeu/utilityScreens/view_gallery_image_screen.dart';
 
@@ -9,10 +10,10 @@ class Gallery extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Gallery',
-          style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.red.shade500,
+          style: TextStyle(color: textColor),),
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: tertiaryColor, //change your color here
         ),
       ),
       body: Padding(

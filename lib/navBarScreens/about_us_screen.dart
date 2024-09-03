@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsScreen extends StatelessWidget {
@@ -8,10 +9,10 @@ class AboutUsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About Us',
-          style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.red.shade500,
+          style: TextStyle(color: textColor),),
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: tertiaryColor, //change your color here
         ),
       ),
       body: SingleChildScrollView(

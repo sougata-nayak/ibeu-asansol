@@ -2,7 +2,8 @@ name: befi_ibeu
 description: "Official application for BEFI - IBEU"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 3.2.1+4
+version: 3.2.2+5
+# Last build on Sept 1, 2024
 
 environment:
   sdk: '>=3.3.4 <4.0.0'

@@ -1,4 +1,10 @@
 import 'package:befi_ibeu/classes/list_item.dart';
+import 'package:flutter/material.dart';
+
+const Color primaryColor = Color.fromARGB(255, 39, 36, 87);
+const Color secondaryColor = Color.fromARGB(255, 220, 163, 64);
+const Color tertiaryColor = Colors.white;
+const Color textColor = Colors.white;
 
 const String newJoinees = '''Casual Leave
 1. Eligible for 12 days in a year.
@@ -195,1216 +201,1220 @@ List<ListItem> befiHistory = [
 ];
 
 List<ListItem> serviceConditions = [
+//   ListItem(
+//       'Basic Pay - Clerk',
+//       '''STAGE	 BASIC PAY 	INCREMENT
+// 1 	17900	1000
+// 2	  18900	1000
+// 3	  19900	1000
+// 4	  20900	1230
+// 5	  22130	1230
+// 6	  23360	1230
+// 7	  24590	1490
+// 8	  26080	1490
+// 9	  27570	1490
+// 10 	29060	1490
+// 11	30550	1730
+// 12	32280	1730
+// 13	34010	1730
+// 14	35740	1730
+// 15	37470	1730
+// 16	39200	1730
+// 17	40930	1730
+// 18	42660	3270
+// 19	45930	1990
+// 20	47920
+//
+// STAGNATION INCREMENT	EVERY 2 YEARS	 9 SLABS
+// 21	49910	1990
+// 22	51900	1990
+// 23	53890	1990
+// 24	55880	1990
+// 25	57870	1990
+// 26	59860	1990
+// 27	61850	1990
+// 28	63840	1990
+// 29	65830
+// Note:
+//
+// a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
+// b)  There shall be no change in the dates of annual increments because of the fitment.
+// c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
+// d)  All employees belonging to Clerical cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
+//       false),
+//   ListItem(
+//       'Basic Pay – Sub Staff',
+//       '''STAGE	BASIC PAY	INCREMENT
+// 1	  14500	500
+// 2	  15000	500
+// 3	  15500	500
+// 4	  16000	500
+// 5	  16500	615
+// 6	  17115	615
+// 7	  17730	615
+// 8	  18345	615
+// 9	  18960	615
+// 10	19575	740
+// 11	20315	740
+// 12	21055	740
+// 13	21795	740
+// 14	22535	870
+// 15	23405	870
+// 16	24275	870
+// 17	25145	1000
+// 18	26145	1000
+// 19	27145	1000
+// 20	28145
+//
+// STAGNATION INCREMENT	EVERY 2 YEARS	9 SLABS
+// 21	29145	1000
+// 22	30145	1000
+// 23	31145	1000
+// 24	32145	1000
+// 25	33145	1000
+// 26	34145	1000
+// 27	35145	1000
+// 28	36145	1000
+// 29	37145
+// Note:
+//
+// a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
+// b)  There shall be no change in the dates of annual increments because of the fitment.
+// c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
+// d)  All employees belonging to sub-ordinate cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
+//       false),
+//   ListItem(
+//       'Dearness Allowance',
+//       '''With effect from 1st November 2017, the Dearness Allowance shall be payable as per the following rates: –
+//
+// Clerical and Subordinate Staff
+//
+// 0.07 % of ‘pay’ per slab of four points.
+//
+// Note:
+//
+// Dearness Allowance in the above manner shall be paid for every rise or fall of 4 points over 6352 points in the quarterly average of the All India Average Working-Class Consumer Price Index (General) Base 1960=100.
+//
+// (a)  It is clarified that there shall be no ceiling on Dearness Allowance.
+// (b)  Dearness Allowance shall be calculated and paid on the following components:
+// Basic Pay including Stagnation increments,
+// Special Pay,
+// Graduation Pay/ Professional Qualification Pay,
+// Special Allowance,
+// Transport Allowance and
+// Officiating Pay, if any, payable under this settlement in respect of both clerical and subordinate staff.
+// (c)  All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.''',
+//       false),
+//   ListItem(
+//       'Transport Allowance',
+//       '''With effect from 1st November 2017, Transport Allowance shall be paid as under;
+//
+// Note :
+//
+// 11th Bipartite Settlement
+//
+// All Clerical and Subordinate Staff	Rs. 600 per month
+// with applicable DA thereon
+// (i)  The Transport Allowance with applicable DA thereon shall not be reckoned for superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.
+// (ii)  This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.''',
+//       false),
+//   ListItem(
+//       'House Rent Allowance',
+//       '''With effect from 1st November 2017, the House Rent Allowance payable to subordinate and clerical staff shall be as under:-
+//
+// 11th Bipartite Settlementpage12image4778688page12image4778880
+// Rate as percentage of ‘Pay’ Area [No Minimum/ No Maximum]
+//
+// At all centres 10.25 %page12image4779072page12image4779264
+// Note:
+//
+// (1)  ‘Pay’ means as defined in Clause 6 of the Settlement hereinabove
+// (2)  Where quarters are provided, HRA shall not be payable and the rent to be recovered shall be 0.2 % of the first stage of the Scales of Pay.
+// (3)  All other existing provisions relating to House Rent Allowance shall remain unchanged.
+// Provided further that when a workman employee is transferred out of the station other than on account of request, he/she may, in lieu of HRA as above, claim reimbursement of house rent up to 150% of HRA otherwise payable and subject to production of rent receipt.''',
+//       false),
+//   ListItem(
+//       'Special Pay – Clerk',
+//       '''For Clerical Staff (w.e.f. 1.11.2017)
+//
+// Post	Special Pay
+// Single Window Operator ‘B’	1250
+// Head Cashier – II	1940
+// Special Assistant	2920''',
+//       false),
+//   ListItem(
+//       'Special Pay – Sub Staff',
+//       '''Post	Special Pay
+// Armed Guard	590
+// Bill Collector	590
+// Daftary	850
+// Head Peon	1120
+// Electrician	3090
+// AC Plant Operator	3090
+// Driver	3590
+// Head Messenger in IOB	2470''',
+//       false),
+//   ListItem(
+//       'Graduation Pay/ Professional qualification pay and fixed personal pay',
+//       '''For those workmen who hereafter reach or have already reached 20th stage of the scale and have got increments in consideration of educational qualification(s), Graduation Pay/ Professional Qualification Pay shall be payable as under:
+//
+// Those who are graduates and/or NDC – Rs. 625 /- p.m. after they complete 1 year
+//
+// Rs. 1215 /- p.m. after they complete 2 years
+// Those who have passed JAIIB or Part I of CAIB/CAIIB-
+//
+// Rs. 625 /- p.m. after they complete 1 year
+// Those who have passed JAIIB and CAIIB or Both Parts of CAIB/CAIIB –
+//
+// Rs. 625 /- p.m. after they complete 1 year Rs. 1215 /- p.m. after they complete 2 years Rs. 1835 /- p.m. after they complete 3 years
+//
+// Those who are graduates/NDC and have passed JAIIB or Part I of CAIB/CAIIB –
+//
+// Rs. 625 /- p.m. after they complete 1 year Rs. 1215 /- p.m. after they complete 2 years Rs. 1835 /- p.m. after they complete 3 years
+//
+// Those who are graduates/NDC and have passed JAIIB or Both Parts of CAIB/CAIIB – Rs. 625 /- p.m. after they complete 1 year
+// Rs. 1215 /- p.m. after they complete 2 years
+// Rs. 1835/- p.m. after they complete 3 years
+//
+// Rs. 2455 /- p.m. after they complete 4 years Rs. 3045 /- p.m. after they complete 5 years.
+//
+// With effect from 1st November 2017, Graduation Pay and Professional Qualification Pay payable to the clerical staff in banks shall be as mentioned in Part B of Schedule II to this Settlement. It would be worked out separately in SBI as applicable for special pay mentioned at para (i) above,
+// (iv)  The Special Pay, Graduation Pay and Professional Qualification Pay as mentioned in Part B of Schedule II shall rank for superannuation benefits.
+// (v)  The rates of special pay and the duties of special pay carrying posts for workmen staff in SBI may be reviewed and settled at the bank level.
+// (vi)  In reiteration of sub-clause (xv) of Clause 11 of the Bipartite Settlement dated 25th May 2015, a member of the non-subordinate cadre acquiring a Graduate/National Diploma in Commerce or JAIIB/CAIIB (either or both parts) qualification/s at a time when he/she does not have the requisite number of increments in the scale to be earned as advance increments shall in the first instance be released increments for such qualification(s) acquired to the extent available in the scale and in lieu of the remaining increments(s) not available for being so released as advance increments be granted / released the first installment of Graduation Pay or PQP, as the case may be. Release of subsequent installments of Graduation Pay or PQP shall be with reference to the date of release of Graduation Pay or PQP under this clause.
+// (vii)  Provided that in the case of an employee acquiring such qualifications after reaching the maximum of the scale of pay, he shall be granted from the date of acquiring such qualification the first installment of Graduation Pay or PQP, as the case may be and the release of subsequent installments of Graduation Pay or PQP shall be with reference to the date of release of Graduation Pay or PQP under this clause.Provided further that in case where the non-subordinate employee as on the date of this Settlement, has already acquired JAIIB (Part-I) or CAIIB (Part- II)/ Graduation after reaching maximum of the scale of Pay (in case of JAIIB/ CAIIB/ Graduation) or after reaching 19th stage of scale of Pay (in case of CAIIB/Graduation), and has not earned increment(s), otherwise entitled on account of acquiring such qualification, when there were no increments to provide in the scale of pay of those employees, the stagnation increment in such cases may be advanced by one year or two years as the case may be.
+// Fixed Personal Pay:
+// CLERICAL – Increment portion 1990 ,SUBSTSAFF – Increment portion 1000
+//
+// FPP – where Quarters not provided ,CLERICAL – Increment portion 2262 ,SUBSTAFF – Increment portion 1140
+//
+// FPP – where Quarters are provided ,CLERICAL – Increment portion 2043 ,SUBSTAFF – Increment portion 1030''',
+//       false),
+//   ListItem(
+//       'Halting Allowance',
+//       '''With effect from 1/11/2020, halting allowance shall be payable at the following rates for the days spent on duty outside the headquarters:
+//
+// Places with population of 12 lakhs and above and States of Goa:
+//
+// Clerical Staff : Rs. 1050/- per diem
+//
+// Subordinate Staff : Rs. 750/- per diem
+//
+// Places with population of 5 lakhs and above, State Capitals/ Capitals of Union Territories not covered in column (A)
+//
+// Clerical Staff : Rs. 900/- per diem
+//
+// Subordinate Staff : Rs. 600/- per diem
+//
+// Other Places:
+//
+// Clerical Staff : Rs. 675/- per diem
+//
+// Subordinate Staff : Rs. 375/- per diem
+//
+// Provided that an employee can also claim lodging expenses reimbursement by production of hotel rent receipt subject to ceilings prescribed hereunder:
+//
+// Places with population of 12 lakhs and above and States of Goa:
+//
+// Clerical Staff : Rs. 2500/- per day
+//
+// Subordinate Staff : Rs. 1250/- per day
+//
+// Places with population of 5 lakhs and above, State Capitals/ Capitals of Union Territories not covered in column (A)
+//
+// Clerical Staff : Rs. 2000/- per day
+//
+// Subordinate Staff : Rs. 1000/- per day
+//
+// Other Places:
+//
+// Clerical Staff : Rs. 1500/- per day
+//
+// Subordinate Staff : Rs. 750/- per day
+//
+// Note: In respect of State Bank of India, the above lodging rates along with other conditions will be decided at bank level.
+//
+// Provided further that in such cases of reimbursement of hotel rent, boarding charges at 25% of the haling allowance shall be payable.
+//
+// ''',
+//       false),
+//   ListItem(
+//       'Special Allowance',
+//       '''With effect from 1.11.2017, workmen employees shall be paid Special Allowance as under:
+//
+// – 16.40 % of the Basic pay with applicable DA thereon.
+// Note: The Special Allowance with applicable DA thereon shall not be reckoned for
+//
+// superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.''',
+//       false),
+//   ListItem(
+//       'DUTIES OF SWO A',
+//       '''All members of the clerical staff who do not get any special pay as on 30th April 2010 on regular basis shall be designated as Single Window Operator A. The following duties shall inter alia form part of their normal duties:
+//
+// (i) Acknowledgements of inward mail received.
+//
+// (ii) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
+//
+// (iii) Delivery of cheque books subject to authorisation by competent authority.
+//
+// (iv) Issue of cash receipts.
+//
+// (v) Issue of E.S.I. stamps wherever applicable or may become applicable.
+//
+// (vi) Recounting of currency notes by cash department staff.
+//
+// (vii) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
+//
+// All clerks shall also perform all duties and functions of their cadre, either online or manually, which does not involve any passing or supervisory function of an officer of the bank. He will, wherever and whenever required, function as a single window operator where he will also receive and pay cash. In addition, his duties will include
+//
+// a. Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.10,000/-
+//
+// b. Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.15,000/-
+//
+// c. Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.15,000/-''',
+//       false),
+//   ListItem(
+//       'DUTIES OF SWO B',
+//       '''(i) Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.20,000/-
+//
+// (ii) Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.25,000/-
+//
+// (iii) Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.25,000/-
+//
+// (iv) Acknowledgements of inward mail received.
+//
+// (v) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
+//
+// (vi) Delivery of cheque books subject to authorisation by competent authority.
+//
+// (vii) Issue of cash receipts.
+//
+// (viii) Issue of E.S.I. stamps wherever applicable or may become applicable.
+//
+// (ix) Recounting of currency notes by cash department staff.
+//
+// (x) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
+//
+// Note:
+// (i) In respect of the above special pay carrying posts in clerical cadre
+//
+// a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+//
+// b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+//
+// c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+//
+// (ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+//       false),
+//   ListItem(
+//       'DUTIES OF HEAD CASHIER II',
+//       '''Holding the bank’s cash, key and/or other valuables in safe custody jointly with an officer and being accountable for them and being responsible for the running of the cash department.
+//
+// (v)Discharging/endorsing bills, cheques, etc.
+//
+// (vi)Being in charge of clearing and godown departments, etc.
+//
+// (vii)Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.50,000/- and cash vouchers upto Rs.50,000/- jointly with an authorized person
+//
+// Note:
+// (i) In respect of the above special pay carrying posts in clerical cadre
+//
+// a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+//
+// b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+//
+// c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+//
+// (ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+//       false),
+//   ListItem(
+//       'DUTIES OF SPECIAL ASSISTANT',
+//       '''Special Assistants will be accountable and responsible for running of the department/section under them and their duties will involve looking after and checking the work of other clerk or clerks and sub-staff and will include :
+//
+// 1) Passing independently, manually or online, cash instruments upto Rs.35,000/- and clearing and transfer cheques vouchers etc., (whether credits or debits) upto and including Rs.1,50,000/-. Passing will include verification of signatures and scrutiny as to the correctness of endorsements on and other particulars of such instruments. There shall be no limits for verification of signatures, passing of authenticated credit vouchers/entries and for verifying authenticated vouchers in the ledgers, books, computer print-outs etc.
+//
+// 2) Accept, verify and post cash / transfer / clearing cheques and other instruments, as the case may be, in appropriate books of accounts / ledgers, either manually or online, and give due acknowledgements.
+//
+// 3) Signing vouchers, cheques, drafts, mail transfers, pay orders, advices such as non payment advices, inter branch fate calling advices, bill schedules, demand notices, statements certificates etc.,
+//
+// 4) Checking all vouchers, advices, statements, cheques, drafts etc., bills and books of accounts including current savings and other ledgers, cash, postal and revenue stamps, franking machine balances, exchange, discount, brokerage calculations and initialing by way of authenticating them for accuracy/correctness;
+//
+// 5) Checking, manually or online, current, savings and other accounts,
+//
+// 6) Checking the coding and decoding of telegrams (excluding check symbols or cyphers).
+//
+// 7) Discharging, endorsing cheques, bills, etc.,
+//
+// 8) Perform, when required in a computerised set up, system control functions, either jointly with an officer or independently, upon specific authorisation in this regard;
+//
+// 9) Briefly explain, the features of Bank’s various products and services to customers, to reply their queries and to refer interested customers to appropriate personnel;
+//
+// 10) Inspecting godown (only in banks where such work is already being done by workmen).
+//
+// For the purpose of efficient and effective functioning of the section or department the special assistant shall ensure that all acts, things and steps necessary therefore are taken by himself of by the clerks placed under him and shall ensure that, wherever necessary :
+//
+// a) Reminders are sent on time and followed up
+//
+// b) Pass sheets/books are filled up and issued promptly
+//
+// c) Deposits are renewed on due dates or reminders sent to the parties
+//
+// d) Standing instructions are complied with
+//
+// e) Bills are accepted and due dates diarised/advised and followed up
+//
+// f) Interest, commissions and service charges are collected
+//
+// g) Proceeds of bills are received or remitted promptly;
+//
+// h) Confirmation of balance of accounts of the customers and its follow up.
+//
+// i) All securities relating to the department/section of which the special assistant is in charge are secured and/or kept in proper custody and properly handed to the authorized person at the close of the day.
+//
+// j) Balances promptly taken, tallied and reported and followed up and also returns submitted.
+//
+// K) Advices and/or duplicate advices /summaries are issued /responded promptly,whenever called for;
+//
+// l) Checking the proper recording of entries and all relevant particulars in regard to accounts opened under due authorisation.
+//
+// Note:
+// (i) In respect of the above special pay carrying posts in clerical cadre
+//
+// a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+//
+// b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+//
+// c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+//
+// (ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
+//       false),
+//   ListItem(
+//       'DUTIES OF SUBSTAFF',
+//       '''All the normal and routine duties of the subordinate staff cadre and for performance of which no special pay shall be payable. In addition they shall also be required to perform the following duties.
+//
+// 1) To take money orders, to buy stamps etc., which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
+//
+// 2) To stitch currency note bundles;
+//
+// 3) To stitch and seal parcels and packets containing currency notes;
+//
+// 4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
+//
+// SPECIAL PAY DUTIES:
+// 1)CASH PEON DUTIES:
+// 1) To take money orders, to buy stamps etc.,which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
+//
+// 2) To stitch currency note bundles
+//
+// 3) To stitch and seal parcels and packets containing currency notes;
+//
+// 4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
+//
+// 2)DUFTARY DUTIES:
+// 1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
+//
+// 2) Collecting payments for cheques or postal order etc., from banks or post office counters. They may also be required to collect cash not exceeding Rs.5,000/- at a time against various instruments.
+//
+// 3) Simple binding of books and registers;
+//
+// 4) Press copying;
+//
+// 5) Filing independently letters and other papers in respect files as per indications marked thereon;
+//
+// 6) Assisting in issuing stationery;
+//
+// 7) Stacking under guidance old records in orderly manner and assisting in giving them out when required; and
+//
+// 8) Undertaking the whole process of sorting, arranging, numbering, tallying the total number or stitching the vouchers.
+//
+// 3)WATCHMAN DUTIES:
+// Persons other than “Armed Guards” who are required to perform watch and ward duties i.e. to watch or look after the premises or a department, for the purposes of its safety, security and guard against infiltration and against removal of the bank’s property by any unauthorised person AND/OR to watch and guard as above, the movement of cash from one place to another inside the bank premises or outside where an Armed Guard is not employed at the Branch / Office.
+//
+// 4)ARMED GUARD DUTIES:
+// Persons required to perform watch and ward duties i.e. to watch or look after the premises or department for the purposes of its safety, security and guard against attack or assault or infiltration and against removal of the bank’s property by any unauthorized persons AND/OR to watch and guard as above the movement of cash from one place to another whether inside or outside the Bank, for which purpose they are required by the bank to carry any of the following weapons:
+//
+// i) Gun, Pistol or any other fire arm; or
+//
+// ii) Dagger, sword, khukri or spear; or
+//
+// iii) any other licensed weapon
+//
+// Note: ‘Retainers’ Peons (other than watchmen) whose names are registered in the Bank’s license as Retainers will, when they perform “Armed Guard” duties, be entitled to special pay for “Armed Guards” pro rata.
+//
+// 5)BILL COLLECTOR DUTIES:
+// 1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
+//
+// 2) Collecting payments for cheques of postal order etc. from banks or post office counters.
+//
+// 3)They may also be required to collect cash not exceeding Rs.4000/- at a time against various instruments.
+//
+// 6)HEAD PEON DUTIES:
+// Persons required to assist in supervision of various matters pertaining to subordinate staff like:
+//
+// i) Cleanliness of the office premises;
+//
+// ii) Cleanliness of uniforms;
+//
+// iii) Leave arrangements;
+//
+// iv) Arrangements for safekeeping of keys; and
+//
+// v) Distribution of duties amongst the subordinate staff
+//
+// 7)ELECTRICIAN DUTIES:
+// Their work involves carrying out semi-skilled electrical work like routine maintenance of electrical equipments, effecting minor repairs to electrical fixtures and appliances.
+//
+// 8)DRIVER DUTIES:
+// Persons required to drive, maintain and effect minor repairs (not requiring a technician’s skill) to motor cars, motor vans, station wagons, scooters, motor cycles or other motor vehicles.
+//
+// 9)AC PLANT HELPER DUTIES:
+// Semi skilled persons who under the supervision of the technician attend to routine maintenance of and minor repairs to air conditioning plants.
+//
+// 10)LIFTMAN DUTIES:
+// Persons required to operate the lifts on regular assignment.''',
+//       false),
+//   ListItem(
+//       'Washing Allowance',
+//       '''With effect from 1st November 2017, washing allowance shall be payable at Rs.200/- p.m., where the washing of livery is not arranged by the bank.''',
+//       false),
+//   ListItem(
+//       'Split Duty Allowance',
+//       '''In partial modification of Clause 26 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November 2017, Split Duty Allowance shall be payable at all centers at Rs 200/- per month.''',
+//       false),
+//   ListItem(
+//       'Project Area Compensatory Allowance',
+//       '''In partial modification of Clause 27 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November, 2017, workmen in project areas shall be paid project area compensatory allowance as under:
+//
+// Project Area Group ‘A’
+//
+// Clerical Staff – Rs. 290/-p.m. Sub-Staff – Rs.230/- p.m.
+//
+// Project Area Group ‘B’
+//
+// Clerical Staff – Rs.230/- p.m. Sub-Staff – Rs.200/- p.m.
+//
+// Note: In addition to the areas/places identified and defined as Project Ares, Branches opened and located within Special Economic Zone, Export Promotion Zone, etc. shall be treated as Project Areas for the purpose of payment of project area compensatory allowance as above.
+//
+// Project Area centres:
+//
+// In partial modification of clause 8.1 Settlement dated 19th October, 1966, clause II/8 of settlement dated 8th November, 1973 and clause 2 of Minutes of Discussions dated 15th/16th April, 1980, the following places shall be termed as Project Areas for the purpose of the provisions under this Settlement.
+//
+// Project Area Centres – Group A
+//
+// 1. Bheemarayangudi (Gulbarga District, Karnataka)
+//
+// 2. Bhilai
+// 3. Bokaro
+// 4. Burnpur (West Bengal)
+//
+// 5. Dapchari (Thane District, Maharashtra)
+// 6. Durg (Madhya Pradesh)
+// 7. Durgapur
+// 8. Heavy Electricals, Kailasapuram (Tiruchirapalli)
+//
+// 9. Jamshedpur
+//
+// 10. Pong Dam (Punjab)
+// 11. Rajghat (Madhya Pradesh)
+// 12. Ramagundam (Andhra Pradesh)
+// 13. Reasi (Jammu & Kashmir)
+// 14. Rourkela
+// 15. Sundarnagar (Mandi district, Himachal Pradesh)
+//
+// 16. Tirthapuri (Aurangabad District, Maharashtra)
+//
+// 17. Visakhapatnam (Andhra Pradesh)
+//
+// Project Area Centres – Group B
+//
+// 1. Agali Attapady Irrigation Project
+//
+// 2. Almatti Dam Site (Karnataka)
+// 3. Ambikanagar (Karnataka)
+// 4. Ankleshwar (Gujarat)
+//
+// 5. Balimela (Koraput District, Orissa)
+// 6. Bhadravati (Chandrapur District, Maharashtra)
+//
+// 7. Bhopal Heavy Electricals (Madhya Pradesh)
+//
+// 8. Cambay (Gujarat)
+// 9. Chakranagar (Shimoga District)
+// 10. Chas
+// 11. Chattargarh (Rajashthan – Rajasthan Canal)
+//
+// 12. Dandeli (Karnataka)
+// 13. Deola (Chankapur Project, Nasik)
+//
+// 14. Dharoi Village (Ahmedabad Circle)
+//
+// 15. Donimalai (Karnataka)
+// 16. Dhurva
+// 17. Farakka Barrage
+//
+// 18. Gajuvaka
+// 19. Ganeshgudi (Giant Kali Project, SupaDam)
+// 20. Gunupur (Koraput District, Orissa)
+// 21. Haldia (West Bengal)
+// 22. Hatia
+// 23. Idikki
+// 24. Jagdalpur
+// 25. Jeypore (Koraput District, Orissa)
+// 26. Jog Falls (Karnataka)
+// 27. Jyotipuram (Salai Hydro Electric Project, Jammu & Kashmir
+//
+// 28. Kalpakkam (Tamilnadu)
+// 29. Kanker (Bastar District)
+// 30. Kashipur (Koraput District, Orissa)
+// 31. Kasimpur (Aligarh, Uttar Pradesh)
+// 32. Kargal (Mysore)
+// 33. Khetri
+// 34. Koraput (Koraput District, Orissa)
+// 35. Kotpad (Koraput District, Orissa)
+// 36. Kudremukh Iron Ore Project (Malleswara)
+// 37. Kulamavu
+// 38. Mach hakund (Koraput District, Orissa)
+// 39. Mahi (Rajasthan – Dam Project)
+// 40. Malthon (West Bengal)
+// 41. Malkangiri (Koraput District, Orissa)
+// 42. Mandi (Himachal Pradesh)
+// 43. Munsar (Pench Electric Project, Maharashtra)
+// 44. Nagarjunsagar
+// 45. Nangal Township
+// 46. Narora Atomic Power Project
+// 47. Nawarngpur (Koraput District, Orissa)
+// 48. Neyveli
+// 49. Pandoh
+// 50. Pochampadu (Andhra Pradesh)
+// 51. Pophali ( Maharashtra)
+// 52. Ramchandrapuram
+// 53. Ranchi (Bihar)
+// 54. Rawat Bhata
+// 55. Rayaguda (Koraput District, Orissa)
+// 56. Sileru (Andhra Pradesh)
+// 57. Supa (Karnataka)
+// 58. Srisilam (Andhra Pradesh)
+//
+// 59. Sunabeda (Koraput District, Orissa)
+// 60. Surangani (Himachal Pradesh)
+// 61. Talwara
+// 62. Umarkote (Koraput District, Orissa)
+// 63. Wadigodri (Jayakwad Project, Aurangabad)
+//
+// 64. Obra (Uttar Pradesh)
+//
+// 65. Renukoot (Uttar Pradesh)
+//
+// Note: It is understood that as and when Central Government or any State Government may declare any other Centre as Project Area, the same would be treated accordingly. Similarly, if any Centre is treated as non-project area by them, those Centres would stand deleted from the above list. ''',
+//       false),
+//   ListItem(
+//       'Hill and Fuel Allowance',
+//       '''Hill and Fuel Allowance shall be payable at the following rates with effect from 1st November 2017:
+//
+// 11th Bipartite Settlement
+//
+// a. At places situated at a height of 3000 meters and above	8% of pay
+// (Max. Rs.2250/-p.m.)
+// b. At places situated at a height of and over 1500 meters but below 3000 meters	4% of pay
+// (Max. Rs.900/-p.m.)
+// c. At places situated at a height of over 1000 meters but less than 1500 meters and Mercara Town	3 % of pay
+// (Max. Rs. 750/-p.m.)
+// Note: All other existing provisions shall remain unchanged. SBI may revise the ceiling amounts.''',
+//       false),
+//   ListItem(
+//       'MEDICAL AID',
+//       '''• On declaration basis : Rs.2355 per year
+//
+// In partial modification of Clause 17 of the Bipartite Settlement dated 25th May, 2015, with effect from 1st November 2017, the reimbursement of medical expenses under medical aid scheme shall be restricted to an amount of Rs.2355 /- per annum.
+// For the calendar year 2017, the reimbursement of medical expenses under the medical aid scheme shall be enhanced proportionately for two months i.e. November and December 2017.''',
+//       false),
+//   ListItem(
+//       'NEW MEDICAL INSURANCE SCHEME',
+//       '''The scheme covers expenses of the officers / employees and dependent in cases he/she  shall contract      any disease or suffer from any illness (hereinafter called DISEASE) or sustain any bodily injury through accident (hereinafter called INJURY) and if such disease or injury shall require any such insured Person, upon the advice of a duly qualified Physician/Medical Specialist/Medical practitioner (hereinafter called MEDICAL PRACTITIONER) or of a duly qualified Surgeon (hereinafter called SURGEON) to incur hospitalization/domiciliary hospitalization and domiciliary treatment expenses as defined in the Scheme, for medical/surgical treatment at any Nursing Home/Hospital / Clinic (for domiciliary treatment)/ Day care Centre  which are registered with the local bodies, in India as herein defined (hereinafter called HOSPITAL) as an inpatient or otherwise as specified as per the scheme, to the extent of the sum insured + Corporate buffer.
+//
+// 1.1. The Scheme Covers Employee + Spouse + Dependent Children + 2 dependent Parents /parents-inlaw.
+//
+// • No age limit for dependent children. (including step children and legally adopted children ) A child would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month; which is at present, or revised by Indian Banks’ Association in due course. Widowed Daughter and dependant divorced / separated daughters, sisters including unmarried / divorced / abandoned or separated from husband/ widowed sisters and Crippled Child shall be considered as dependent for the purpose of this policy. Physically challenged Brother / Sister with 40% or more disability.
+//
+// • No Age Limits for Dependent Parents. Either Dependent Parents or parents-In-law will be covered. Parents would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month, which is at present, or revised by Indian Banks’ Association in due course, and wholly dependent on the employee as defined in this scheme.
+//
+//  (The definition of family shall undergo a change as decided in due course in the negotiations)
+//
+// 1.2.1  All New Officers / employees to be covered from the date of joining as per their appointment letter. For additions /deletions during policy period, premium to be charged /refunded on pro rata basis.
+//
+// 1.2.2  Continuity benefits coverage to officers / employees on retirement and also to the Retired Officers / employees, who may be inducted in the Scheme.
+//
+// 1.3 Sum Insured: Hospitalization and Domiciliary Treatment coverage as defined in the scheme per annum
+//
+// Clerical Staff :  Rs.300000
+//
+// Sub Staff       : Rs.300000
+//
+// Change in sum insured after commencement of policy to be considered in case of promotion of the employee or vice versa.
+//
+// 1.4 Corporate Buffer: Rs. 100,00,00,000/- Corporate buffer may be appropriated as per the premium of the bank. If the Corporate buffer of one bank is exhausted, the remaining amount can be claimed from the unutilized corporate buffer of the other banks. Corporate Buffer can be authorized by the Management, through an Authorized person / Committee as decided by IBA / Bank, and informed directly to the THIRD PARTY ADMINISTRATOR by keeping the insurance company in the loop.
+//
+// 1.5 In the event of any claim becoming admissible under this scheme, the company will pay through Third Party Administrator to the Hospital / Nursing Home or insured the amount of such expenses as would fall under different heads mentioned below and as are reasonably and medically necessary incurred thereof by or on behalf of such insured but not exceeding the Sum Insured in aggregate mentioned in the schedule hereto.
+//
+// A. Room and Boarding expenses as provided by the Hospital/Nursing Home not exceeding   Rs. 5000 per day or the actual amount whichever is less.   B. Intensive Care Unit (ICU) expenses not exceeding Rs. 7500 per day or actual amount whichever is less.
+//
+// C. Surgeon, team of surgeons, Assistant surgeon, Anesthetist, Medical Practitioner, Consultants, Specialists Fees.
+//
+// D. Nursing Charges , Service Charges, IV Administration Charges, Nebulization Charges, RMO charges, Anaesthetic, Blood, Oxygen, Operation Theatre Charges, surgical appliances, OT consumables, Medicines & Drugs, Dialysis, Chemotherapy, Radiotherapy, Cost of Artificial Limbs, cost of prosthetic devices implanted during surgical procedure like pacemaker, Defibrillator, Ventilator,  orthopaedic implants, Cochlear Implant, any other implant, IntraOccular Lenses, ,  infra cardiac valve replacements, vascular stents, any other valve replacement, laboratory/diagnostic tests, X-ray CT Scan, MRI, any other scan, scopies  and such similar expenses that are medically necessary, or incurred during  hospitalization as per the advice of the attending doctor.
+//
+// E. Hospitalization expenses (excluding cost of organ) incurred on donor in respect of organ transplant to the insured.
+//
+// 1.6 Pre and Post Hospitalization expenses payable in respect of each hospitalization shall be the actual expenses incurred subject to 30 days prior to hospitalization and 90 days after discharge.
+//
+// 2.   DEFINITIONS:
+//
+// 2.1 ACCIDENT:  An accident is a sudden, unforeseen and involuntary event caused resulting in injury –    2.2 A.     “Acute condition” – Acute condition is a disease, illness or injury that is likely to respond quickly to treatment which aims to return the person to his or her state of health immediately before suffering the disease/illness/injury which leads to full recovery. B.     “Chronic condition” – A chronic condition is defined as a disease, illness, or injury that has one or more of the following characteristics – i. It needs ongoing or long-term monitoring through consultations, examinations, checkups and/or tests – ii. It needs ongoing or long-term control or relief of symptoms iii. It requires your rehabilitation or for you to be specially trained to cope with it iv. It continues indefinitely v. It comes back or is likely to come back.
+//
+// 2.3  ALTERNATIVE TREATMENTS:  Alternative Treatments are forms of treatment other than treatment “Allopathy” or “modern medicine and includes Ayurveda, unani, siddha homeopathy and Naturopathy in the Indian Context, for Hospitalisation only and Domiciliary for treatment only under ailments mentioned under clause number 3.1
+//
+// 2.4  ANY ONE ILLNESS:   Any one illness will be deemed to mean continuous period of illness and it includes relapse within 45 days from the date of last consultation with the Hospital / Nursing Home where treatment has been taken. Occurrence of the same illness after a lapse of 45 days as stated above will be considered as fresh illness for the purpose of this policy.
+//
+// 2.5  CASHLESS FACILITY:
+//
+// Cashless facility “means a facility extended by the insurer to the insured where the payments, of the cost of treatment undergone by the employee and the dependent family members of the insured in accordance with the policy terms and conditions, or directly made to the network provider by the insurer to the extent pre-authorization approved.
+//
+// 2.6  CONGENITAL ANOMALY:
+//
+// Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure or position.
+//
+// a. Internal Congenital Anomaly which is not in the visible and accessible parts of the body
+//
+// b. External Congenital Anomaly which is in the visible and accessible parts of the body
+//
+// 2.7  CONDITION PRECEDENT:
+//
+//  Condition Precedent shall mean a policy term or condition upon which the Insurer’s liability under the policy is conditional upon.
+//
+// 2.8  CONTRIBUTION:
+//
+//  The Officers / employees will not share the cost of an indemnity claim on a ratable proportion from their personal Insurance Policies.
+//
+// 2.9   DAYCARE CENTRE:
+//
+// A day care centre means any institution established for day care treatment of illness and/ or injuries or a medical setup within a hospital and which has been registered with the local authorities, wherever applicable, and is under the supervision of a registered and qualified medical practitioner AND must comply with all minimum criteria as under;-
+//
+//  –  has qualified nursing staff under its employment  –  has all qualified medical practitioner(s) in charge   –  has a fully equipped operation theatre of its own where surgical procedures are carried out.
+//
+//  – maintains daily records of patients and will make these accessible to the insurance companies authorised personnel.
+//
+// 2.10   DAY CARE TREATMENT:    Day care Treatment refers to medical treatment and or surgical procedure which is
+//
+// iii. undertaken under general or local anesthesia in a hospital/day care Centre in less than a day because of technological advancement, and
+//
+// iv.  Which would have otherwise required a hospitalisation of more than a day.
+//
+//     Treatment normally taken on an out patient basis is not included in the scope of this definition.
+//
+// 2.11   DOMICILIARY HOSPITALIZATION:
+//
+//  Domiciliary Hospitalization means medical treatment for an illness/disease/injury which in the   normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances:
+//
+// c)  The condition of the patient is such that he/she is not in a condition to be removed to a hospital or
+//
+// d) The patient takes treatment at home on account of non-availability of room in a hospital.
+//
+// 2.12 DOMICILIARY TREATMENT
+//
+//   Treatment taken for specified diseases which may or may not require hospitalization as mentioned in the Scheme under clause Number 3.1
+//
+//  2.13   HOSPITAL / NURSING HOME:
+//
+// A Hospital means any institution established for in-patient care and day care treatment of illness and/or injuries and which has been registered as a Hospital with the local authorities under the Clinical establishments (Registration and Regulation) Act, 2010 or under the enactments specified under the Schedule of Section 56(1) of the said Act OR complies with all minimum criteria as under
+//
+// – Has qualified nursing staff under its employment round the clock.
+//
+// – Has at least 10 in-patient beds in towns having a population of less than 10 lacs and at least 15 in-patient beds in all other places;
+//
+// – Has qualified medical practitioner(s) in charge round the clock;
+//
+// – Has a fully equipped Operation Theatre of its own where surgical procedures are carried out;
+//
+// – Maintains daily records of patients and makes these accessible to the insurance company’s authorized personnel.
+//
+// The term ‘ Hospital / Nursing Home ‘ shall not include an establishment which is a place of rest,     a place for the aged, a place for drug-addicts or place for alcoholics, a hotel or a similar place.
+//
+// This clause will however be relaxed in areas where it is difficult to find such hospitals.
+//
+// 2.14   HOSPITALIZATION:
+//
+//  Hospitalization means admission in a Hospital/Nursing Home for a minimum period of 24 consecutive hours of inpatient care except for specified procedures/treatments, where such admission could be for a period of less than a day, as mentioned in clauses 2.9 and 2.10
+//
+// 2.15   ID CARD:
+//
+//  ID Card means the identity card issued to the insured person by the THIRD PARTY ADMINISTRATOR to avail cashless facility in network hospitals.
+//
+// 2.16   ILLNESS:
+//
+//  Illness means a sickness or a disease or pathological condition leading to the impairment of normal physiological function which manifests itself during the policy period and requires medical treatment.
+//
+// 2.17   INJURY:
+//
+// Injury means accidental physical bodily harm excluding illness or disease which is verified and certified by a medical practitioner.
+//
+// However all types of Hospitalization is covered under the Scheme.
+//
+// 2.18   IN PATIENT CARE:
+//
+// In Patient Care means treatment for which the insured person has to stay in a hospital for more than a day for a covered event.
+//
+// 2.19   INTENSIVE CARE UNIT:
+//
+// Intensive Care Unit means an identified section, ward or wing of a Hospital which is under the constant supervision of a dedicated medical practitioner(s) and which is specially equipped for the continuous monitoring and treatment of patients who are in a critical condition, or require life support facilities and where the level of care and supervision is considerably more sophisticated and intensive than in the ordinary and other wards.
+//
+// 2.20 MATERNITY EXPENSES:
+//
+//   Maternity expenses/treatment shall include:
+//
+// a) Medical treatment expenses traceable to childbirth (including complicated deliveries and   caesarean sections incurred during hospitalization).
+//
+// b) Expenses towards medical termination of pregnancy during the policy period.
+//
+// C) Complications on Maternity would be covered up to the Sum Insured plus the Corporate Buffer.
+//
+// 2.21 MEDICAL ADVICE:
+//
+//  Any consultation or advice from a medical practitioner/doctor including the issue of any prescription or repeat prescription.
+//
+// 2.22 MEDICAL EXPENSES:
+//
+//  Medical Expenses means those expenses that an insured person has necessarily and actually incurred for medical treatment on account of illness or accident on the advice of a medical practitioner, as long as these are no more than would have been payable if the insured person had not been insured.
+//
+// 2.23 MEDICALLY NECESSARY:  Medically necessary treatment is defined as any treatment, test, medication or stay in hospital or part of a stay in a hospital which
+//
+// – is required for the medical management of the illness or injury suffered by the insured;
+//
+// – must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity;
+//
+// – must have been prescribed by a medical practitioner;
+//
+// – must confirm to the  professional standards widely accepted in  international medical practice or by the medical community in India.
+//
+// 2.24   MEDICAL PRACTITIONER:
+//
+//  Medical Practitioner is a person who holds a valid registration from the Medical Council of any State or Medical Council of India or Council for Indian Medicine or the homeopathy set up by the Government of India or a State Government and is thereby entitled to practice medicine within its jurisdiction; and is acting within the scope and jurisdiction of his license. The term medical practitioner would include physician, specialist and surgeon.
+//
+// (The Registered practitioner should not be the insured or close family members such as parents, parentsin-law, spouse and children.)
+//
+// 2.25  NETWORK PROVIDER:
+//
+//  Network Provider means hospitals or health care providers enlisted by an insurer or by a Third Party Administrator and insurer together to provide medical services to an insured on payment by a cashless facility.
+//
+// The list of network hospitals is maintained by and available with the THIRD PARTY ADMINISTRATOR and the same is subject to amendment from time to time.
+//
+// 2.26 NEW BORN BABY:
+//
+// A new born baby means baby born during the Policy Period aged between one day and 90 days, both days inclusive.
+//
+// 2.27 NON NETWORK :
+//
+//  Any hospital, day care Centre or other provider that is not part of the network.
+//
+// 2.28 NOTIFICATION OF CLAIM
+//
+// Notification of claim is the process of notifying a claim to the Bank, insurer or Third Party Administrator as well as the address/telephone number to which it should be notified.
+//
+// 2.29 OPD TREATMENT:    OPD Treatment is one in which the insured visits a clinic/hospital or associated facility like a consultation room for diagnosis and treatment based on the advice of medical a practitioner. The insured is not admitted as a day care or in-patient.
+//
+// 2.30 PRE-EXISTING DISEASE:
+//
+//  Pre Existing Disease is any condition, ailment or injury or related condition(s) for which you had signs or symptoms, and/or were diagnosed, and/or received medical advice/treatment, prior to the first policy issued by the insurer.
+//
+// 2.31 PRE – HOSPITALISATION MEDICAL EXPENSES:
+//
+// Medical expenses incurred immediately 30 days before the insured person is hospitalized will be considered as part of a claim as mentioned under Item 1.2 above provided that;
+//
+// i. such medical expenses are incurred for the same condition for which the insured person’s hospitalization was required and
+//
+// ii. the inpatient hospitalization claim for such hospitalization is admissible by the insurance company.
+//
+// 2.32 POST HOSPITALISATION MEDICAL EXPENSES:
+//
+// Relevant medical expenses incurred immediately 90 days after the Insured person is discharged from the hospital provided that;
+//
+// a. Such Medical expenses are incurred for the same condition for which the Insured Person’s Hospitalization was required; and
+//
+// b. The In-patient Hospitalization claim for such Hospitalization is admissible by the Insurance Company.
+//
+// 2.33 QUALIFIED NURSE:
+//
+// Qualified Nurse is a person who holds a valid registration from the Nursing Council of India or the Nursing Council of any state in India and/or who is employed on recommendation of the attending medical practitioner.
+//
+// 2.34 REASONABLE AND CUSTOMARY CHARGES:
+//
+// Reasonable Charges means the charges for services or supplies, which are the standard charges for the specific provider and consistent with the prevailing charges in the geographical area for identical or similar services, taking into account the nature of the illness/injury involved.
+//
+// 2.35 ROOM RENT:
+//
+// Room Rent shall mean the amount charged by the hospital for the occupancy of a bed on per day basis.
+//
+// 2.36   SUBROGATION:  Subrogation shall mean the right of the insurer to assume the rights of the insured person to   recover expenses paid out under the policy that may be recovered from any other source. It shall exclude the medical / accident policies obtained by the insured person separately.
+//
+// 2.37     SURGERY:
+//
+// Surgery or surgical procedure means manual and/or operative procedure(s) required for treatment of an illness or injury, correction of deformities and defects, diagnosis and cure of diseases, relief of suffering or prolongation of life, performed in a hospital or day care Centre by a medical practitioner.
+//
+// 2.38   Third Party Administrator
+//
+// Third Party Administrator means a Third Party Administrator who holds a valid License from Insurance Regulatory and Development Authority to act as a THIRD PARTY ADMINISTRATOR    and is engaged by the Company for the provision of health services as specified in the agreement between the Company and Third Party Administrator.
+//
+// 2.39 UNPROVEN/EXPERIMENTAL TREATMENT:
+//
+//          Unproven/Experimental treatment is treatment, including drug Experimental therapy, which is not based on established medical practice in India.
+//
+// 3.  COVERAGES:
+//
+// 3.1   Domiciliary Hospitalization / Domiciliary Treatment : Medical expenses incurred in case of the following diseases which need Domiciliary Hospitalization /domiciliary treatment as may be certified by the attending medical practitioner and / or bank’s ’medical officer shall be deemed as hospitalization expenses and reimbursed to the extent of 100%
+//
+// Cancer , Leukemia, Thalassemia, Tuberculosis, Paralysis, Cardiac Ailments , Pleurisy , Leprosy, Kidney Ailment , All Seizure disorders, Parkinson’s diseases, Psychiatric disorder including schizophrenia and psychotherapy , Diabetes and its complications, hypertension, Hepatitis –B , Hepatitis – C, Hemophilia, Myasthenia gravis, Wilson’s disease, Ulcerative Colitis , Epidermolysis bullosa, Venous Thrombosis(not caused by smoking) Aplastic Anaemia, Psoriasis, Third Degree burns, Arthritis , Hypothyroidism , Hyperthyroidism expenses incurred on radiotherapy and chemotherapy in the treatment of cancer and leukemia, Glaucoma, Tumor, Diptheria, Malaria,  Non-Alcoholic Cirrhosis of Liver, Purpura, Typhoid, Accidents of Serious Nature , Cerebral Palsy, , Polio, All Strokes Leading to Paralysis, Haemorrhages caused by accidents, All animal/reptile/insect bite or sting , chronic pancreatitis, Immuno suppressants, multiple sclerosis / motorneuron disease, status asthamaticus,  sequalea of meningitis, osteoporosis, muscular dystrophies, sleep apnea  syndrome(not related to obesity), any organ related (chronic) condition, sickle cell disease, systemic lupus erythematous (SLE),  any connective  tissue  disorder,  varicose  veins,   thrombo  embolism venous thrombosis/venous thrombo embolism (VTE)],  growth disorders, Graves’ disease, Chronic obstructive Pulmonary Disease, Chronic Bronchitis, Asthma, Physiotherapy and swine flu shall be considered for reimbursement under domiciliary treatment.
+//
+// Addition in Domiciliary Scheme coverage:
+//
+// The following treatments/ diseases have also been included under Domiciliary treatment coverage w.e.f. 1/10/2019.
+//
+// Type 1 Diabetes
+// Rheumatoid Arthritis
+// Psoriasis/Psoriatic Arthritis
+// System lupus Erythematous
+// Inflammatory Bowel Diseases
+// Additions Diseases
+// Sjogren’s Diseases
+// Hashimoyos Thyroiditis
+// Auto immune vacuities
+// Pernicious Anemia
+// Celiac disease
+// Auto immune myositis
+// The cost of Medicines, Investigations, and consultations, etc.in respect of domiciliary treatment shall be reimbursed for the period stated by the specialist and / or the attending doctor and / or the bank’s medical officer, in Prescription. If no period stated, the prescription for the purpose of reimbursement shall be valid for a period not exceeding 90 days.
+//
+// 3.2 Critical Illness :  To be provided to the employee only subject to a sum insured of Rs. 1,00,000/- . Cover starts on inception of the policy. In case an employee contracts a Critical Illness as listed below, the total sum insured of Rs.1,00,000/- is paid, as a benefit. This benefit is provided on first detection/diagnosis of the Critical Illness.
+//
+// • Cancer  including  Leukemia
+//
+// • Stroke
+//
+// • Paralysis
+//
+// • By Pass Surgery
+//
+// • Major Organ Transplant
+//
+// • End Stage Liver Disease
+//
+// • Heart Attack
+//
+// • Kidney Failure
+//
+// • Heart Valve Replacement Surgery
+//
+// Hospitalization is not required to claim this benefit. Further the Employee can claim the cost of hospitalization on the same from the Group Mediclaim Policy as cashless / reimbursement of expenses for the treatment taken by him.
+//
+// 3.3  Expenses on Hospitalization for minimum period of a day are admissible.  However, this time limit is not applied to specific treatments, such as
+//
+// Adenoidectomy
+// Haemo dialysis
+// Appendectomy
+// Fissurectomy / Fistulectomy
+// Ascitic / Plueral tapping
+// Mastoidectomy
+// Auroplasty  not Cosmetic in nature
+// Hydrocele
+// Coronary angiography /Renal
+// Hysterectomy
+// Coronary angioplasty
+// Inguinal/ ventral/ umbilica/ femoral hernia
+// Dental surgery
+// Parenteral chemotherapy
+// D&C
+// Polypectomy
+// Excision of cyst/ granuloma/lump/tumor
+// Eye surgery
+// Septoplasty
+//  Fracture including hairline fracture /dislocation
+// Piles/ fistula
+// Radiotherapy
+// Prostate surgeries
+// Chemotherapy including parental chemotherapy
+// Sinusitis surgeries
+// Lithotripsy
+// Tonsillectomy
+// Incision and drainage of abscess
+// Liver aspiration
+// Varicocelectomy
+// Sclerotherapy
+// Wound suturing
+// Varicose Vein Ligation
+// FESS
+// All scopies along with biopsies
+// Operations/Micro surgical operations on the nose, middle ear/internal ear, tongue, mouth, face, tonsils & adenoids, salivary glands & salivary ducts, breast, skin & subcutaneous tissues, digestive tract, female/male sexual organs.
+//  Lumbar puncture
+// This condition will also not apply in case of stay in hospital of less than a day provided –
+//
+//  a. The treatment is undertaken under General or Local Anesthesia in a hospital / day care Centre in less than a day because of technological advancement and
+//
+// b.   Which would have otherwise required hospitalization of more than a day.
+//
+// 3.4    Alternative Therapy :  Reimbursement of Expenses for hospitalization or domiciliary treatment (under clause 3.1) under the recognized system of medicines , viz, Ayurvedic ,Unani, Sidha, Homeopathy ,Naturopathy , if such treatment is taken in a clinic /hospital registered, by the central and state government .
+//
+// 3.5       MATERNITY EXPENSES BENEFIT EXTENSION
+//
+// The hospitalization expenses in respect of the new born child can be covered within the Mother’s Maternity expenses. The maximum benefit allowable under this clause will be up to Rs. 50000/- for Normal Delivery and Rs. 75,000/- for Caesarean Section.
+//
+// Special conditions applicable to Maternity expenses Benefit Extension:
+//
+// I. 9 months waiting period under maternity benefit will be waived from the policy.
+//
+// II. Pre-natal & post natal charges in respect of maternity benefit are covered under the policy up to 30 days and 60 days only, unless the same requires hospitalization.
+//
+// III. Missed Abortions , Miscarriage or abortions induced by accidents are covered under the limit of Maternity IV. Complications in Maternity including operations for extra uterine pregnancy ectopic pregnancy would be covered in the up to the Sum Insured + Corporate Buffer V. Expenses incurred for Medical Termination of Pregnancy VI. Claim in respect of delivery to be given irrespective of the number of children
+//
+// 3.6 Baby Day one Cover: New born baby is covered from day one. All expenses incurred on the new born baby during maternity will be covered in addition to the maternity limit up to Rs, 20000/-.  However if the baby contacts any illness the same shall be considered in the Sum Insured + Corporate buffer. Baby to be taken as an additional member within the normal family floater.
+//
+// 3.7 Ambulance Charges: Ambulance charges are payable up to Rs 2500/- per trip to hospital and / or transfer to another hospital or transfer from hospital to home if medically advised. Taxi and Auto expenses in actual maximum up to Rs750/- per trip. Ambulance charges actually incurred on transfer from one center to another center due to Non availability of medical services/ medical complication shall be payable in full.
+//
+// 3.8 Pre- Existing Diseases / Ailments: Pre-existing diseases are covered under the scheme.
+//
+// 3.9 Congenital Anomalies: Expenses for Treatment of Congenital Internal / External diseases, defects anomalies are covered under the policy
+//
+// 3.10  Psychiatric diseases: Expenses for treatment of psychiatric and psychosomatic diseases be payable with or without hospitalization.
+//
+// 3.11 Advanced Medical Treatment: All new kinds of approved advanced medical procedures for e.g. laser surgery, stem cell therapy for treatment of a disease is payable on hospitalization /day care surgery.
+//
+// 3.12 Treatment taken for Accidents can be payable even on OPD basis in Hospital up to Sum Insured.
+//
+// 3.13 Taxes and other Charges : All Taxes , Surcharges , Service Charges , Registration charges , Admission Charges , Nursing ,  and Administration charges to be payable.
+//
+// Charges for diapers and sanitary pads are payable if necessary as part of the treatment  Charges for Hiring a nurse / attendant during hospitalization will be payable only in case of recommendation from the treating doctor in case ICU / CCU, Neo natal nursing care or any other case where the patient is critical and requiring special care.
+//
+// 3.14 Treatment for Genetic Disorder and stem cell therapy is covered under the scheme.
+//
+// 3.15  Treatment for Age related Macular Degeneration (ARMD), treatment such as Rotational Field Quantum magnetic Resonance (RFQMR), Enhanced External Counter Pulsation (EECP), etc. are covered under the scheme. Treatment for all neurological/ macular degenerative disorders shall be covered under the scheme.
+//
+// 3.16  Rental Charges for External and or durable Medical equipment of any kind used for diagnosis and or treatment including CPAP, CAPD, Bi-PAP, Infusion pump etc. will be covered under the scheme. However purchase of the above equipment to be subsequently used at home in exceptional cases on medical advice shall be covered.
+//
+// 3.17  Ambulatory devices i.e., walker, crutches, Belts, Collars, Caps, Splints, Slings, Braces, Stockings, elastocrepe bandages, external orthopaedic pads, sub cutaneous insulin pump,  Diabetic foot wear, Glucometer (including Glucose Test Strips)/ Nebulizer/ prosthetic devise/  Thermometer, alpha / water bed and similar related items etc., will be covered under the scheme.
+//
+// 3.18 Physiotherapy charges: Physiotherapy charges shall be covered for the period specified by the Medical Practitioner even if taken at home.
+//
+// All claims admitted in respect of any/all insured person/s during the period of insurance shall not exceed the Sum Insured stated in the schedule and Corporate Buffer if allocated.
+//
+// 4.  EXCLUSIONS:
+//
+// The company shall not be liable to make any payment under this policy in respect of any expenses whatsoever incurred by any Insured Person in connection with or in respect of:
+//
+// 4.1 Injury / disease directly or indirectly caused by or arising from or attributable to War, invasion, Act of Foreign enemy, War like operations (whether war be declared or not).
+//
+// 4.2   a. Circumcision unless necessary for treatment of a disease not excluded hereunder or as may be necessitated due to an accident.
+//
+// b. Vaccination or inoculation.
+//
+//  c. Change of life or cosmetic or aesthetic treatment of any description is not covered.
+//
+// d. Plastic surgery other than as may be necessitated due to an accident or as part of any   illness.
+//
+// 4.3 Cost of spectacles and contact lenses, hearing aids. Other than Intra-Ocular Lenses and Cochlear Implant.
+//
+// 4.4         Dental treatment or surgery of any kind which are done in a dental clinic and those that are cosmetic in nature.
+//
+// 4.5     Convalescence, rest cure, Obesity treatment and its complications including morbid obesity, treatment relating disorders, Venereal disease, intentional self-injury and use of intoxication drugs / alcohol.
+//
+// 4.6 All expenses arising out of any condition directly or indirectly caused to or associated with Human TCell Lymphotropic Virus Type III (HTLB – III) or lymphadinopathy Associated Virus (LAV) or the Mutants Derivative or Variation Deficiency Syndrome or any syndrome or condition of a similar kind commonly referred to as AIDS.
+//
+// 4.7 Charges incurred at Hospital or Nursing Home primarily for diagnosis x-ray or Laboratory examinations or other diagnostic studies not consistent with or incidental to the diagnosis and treatment of positive existence of presence of any ailment, sickness or injury, for which confinement is required at a Hospital / Nursing Home, unless recommended by the attending doctor.
+//
+// 4.8 Expenses on vitamins and tonics unless forming part of treatment for injury or diseases as certified by the attending physician
+//
+// 4.9 Injury or Disease directly or indirectly caused by or contributed to by nuclear weapon / materials.
+//
+// 4.10    All non-medical expenses including convenience items for personal comfort such as charges for telephone, television, /barber or beauty services, died t  charges, baby food, cosmetics, tissue paper, diapers, sanitary pads, toiletry items and similar incidental expenses, unless and otherwise they are necessitated during the course of treatment.
+//
+// 5. CONDITIONS:
+//
+// 5.1  Contract: the proposal form, declaration, and the policy issued shall constitute the complete contract of insurance.
+//
+// 5.2 Every notice or communication regarding hospitalization or claim to be given or made under this Policy shall be communicated to the office of the Bank, dealing with Medical Claims, and/or the THIRD PARTY ADMINISTRATOR office as shown in the Schedule. Other matters relating to the policy may be communicated to the policy issuing office.
+//
+// 5.3 The premium payable under this Policy shall be paid in advance.  No receipt for Premium shall be valid except on the official form of the company signed by a duly authorized official of the company.  The due payment of premium and the observance and fulfillment of the terms, provisions, conditions and endorsements of this Policy by the Insured Person in so far as they relate to anything to be done or complied with by the Insured Person shall be a condition precedent to any liability of the Company to make any payment under this Policy.  No waiver of any terms, provisions, conditions and endorsements of this policy shall be valid unless made in writing and signed by an authorised official of the Company.
+//
+// 5.4 Notice of Communication: Upon the happening of any event which may give rise to a claim under this Policy notice with full particulars shall be sent to the Bank or  Regional Office or THIRD PARTY ADMINISTRATOR named in the schedule at the earliest in case of emergency hospitalization within 7 days from the time of Hospitalisation/Domiciliary Hospitalisation .
+//
+// 5.5 All supporting documents relating to the claim must be filed with the office of the Bank dealing with the claims or THIRD PARTY ADMINISTRATOR within 30 days from the date of discharge from the hospital.  In case of post-hospitalisation, treatment (limited to 90 days), (as mentioned in para 2.32) all claim documents should be submitted within 30 days after completion of such treatment.
+//
+// Note:     Waiver of these Conditions 5.4 and 5.5 may be considered in extreme cases of hardship where it is proved to the satisfaction of the Bank that under the circumstances in which the insured was placed it was not possible for him or any other person to give such notice or deliberate or file claim within the prescribed time-limit. The same would be waived by the TPA without reference to the Insurance Company.
+//
+// 5.5.1 The Insured Person shall obtain and furnish to the office of the Bank dealing with the claims    /  THIRD PARTY ADMINISTRATOR with all original bills, receipts and other documents upon which a claim is based and shall also give such additional information and assistance as the Bank through the THIRD PARTY ADMINISTRATOR/Company may require in dealing with the claim.
+//
+// 5.5.2  Any medical practitioner authorised by the Bank / Third Party Administrator / shall be allowed to examine the Insured Person in case of any alleged injury or disease leading to Hospitalisation, if so required.
+//
+// 5.6 The Company shall not be liable to make any payment under this policy in respect of any claim if such claim be in any manner fraudulent or supported by any fraudulent means or device whether by the Insured Person or by any other person acting on his behalf.
+//
+// 5.7  DISCLOSURE TO INFORMATION NORM
+//
+//  The claim shall rejected in the event of misrepresentation, mis-description or non-disclosure of any material fact.
+//
+// 5.8 Claims will be managed through the same Office of the Bank from where it is managed at present. The Insurance Companies third party administrator will be setting up a help desk at that office and supporting the bank in clearing all the claims on real time basis.
+//
+// 5.9   In case of rejection of claims it would go through a Committee set up of the Bank, Third Party Administrator and United India Insurance Co Ltd. unless rejected by the committee in real time the claim should not be rejected.
+//
+// 5.10  There would be a continuity of this Scheme / benefits to the Retiring Officers / employees and their family and also to the Retired Officers / employees and their family.''',
+//       false),
+//   ListItem(
+//       'LEAVE FARE CONCESSION – CLERK',
+//       '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
+//
+// CLERK:
+//
+// Once in 2 years – 2200 KM
+//
+// Once in 4 years – 4400 KM
+//
+// ELIGIBILITY
+//
+// AC II Tier for the journey by mail/express train.
+//
+// By Steamer – I Class Cabin
+//
+// Note: The above mentioned distance limit is only for one way travel and reimbursement will be for both onward and return journey.
+//
+// Road Milege charges Rs.8/- per Km.
+//
+// • Permanent employees with 11 months service eligible for LFC.
+//
+// • Employees have to give their option to avail LFC either in 2 year block or 4 year block
+//
+// • Clerical employees can undertake travel by air ; reimbursement will be restricted to the entitled train fare as per the admissible distance.
+//
+// • Employees can undertake the travel by any means of surface transport including taxi or own car within the eligible entitled fare.
+//
+// • By giving option, employees can encash the LFC and cash will be paid upto 100% of the entitled train fare of that block.
+//
+// • While encashing LFC, no leave need to be taken
+//
+// • While availing LFC/encashing LFC, employees under 2 year block can encash Privilege leave upto either 15 days in each block or 30 days in one block. Employees under 4 year block can encash upto 30 days.
+//
+// For the purpose of LFC / Medical facilities)
+//
+// 1. Spouse
+//
+// 2. Wholly dependent unmarried children (including step children and legally adopted children)
+//
+// 3. Parents ordinarily residing with and wholly dependent on the employee.
+//
+// 4. A married female employee may include her natural parents or parents-in-law under the definition of family (but not both) provided that the parents/parents-in-law are ordinarily residing with and wholly dependent on her.
+//
+// Provided however, in the case of non-subordinate staff, they will be reimbursed the fare for travel by Rajdhani/Shatabdi trains if the travel has been actually undertaken by such trains.
+//
+// Provided further that where the non-subordinate employee and / or dependent members of his family undertake travel by air either to his place of domicile or to any other place for rest and recuperation within India, he shall be entitled to be reimbursed the actual air fare so incurred or the II AC class fare by train by a direct route in case of travel to place of domicile or to the extent of the maximum admissible distance in case of travel to any other place for rest and recuperation, during the two year/four year block respectively, whichever is less.
+//
+// Provided further that in addition to train fare, charges incurred on account of local sight-seeing during availment of LFC may also be reimbursed subject to total claim not exceeding the amount equivalent to eligible train fare as per respective entitlement.
+//
+// Note: GST Charges levied on Train Fare shall be over and above the entitlement. In view of prevailing dynamic fare system, the cost of train tickets charged on the date of booking will be reimbursed.
+//
+// For employees working in North East States, LFC will begin from Guwahati and the eligible train fare from their place of work to Guwahati will be additionally paid. Similarly, eligible fare for Andaman & Nicobar islands to Chennai/Kolkata, Lakshadweep to Kochi, far-flung area branches in Himachal Pradesh, Uttarakhand, Sikkim, Jammu & Kashmir or any other areas which are not directly connected by train shall be additionally reimbursed under LFC in addition to normal entitlement for the employees working in these areas to the nearest major Railway Station.
+//
+// An employee and/or members of his family, when availing leave fare concession may undertake travel by any mode of surface transport between places and the employee will be eligible to claim in respect of such journey his actual expenditure or the notional train fare by the entitled class for the admissible and entitled distance, whichever is less, within his overall entitlement.
+//
+// For the purpose of this sub-clause, travel by any approved mode of surface transport would mean such travel undertaken through any public transport or transport (including taxi) operated by agencies / tour operators approved by appropriate Government authorities or motorcar owned by the employee/spouse.
+//
+// (iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
+// (iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
+// (v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
+// (vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
+//       false),
+//   ListItem(
+//       'LEAVE FARE CONCESSION – SUBSTAFF',
+//       '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
+//
+// SUBSTAFF
+//
+// Once in 2 years – 2600 KM
+//
+// Once in 4 years – 5200 KM
+//
+// ELIGIBILITY – AC III Tier for the journey by mail/express train. By Steamer – II Class Cabin
+//
+// Note: The above mentioned distance limit is only for one way travel and reimbursement will be for both onward and return journey.
+//
+// Road Milege charges Rs.8/- per Km.
+//
+// • Permanent employees with 11 months service eligible for LFC.
+//
+// • Employees have to give their option to avail LFC either in 2 year block or 4 year block
+//
+// • Clerical employees can undertake travel by air ; reimbursement will be restricted to the entitled train fare as per the admissible distance.
+//
+// • Employees can undertake the travel by any means of surface transport including taxi or own car within the eligible entitled fare.
+//
+// • By giving option, employees can encash the LFC and cash will be paid upto 100% of the entitled train fare of that block.
+//
+// • While encashing LFC, no leave need to be taken
+//
+// • While availing LFC/encashing LFC, employees under 2 year block can encash Privilege leave upto either 15 days in each block or 30 days in one block. Employees under 4 year block can encash upto 30 days.
+//
+// • Employees can avail LFC with their family
+//
+// • Employee and family can travel together or avail LFC by separate travel within the block
+//
+// • Employees can travel by steamer while on LFC and for clerks entitled class would be I Class Cabin and for substaff II class cabin
+//
+// For the purpose of LFC / Medical facilities)
+//
+// 1. Spouse
+//
+// 2. Wholly dependent unmarried children (including step children and legally adopted children)
+//
+// 3. Parents ordinarily residing with and wholly dependent on the employee.
+//
+// 4. A married female employee may include her natural parents or parents-in-law under the definition of family (but not both) provided that the parents/parents-in-law are ordinarily residing with and wholly dependent on her.
+//
+// Provided however, in the case of non-subordinate staff, they will be reimbursed the fare for travel by Rajdhani/Shatabdi trains if the travel has been actually undertaken by such trains.
+//
+// Provided further that where the non-subordinate employee and / or dependent members of his family undertake travel by air either to his place of domicile or to any other place for rest and recuperation within India, he shall be entitled to be reimbursed the actual air fare so incurred or the II AC class fare by train by a direct route in case of travel to place of domicile or to the extent of the maximum admissible distance in case of travel to any other place for rest and recuperation, during the two year/four year block respectively, whichever is less.
+//
+// Provided further that in addition to train fare, charges incurred on account of local sight-seeing during availment of LFC may also be reimbursed subject to total claim not exceeding the amount equivalent to eligible train fare as per respective entitlement.
+//
+// Note: GST Charges levied on Train Fare shall be over and above the entitlement. In view of prevailing dynamic fare system, the cost of train tickets charged on the date of booking will be reimbursed.
+//
+// For employees working in North East States, LFC will begin from Guwahati and the eligible train fare from their place of work to Guwahati will be additionally paid. Similarly, eligible fare for Andaman & Nicobar islands to Chennai/Kolkata, Lakshadweep to Kochi, far-flung area branches in Himachal Pradesh, Uttarakhand, Sikkim, Jammu & Kashmir or any other areas which are not directly connected by train shall be additionally reimbursed under LFC in addition to normal entitlement for the employees working in these areas to the nearest major Railway Station.
+//
+// An employee and/or members of his family, when availing leave fare concession may undertake travel by any mode of surface transport between places and the employee will be eligible to claim in respect of such journey his actual expenditure or the notional train fare by the entitled class for the admissible and entitled distance, whichever is less, within his overall entitlement.
+//
+// For the purpose of this sub-clause, travel by any approved mode of surface transport would mean such travel undertaken through any public transport or transport (including taxi) operated by agencies / tour operators approved by appropriate Government authorities or motorcar owned by the employee/spouse.
+//
+// (iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
+// (iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
+// (v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
+// (vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
+//       false),
+//   ListItem(
+//       'Definition of Family',
+//       '''In partial modification of Clause 18 of the Bipartite Settlement dated 25th May, 2015, for the purpose of medical facilities and for the purpose of leave fare concession, the expression ‘family’ of an employee shall mean –
+//
+// (i) the employee’s spouse, wholly dependent unmarried children (including step children and legally adopted children) wholly dependent physically and mentally challenged brothers/ sisters with 40% or more disability, widowed daughters and dependent divorced/ separated daughters, sisters including unmarried/ divorced/ abandoned or separated from husband/ widowed sisters, as also parents wholly dependent on the employee.
+//
+// Provided that in the case of physically and mentally challenged children, they shall be construed as dependents even after their marriage including spouse and children subject to fulfilling the income criteria.
+//
+// (ii) The term wholly dependent family member shall mean such member of the family having a monthly income not exceeding Rs.12,000/- p.m. If the income of one of the parents exceeds Rs.12,000/- p.m. or the aggregate income of both the parents exceeds Rs.12,000/- p.m., both the parents shall not be considered as wholly dependent on the employee.
+//
+// (iii) A married female employee may include her natural / legal parents or parents-in-law under the definition of family, but not both, provided that the parents/parents-in-law are wholly dependent on her.
+//
+// Note: For the purpose of medical expenses reimbursement scheme, for all employees, Leave Fare Concession etc. any two of either of the dependent parents/ parents-in-law shall be covered.''',
+//       false),
+//   ListItem(
+//       'OFFICIATING ALLOWANCE',
+//       '''ABH:
+// 15% of the Basic Pay divided by No of Days of that Month gives Officiating pay for a day
+//
+// Head Cashier II:
+// Special Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day''',
+//       false),
   ListItem(
-      'Basic Pay - Clerk',
-      '''STAGE	 BASIC PAY 	INCREMENT
-1 	17900	1000
-2	  18900	1000
-3	  19900	1000
-4	  20900	1230
-5	  22130	1230
-6	  23360	1230
-7	  24590	1490
-8	  26080	1490
-9	  27570	1490
-10 	29060	1490
-11	30550	1730
-12	32280	1730
-13	34010	1730
-14	35740	1730
-15	37470	1730
-16	39200	1730
-17	40930	1730
-18	42660	3270
-19	45930	1990
-20	47920 
-
-STAGNATION INCREMENT	EVERY 2 YEARS	 9 SLABS
-21	49910	1990
-22	51900	1990
-23	53890	1990
-24	55880	1990
-25	57870	1990
-26	59860	1990
-27	61850	1990
-28	63840	1990
-29	65830
-Note:
-
-a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
-b)  There shall be no change in the dates of annual increments because of the fitment.
-c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
-d)  All employees belonging to Clerical cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
-      false),
-  ListItem(
-      'Basic Pay – Sub Staff',
-      '''STAGE	BASIC PAY	INCREMENT
-1	  14500	500
-2	  15000	500
-3	  15500	500
-4	  16000	500
-5	  16500	615
-6	  17115	615
-7	  17730	615
-8	  18345	615
-9	  18960	615
-10	19575	740
-11	20315	740
-12	21055	740
-13	21795	740
-14	22535	870
-15	23405	870
-16	24275	870
-17	25145	1000
-18	26145	1000
-19	27145	1000
-20	28145	 
-
-STAGNATION INCREMENT	EVERY 2 YEARS	9 SLABS
-21	29145	1000
-22	30145	1000
-23	31145	1000
-24	32145	1000
-25	33145	1000
-26	34145	1000
-27	35145	1000
-28	36145	1000
-29	37145	 
-Note:
-
-a)  Fitment in the new scales of pay shall be on a stage-to-stage basis.
-b)  There shall be no change in the dates of annual increments because of the fitment.
-c)  In the case of Ex-servicemen category employees who have joined the Banks on and after 1st November, 2017 up to the date of this Settlement, the fixation/fitment in the pay scales already given/eligible to be given under the Settlement dated 25th May, 2015 shall be refixed as per the provisions of this settlement.
-d)  All employees belonging to sub-ordinate cadre shall be eligible for one extra increment for passing JAIIB and two increments for passing CAIIB examination w.e.f 1.11.2017''',
-      false),
-  ListItem(
-      'Dearness Allowance',
-      '''With effect from 1st November 2017, the Dearness Allowance shall be payable as per the following rates: –
-
-Clerical and Subordinate Staff
-
-0.07 % of ‘pay’ per slab of four points.
-
-Note:
-
-Dearness Allowance in the above manner shall be paid for every rise or fall of 4 points over 6352 points in the quarterly average of the All India Average Working-Class Consumer Price Index (General) Base 1960=100.
-
-(a)  It is clarified that there shall be no ceiling on Dearness Allowance.
-(b)  Dearness Allowance shall be calculated and paid on the following components:
-Basic Pay including Stagnation increments,
-Special Pay,
-Graduation Pay/ Professional Qualification Pay,
-Special Allowance,
-Transport Allowance and
-Officiating Pay, if any, payable under this settlement in respect of both clerical and subordinate staff.
-(c)  All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.''',
-      false),
-  ListItem(
-      'Transport Allowance',
-      '''With effect from 1st November 2017, Transport Allowance shall be paid as under;
-
-Note :
-
-11th Bipartite Settlement
-
-All Clerical and Subordinate Staff	Rs. 600 per month
-with applicable DA thereon
-(i)  The Transport Allowance with applicable DA thereon shall not be reckoned for superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.
-(ii)  This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.''',
-      false),
-  ListItem(
-      'House Rent Allowance',
-      '''With effect from 1st November 2017, the House Rent Allowance payable to subordinate and clerical staff shall be as under:-
-
-11th Bipartite Settlementpage12image4778688page12image4778880
-Rate as percentage of ‘Pay’ Area [No Minimum/ No Maximum]
-
-At all centres 10.25 %page12image4779072page12image4779264
-Note:
-
-(1)  ‘Pay’ means as defined in Clause 6 of the Settlement hereinabove
-(2)  Where quarters are provided, HRA shall not be payable and the rent to be recovered shall be 0.2 % of the first stage of the Scales of Pay.
-(3)  All other existing provisions relating to House Rent Allowance shall remain unchanged.
-Provided further that when a workman employee is transferred out of the station other than on account of request, he/she may, in lieu of HRA as above, claim reimbursement of house rent up to 150% of HRA otherwise payable and subject to production of rent receipt.''',
-      false),
-  ListItem(
-      'Special Pay – Clerk',
-      '''For Clerical Staff (w.e.f. 1.11.2017)
-
-Post	Special Pay
-Single Window Operator ‘B’	1250
-Head Cashier – II	1940
-Special Assistant	2920''',
-      false),
-  ListItem(
-      'Special Pay – Sub Staff',
-      '''Post	Special Pay
-Armed Guard	590
-Bill Collector	590
-Daftary	850
-Head Peon	1120
-Electrician	3090
-AC Plant Operator	3090
-Driver	3590
-Head Messenger in IOB	2470''',
-      false),
-  ListItem(
-      'Graduation Pay/ Professional qualification pay and fixed personal pay',
-      '''For those workmen who hereafter reach or have already reached 20th stage of the scale and have got increments in consideration of educational qualification(s), Graduation Pay/ Professional Qualification Pay shall be payable as under:
-
-Those who are graduates and/or NDC – Rs. 625 /- p.m. after they complete 1 year
-
-Rs. 1215 /- p.m. after they complete 2 years
-Those who have passed JAIIB or Part I of CAIB/CAIIB-
-
-Rs. 625 /- p.m. after they complete 1 year
-Those who have passed JAIIB and CAIIB or Both Parts of CAIB/CAIIB –
-
-Rs. 625 /- p.m. after they complete 1 year Rs. 1215 /- p.m. after they complete 2 years Rs. 1835 /- p.m. after they complete 3 years
-
-Those who are graduates/NDC and have passed JAIIB or Part I of CAIB/CAIIB –
-
-Rs. 625 /- p.m. after they complete 1 year Rs. 1215 /- p.m. after they complete 2 years Rs. 1835 /- p.m. after they complete 3 years
-
-Those who are graduates/NDC and have passed JAIIB or Both Parts of CAIB/CAIIB – Rs. 625 /- p.m. after they complete 1 year
-Rs. 1215 /- p.m. after they complete 2 years
-Rs. 1835/- p.m. after they complete 3 years
-
-Rs. 2455 /- p.m. after they complete 4 years Rs. 3045 /- p.m. after they complete 5 years.
-
-With effect from 1st November 2017, Graduation Pay and Professional Qualification Pay payable to the clerical staff in banks shall be as mentioned in Part B of Schedule II to this Settlement. It would be worked out separately in SBI as applicable for special pay mentioned at para (i) above,
-(iv)  The Special Pay, Graduation Pay and Professional Qualification Pay as mentioned in Part B of Schedule II shall rank for superannuation benefits.
-(v)  The rates of special pay and the duties of special pay carrying posts for workmen staff in SBI may be reviewed and settled at the bank level.
-(vi)  In reiteration of sub-clause (xv) of Clause 11 of the Bipartite Settlement dated 25th May 2015, a member of the non-subordinate cadre acquiring a Graduate/National Diploma in Commerce or JAIIB/CAIIB (either or both parts) qualification/s at a time when he/she does not have the requisite number of increments in the scale to be earned as advance increments shall in the first instance be released increments for such qualification(s) acquired to the extent available in the scale and in lieu of the remaining increments(s) not available for being so released as advance increments be granted / released the first installment of Graduation Pay or PQP, as the case may be. Release of subsequent installments of Graduation Pay or PQP shall be with reference to the date of release of Graduation Pay or PQP under this clause.
-(vii)  Provided that in the case of an employee acquiring such qualifications after reaching the maximum of the scale of pay, he shall be granted from the date of acquiring such qualification the first installment of Graduation Pay or PQP, as the case may be and the release of subsequent installments of Graduation Pay or PQP shall be with reference to the date of release of Graduation Pay or PQP under this clause.Provided further that in case where the non-subordinate employee as on the date of this Settlement, has already acquired JAIIB (Part-I) or CAIIB (Part- II)/ Graduation after reaching maximum of the scale of Pay (in case of JAIIB/ CAIIB/ Graduation) or after reaching 19th stage of scale of Pay (in case of CAIIB/Graduation), and has not earned increment(s), otherwise entitled on account of acquiring such qualification, when there were no increments to provide in the scale of pay of those employees, the stagnation increment in such cases may be advanced by one year or two years as the case may be.
-Fixed Personal Pay:
-CLERICAL – Increment portion 1990 ,SUBSTSAFF – Increment portion 1000
-
-FPP – where Quarters not provided ,CLERICAL – Increment portion 2262 ,SUBSTAFF – Increment portion 1140
-
-FPP – where Quarters are provided ,CLERICAL – Increment portion 2043 ,SUBSTAFF – Increment portion 1030''',
-      false),
-  ListItem(
-      'Halting Allowance',
-      '''With effect from 1/11/2020, halting allowance shall be payable at the following rates for the days spent on duty outside the headquarters:
-
-Places with population of 12 lakhs and above and States of Goa:
-
-Clerical Staff : Rs. 1050/- per diem
-
-Subordinate Staff : Rs. 750/- per diem
-
-Places with population of 5 lakhs and above, State Capitals/ Capitals of Union Territories not covered in column (A)
-
-Clerical Staff : Rs. 900/- per diem
-
-Subordinate Staff : Rs. 600/- per diem
-
-Other Places:
-
-Clerical Staff : Rs. 675/- per diem
-
-Subordinate Staff : Rs. 375/- per diem
-
-Provided that an employee can also claim lodging expenses reimbursement by production of hotel rent receipt subject to ceilings prescribed hereunder:
-
-Places with population of 12 lakhs and above and States of Goa:
-
-Clerical Staff : Rs. 2500/- per day
-
-Subordinate Staff : Rs. 1250/- per day
-
-Places with population of 5 lakhs and above, State Capitals/ Capitals of Union Territories not covered in column (A)
-
-Clerical Staff : Rs. 2000/- per day
-
-Subordinate Staff : Rs. 1000/- per day
-
-Other Places:
-
-Clerical Staff : Rs. 1500/- per day
-
-Subordinate Staff : Rs. 750/- per day
-
-Note: In respect of State Bank of India, the above lodging rates along with other conditions will be decided at bank level.
-
-Provided further that in such cases of reimbursement of hotel rent, boarding charges at 25% of the haling allowance shall be payable.
-
-''',
-      false),
-  ListItem(
-      'Special Allowance',
-      '''With effect from 1.11.2017, workmen employees shall be paid Special Allowance as under:
-
-– 16.40 % of the Basic pay with applicable DA thereon.
-Note: The Special Allowance with applicable DA thereon shall not be reckoned for
-
-superannuation benefits viz., pension including contribution to NPS, PF & Gratuity.''',
-      false),
-  ListItem(
-      'DUTIES OF SWO A',
-      '''All members of the clerical staff who do not get any special pay as on 30th April 2010 on regular basis shall be designated as Single Window Operator A. The following duties shall inter alia form part of their normal duties:
-
-(i) Acknowledgements of inward mail received.
-
-(ii) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
-
-(iii) Delivery of cheque books subject to authorisation by competent authority.
-
-(iv) Issue of cash receipts.
-
-(v) Issue of E.S.I. stamps wherever applicable or may become applicable.
-
-(vi) Recounting of currency notes by cash department staff.
-
-(vii) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
-
-All clerks shall also perform all duties and functions of their cadre, either online or manually, which does not involve any passing or supervisory function of an officer of the bank. He will, wherever and whenever required, function as a single window operator where he will also receive and pay cash. In addition, his duties will include
-
-a. Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.10,000/-
-
-b. Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.15,000/-
-
-c. Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.15,000/-''',
-      false),
-  ListItem(
-      'DUTIES OF SWO B',
-      '''(i) Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.20,000/-
-
-(ii) Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.25,000/-
-
-(iii) Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.25,000/-
-
-(iv) Acknowledgements of inward mail received.
-
-(v) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
-
-(vi) Delivery of cheque books subject to authorisation by competent authority.
-
-(vii) Issue of cash receipts.
-
-(viii) Issue of E.S.I. stamps wherever applicable or may become applicable.
-
-(ix) Recounting of currency notes by cash department staff.
-
-(x) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
-
-Note:
-(i) In respect of the above special pay carrying posts in clerical cadre
-
-a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
-
-b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
-
-c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
-
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
-      false),
-  ListItem(
-      'DUTIES OF HEAD CASHIER II',
-      '''Holding the bank’s cash, key and/or other valuables in safe custody jointly with an officer and being accountable for them and being responsible for the running of the cash department.
-
-(v)Discharging/endorsing bills, cheques, etc.
-
-(vi)Being in charge of clearing and godown departments, etc.
-
-(vii)Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.50,000/- and cash vouchers upto Rs.50,000/- jointly with an authorized person
-
-Note:
-(i) In respect of the above special pay carrying posts in clerical cadre
-
-a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
-
-b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
-
-c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
-
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
-      false),
-  ListItem(
-      'DUTIES OF SPECIAL ASSISTANT',
-      '''Special Assistants will be accountable and responsible for running of the department/section under them and their duties will involve looking after and checking the work of other clerk or clerks and sub-staff and will include :
-
-1) Passing independently, manually or online, cash instruments upto Rs.35,000/- and clearing and transfer cheques vouchers etc., (whether credits or debits) upto and including Rs.1,50,000/-. Passing will include verification of signatures and scrutiny as to the correctness of endorsements on and other particulars of such instruments. There shall be no limits for verification of signatures, passing of authenticated credit vouchers/entries and for verifying authenticated vouchers in the ledgers, books, computer print-outs etc.
-
-2) Accept, verify and post cash / transfer / clearing cheques and other instruments, as the case may be, in appropriate books of accounts / ledgers, either manually or online, and give due acknowledgements.
-
-3) Signing vouchers, cheques, drafts, mail transfers, pay orders, advices such as non payment advices, inter branch fate calling advices, bill schedules, demand notices, statements certificates etc.,
-
-4) Checking all vouchers, advices, statements, cheques, drafts etc., bills and books of accounts including current savings and other ledgers, cash, postal and revenue stamps, franking machine balances, exchange, discount, brokerage calculations and initialing by way of authenticating them for accuracy/correctness;
-
-5) Checking, manually or online, current, savings and other accounts,
-
-6) Checking the coding and decoding of telegrams (excluding check symbols or cyphers).
-
-7) Discharging, endorsing cheques, bills, etc.,
-
-8) Perform, when required in a computerised set up, system control functions, either jointly with an officer or independently, upon specific authorisation in this regard;
-
-9) Briefly explain, the features of Bank’s various products and services to customers, to reply their queries and to refer interested customers to appropriate personnel;
-
-10) Inspecting godown (only in banks where such work is already being done by workmen).
-
-For the purpose of efficient and effective functioning of the section or department the special assistant shall ensure that all acts, things and steps necessary therefore are taken by himself of by the clerks placed under him and shall ensure that, wherever necessary :
-
-a) Reminders are sent on time and followed up
-
-b) Pass sheets/books are filled up and issued promptly
-
-c) Deposits are renewed on due dates or reminders sent to the parties
-
-d) Standing instructions are complied with
-
-e) Bills are accepted and due dates diarised/advised and followed up
-
-f) Interest, commissions and service charges are collected
-
-g) Proceeds of bills are received or remitted promptly;
-
-h) Confirmation of balance of accounts of the customers and its follow up.
-
-i) All securities relating to the department/section of which the special assistant is in charge are secured and/or kept in proper custody and properly handed to the authorized person at the close of the day.
-
-j) Balances promptly taken, tallied and reported and followed up and also returns submitted.
-
-K) Advices and/or duplicate advices /summaries are issued /responded promptly,whenever called for;
-
-l) Checking the proper recording of entries and all relevant particulars in regard to accounts opened under due authorisation.
-
-Note:
-(i) In respect of the above special pay carrying posts in clerical cadre
-
-a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
-
-b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
-
-c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
-
-(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.''',
-      false),
-  ListItem(
-      'DUTIES OF SUBSTAFF',
-      '''All the normal and routine duties of the subordinate staff cadre and for performance of which no special pay shall be payable. In addition they shall also be required to perform the following duties.
-
-1) To take money orders, to buy stamps etc., which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
-
-2) To stitch currency note bundles;
-
-3) To stitch and seal parcels and packets containing currency notes;
-
-4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
-
-SPECIAL PAY DUTIES:
-1)CASH PEON DUTIES:
-1) To take money orders, to buy stamps etc.,which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
-
-2) To stitch currency note bundles
-
-3) To stitch and seal parcels and packets containing currency notes;
-
-4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
-
-2)DUFTARY DUTIES:
-1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
-
-2) Collecting payments for cheques or postal order etc., from banks or post office counters. They may also be required to collect cash not exceeding Rs.5,000/- at a time against various instruments.
-
-3) Simple binding of books and registers;
-
-4) Press copying;
-
-5) Filing independently letters and other papers in respect files as per indications marked thereon;
-
-6) Assisting in issuing stationery;
-
-7) Stacking under guidance old records in orderly manner and assisting in giving them out when required; and
-
-8) Undertaking the whole process of sorting, arranging, numbering, tallying the total number or stitching the vouchers.
-
-3)WATCHMAN DUTIES:
-Persons other than “Armed Guards” who are required to perform watch and ward duties i.e. to watch or look after the premises or a department, for the purposes of its safety, security and guard against infiltration and against removal of the bank’s property by any unauthorised person AND/OR to watch and guard as above, the movement of cash from one place to another inside the bank premises or outside where an Armed Guard is not employed at the Branch / Office.
-
-4)ARMED GUARD DUTIES:
-Persons required to perform watch and ward duties i.e. to watch or look after the premises or department for the purposes of its safety, security and guard against attack or assault or infiltration and against removal of the bank’s property by any unauthorized persons AND/OR to watch and guard as above the movement of cash from one place to another whether inside or outside the Bank, for which purpose they are required by the bank to carry any of the following weapons:
-
-i) Gun, Pistol or any other fire arm; or
-
-ii) Dagger, sword, khukri or spear; or
-
-iii) any other licensed weapon
-
-Note: ‘Retainers’ Peons (other than watchmen) whose names are registered in the Bank’s license as Retainers will, when they perform “Armed Guard” duties, be entitled to special pay for “Armed Guards” pro rata.
-
-5)BILL COLLECTOR DUTIES:
-1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
-
-2) Collecting payments for cheques of postal order etc. from banks or post office counters.
-
-3)They may also be required to collect cash not exceeding Rs.4000/- at a time against various instruments.
-
-6)HEAD PEON DUTIES:
-Persons required to assist in supervision of various matters pertaining to subordinate staff like:
-
-i) Cleanliness of the office premises;
-
-ii) Cleanliness of uniforms;
-
-iii) Leave arrangements;
-
-iv) Arrangements for safekeeping of keys; and 
-
-v) Distribution of duties amongst the subordinate staff 
-
-7)ELECTRICIAN DUTIES:
-Their work involves carrying out semi-skilled electrical work like routine maintenance of electrical equipments, effecting minor repairs to electrical fixtures and appliances.
-
-8)DRIVER DUTIES:
-Persons required to drive, maintain and effect minor repairs (not requiring a technician’s skill) to motor cars, motor vans, station wagons, scooters, motor cycles or other motor vehicles.
-
-9)AC PLANT HELPER DUTIES:
-Semi skilled persons who under the supervision of the technician attend to routine maintenance of and minor repairs to air conditioning plants.
-
-10)LIFTMAN DUTIES:
-Persons required to operate the lifts on regular assignment.''',
-      false),
-  ListItem(
-      'Washing Allowance',
-      '''With effect from 1st November 2017, washing allowance shall be payable at Rs.200/- p.m., where the washing of livery is not arranged by the bank.''',
-      false),
-  ListItem(
-      'Split Duty Allowance',
-      '''In partial modification of Clause 26 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November 2017, Split Duty Allowance shall be payable at all centers at Rs 200/- per month.''',
-      false),
-  ListItem(
-      'Project Area Compensatory Allowance',
-      '''In partial modification of Clause 27 of the Bipartite Settlement dated 25th May 2015, w.e.f. 1st November, 2017, workmen in project areas shall be paid project area compensatory allowance as under:
-
-Project Area Group ‘A’
-
-Clerical Staff – Rs. 290/-p.m. Sub-Staff – Rs.230/- p.m.
-
-Project Area Group ‘B’
-
-Clerical Staff – Rs.230/- p.m. Sub-Staff – Rs.200/- p.m.
-
-Note: In addition to the areas/places identified and defined as Project Ares, Branches opened and located within Special Economic Zone, Export Promotion Zone, etc. shall be treated as Project Areas for the purpose of payment of project area compensatory allowance as above.
-
-Project Area centres: 
-
-In partial modification of clause 8.1 Settlement dated 19th October, 1966, clause II/8 of settlement dated 8th November, 1973 and clause 2 of Minutes of Discussions dated 15th/16th April, 1980, the following places shall be termed as Project Areas for the purpose of the provisions under this Settlement. 
-
-Project Area Centres – Group A 
-
-1. Bheemarayangudi (Gulbarga District, Karnataka) 
-
-2. Bhilai
-3. Bokaro
-4. Burnpur (West Bengal) 
-
-5. Dapchari (Thane District, Maharashtra)
-6. Durg (Madhya Pradesh)
-7. Durgapur
-8. Heavy Electricals, Kailasapuram (Tiruchirapalli) 
-
-9. Jamshedpur 
-
-10. Pong Dam (Punjab)
-11. Rajghat (Madhya Pradesh)
-12. Ramagundam (Andhra Pradesh)
-13. Reasi (Jammu & Kashmir)
-14. Rourkela
-15. Sundarnagar (Mandi district, Himachal Pradesh) 
-
-16. Tirthapuri (Aurangabad District, Maharashtra) 
-
-17. Visakhapatnam (Andhra Pradesh) 
-
-Project Area Centres – Group B 
-
-1. Agali Attapady Irrigation Project 
-
-2. Almatti Dam Site (Karnataka)
-3. Ambikanagar (Karnataka)
-4. Ankleshwar (Gujarat) 
-
-5. Balimela (Koraput District, Orissa)
-6. Bhadravati (Chandrapur District, Maharashtra) 
-
-7. Bhopal Heavy Electricals (Madhya Pradesh) 
-
-8. Cambay (Gujarat)
-9. Chakranagar (Shimoga District)
-10. Chas
-11. Chattargarh (Rajashthan – Rajasthan Canal) 
-
-12. Dandeli (Karnataka)
-13. Deola (Chankapur Project, Nasik) 
-
-14. Dharoi Village (Ahmedabad Circle) 
-
-15. Donimalai (Karnataka)
-16. Dhurva
-17. Farakka Barrage 
-
-18. Gajuvaka
-19. Ganeshgudi (Giant Kali Project, SupaDam)
-20. Gunupur (Koraput District, Orissa)
-21. Haldia (West Bengal)
-22. Hatia
-23. Idikki
-24. Jagdalpur
-25. Jeypore (Koraput District, Orissa)
-26. Jog Falls (Karnataka)
-27. Jyotipuram (Salai Hydro Electric Project, Jammu & Kashmir 
-
-28. Kalpakkam (Tamilnadu)
-29. Kanker (Bastar District)
-30. Kashipur (Koraput District, Orissa)
-31. Kasimpur (Aligarh, Uttar Pradesh)
-32. Kargal (Mysore)
-33. Khetri
-34. Koraput (Koraput District, Orissa)
-35. Kotpad (Koraput District, Orissa)
-36. Kudremukh Iron Ore Project (Malleswara)
-37. Kulamavu
-38. Mach hakund (Koraput District, Orissa)
-39. Mahi (Rajasthan – Dam Project)
-40. Malthon (West Bengal)
-41. Malkangiri (Koraput District, Orissa)
-42. Mandi (Himachal Pradesh)
-43. Munsar (Pench Electric Project, Maharashtra)
-44. Nagarjunsagar
-45. Nangal Township
-46. Narora Atomic Power Project
-47. Nawarngpur (Koraput District, Orissa)
-48. Neyveli
-49. Pandoh
-50. Pochampadu (Andhra Pradesh)
-51. Pophali ( Maharashtra)
-52. Ramchandrapuram
-53. Ranchi (Bihar)
-54. Rawat Bhata
-55. Rayaguda (Koraput District, Orissa)
-56. Sileru (Andhra Pradesh)
-57. Supa (Karnataka)
-58. Srisilam (Andhra Pradesh) 
-
-59. Sunabeda (Koraput District, Orissa)
-60. Surangani (Himachal Pradesh)
-61. Talwara
-62. Umarkote (Koraput District, Orissa)
-63. Wadigodri (Jayakwad Project, Aurangabad) 
-
-64. Obra (Uttar Pradesh) 
-
-65. Renukoot (Uttar Pradesh) 
-
-Note: It is understood that as and when Central Government or any State Government may declare any other Centre as Project Area, the same would be treated accordingly. Similarly, if any Centre is treated as non-project area by them, those Centres would stand deleted from the above list. ''',
-      false),
-  ListItem(
-      'Hill and Fuel Allowance',
-      '''Hill and Fuel Allowance shall be payable at the following rates with effect from 1st November 2017:
-
-11th Bipartite Settlement
-
-a. At places situated at a height of 3000 meters and above	8% of pay
-(Max. Rs.2250/-p.m.)
-b. At places situated at a height of and over 1500 meters but below 3000 meters	4% of pay
-(Max. Rs.900/-p.m.)
-c. At places situated at a height of over 1000 meters but less than 1500 meters and Mercara Town	3 % of pay
-(Max. Rs. 750/-p.m.)
-Note: All other existing provisions shall remain unchanged. SBI may revise the ceiling amounts.''',
-      false),
-  ListItem(
-      'MEDICAL AID',
-      '''• On declaration basis : Rs.2355 per year
-
-In partial modification of Clause 17 of the Bipartite Settlement dated 25th May, 2015, with effect from 1st November 2017, the reimbursement of medical expenses under medical aid scheme shall be restricted to an amount of Rs.2355 /- per annum.
-For the calendar year 2017, the reimbursement of medical expenses under the medical aid scheme shall be enhanced proportionately for two months i.e. November and December 2017.''',
-      false),
-  ListItem(
-      'NEW MEDICAL INSURANCE SCHEME',
-      '''The scheme covers expenses of the officers / employees and dependent in cases he/she  shall contract      any disease or suffer from any illness (hereinafter called DISEASE) or sustain any bodily injury through accident (hereinafter called INJURY) and if such disease or injury shall require any such insured Person, upon the advice of a duly qualified Physician/Medical Specialist/Medical practitioner (hereinafter called MEDICAL PRACTITIONER) or of a duly qualified Surgeon (hereinafter called SURGEON) to incur hospitalization/domiciliary hospitalization and domiciliary treatment expenses as defined in the Scheme, for medical/surgical treatment at any Nursing Home/Hospital / Clinic (for domiciliary treatment)/ Day care Centre  which are registered with the local bodies, in India as herein defined (hereinafter called HOSPITAL) as an inpatient or otherwise as specified as per the scheme, to the extent of the sum insured + Corporate buffer.  
-
-1.1. The Scheme Covers Employee + Spouse + Dependent Children + 2 dependent Parents /parents-inlaw. 
-
-• No age limit for dependent children. (including step children and legally adopted children ) A child would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month; which is at present, or revised by Indian Banks’ Association in due course. Widowed Daughter and dependant divorced / separated daughters, sisters including unmarried / divorced / abandoned or separated from husband/ widowed sisters and Crippled Child shall be considered as dependent for the purpose of this policy. Physically challenged Brother / Sister with 40% or more disability.
-
-• No Age Limits for Dependent Parents. Either Dependent Parents or parents-In-law will be covered. Parents would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month, which is at present, or revised by Indian Banks’ Association in due course, and wholly dependent on the employee as defined in this scheme. 
-
- (The definition of family shall undergo a change as decided in due course in the negotiations)  
-
-1.2.1  All New Officers / employees to be covered from the date of joining as per their appointment letter. For additions /deletions during policy period, premium to be charged /refunded on pro rata basis. 
-
-1.2.2  Continuity benefits coverage to officers / employees on retirement and also to the Retired Officers / employees, who may be inducted in the Scheme. 
-
-1.3 Sum Insured: Hospitalization and Domiciliary Treatment coverage as defined in the scheme per annum
-
-Clerical Staff :  Rs.300000
-
-Sub Staff       : Rs.300000
-
-Change in sum insured after commencement of policy to be considered in case of promotion of the employee or vice versa.  
-
-1.4 Corporate Buffer: Rs. 100,00,00,000/- Corporate buffer may be appropriated as per the premium of the bank. If the Corporate buffer of one bank is exhausted, the remaining amount can be claimed from the unutilized corporate buffer of the other banks. Corporate Buffer can be authorized by the Management, through an Authorized person / Committee as decided by IBA / Bank, and informed directly to the THIRD PARTY ADMINISTRATOR by keeping the insurance company in the loop.
-
-1.5 In the event of any claim becoming admissible under this scheme, the company will pay through Third Party Administrator to the Hospital / Nursing Home or insured the amount of such expenses as would fall under different heads mentioned below and as are reasonably and medically necessary incurred thereof by or on behalf of such insured but not exceeding the Sum Insured in aggregate mentioned in the schedule hereto.
-
-A. Room and Boarding expenses as provided by the Hospital/Nursing Home not exceeding   Rs. 5000 per day or the actual amount whichever is less.   B. Intensive Care Unit (ICU) expenses not exceeding Rs. 7500 per day or actual amount whichever is less.
-
-C. Surgeon, team of surgeons, Assistant surgeon, Anesthetist, Medical Practitioner, Consultants, Specialists Fees.
-
-D. Nursing Charges , Service Charges, IV Administration Charges, Nebulization Charges, RMO charges, Anaesthetic, Blood, Oxygen, Operation Theatre Charges, surgical appliances, OT consumables, Medicines & Drugs, Dialysis, Chemotherapy, Radiotherapy, Cost of Artificial Limbs, cost of prosthetic devices implanted during surgical procedure like pacemaker, Defibrillator, Ventilator,  orthopaedic implants, Cochlear Implant, any other implant, IntraOccular Lenses, ,  infra cardiac valve replacements, vascular stents, any other valve replacement, laboratory/diagnostic tests, X-ray CT Scan, MRI, any other scan, scopies  and such similar expenses that are medically necessary, or incurred during  hospitalization as per the advice of the attending doctor.
-
-E. Hospitalization expenses (excluding cost of organ) incurred on donor in respect of organ transplant to the insured. 
-
-1.6 Pre and Post Hospitalization expenses payable in respect of each hospitalization shall be the actual expenses incurred subject to 30 days prior to hospitalization and 90 days after discharge. 
-
-2.   DEFINITIONS: 
-
-2.1 ACCIDENT:  An accident is a sudden, unforeseen and involuntary event caused resulting in injury –    2.2 A.     “Acute condition” – Acute condition is a disease, illness or injury that is likely to respond quickly to treatment which aims to return the person to his or her state of health immediately before suffering the disease/illness/injury which leads to full recovery. B.     “Chronic condition” – A chronic condition is defined as a disease, illness, or injury that has one or more of the following characteristics – i. It needs ongoing or long-term monitoring through consultations, examinations, checkups and/or tests – ii. It needs ongoing or long-term control or relief of symptoms iii. It requires your rehabilitation or for you to be specially trained to cope with it iv. It continues indefinitely v. It comes back or is likely to come back.  
-
-2.3  ALTERNATIVE TREATMENTS:  Alternative Treatments are forms of treatment other than treatment “Allopathy” or “modern medicine and includes Ayurveda, unani, siddha homeopathy and Naturopathy in the Indian Context, for Hospitalisation only and Domiciliary for treatment only under ailments mentioned under clause number 3.1  
-
-2.4  ANY ONE ILLNESS:   Any one illness will be deemed to mean continuous period of illness and it includes relapse within 45 days from the date of last consultation with the Hospital / Nursing Home where treatment has been taken. Occurrence of the same illness after a lapse of 45 days as stated above will be considered as fresh illness for the purpose of this policy.
-
-2.5  CASHLESS FACILITY: 
-
-Cashless facility “means a facility extended by the insurer to the insured where the payments, of the cost of treatment undergone by the employee and the dependent family members of the insured in accordance with the policy terms and conditions, or directly made to the network provider by the insurer to the extent pre-authorization approved.
-
-2.6  CONGENITAL ANOMALY:
-
-Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure or position.
-
-a. Internal Congenital Anomaly which is not in the visible and accessible parts of the body
-
-b. External Congenital Anomaly which is in the visible and accessible parts of the body 
-
-2.7  CONDITION PRECEDENT: 
-
- Condition Precedent shall mean a policy term or condition upon which the Insurer’s liability under the policy is conditional upon.
-
-2.8  CONTRIBUTION: 
-
- The Officers / employees will not share the cost of an indemnity claim on a ratable proportion from their personal Insurance Policies. 
-
-2.9   DAYCARE CENTRE:
-
-A day care centre means any institution established for day care treatment of illness and/ or injuries or a medical setup within a hospital and which has been registered with the local authorities, wherever applicable, and is under the supervision of a registered and qualified medical practitioner AND must comply with all minimum criteria as under;-
-
- –  has qualified nursing staff under its employment  –  has all qualified medical practitioner(s) in charge   –  has a fully equipped operation theatre of its own where surgical procedures are carried out.
-
- – maintains daily records of patients and will make these accessible to the insurance companies authorised personnel. 
-
-2.10   DAY CARE TREATMENT:    Day care Treatment refers to medical treatment and or surgical procedure which is 
-
-iii. undertaken under general or local anesthesia in a hospital/day care Centre in less than a day because of technological advancement, and 
-
-iv.  Which would have otherwise required a hospitalisation of more than a day. 
-
-    Treatment normally taken on an out patient basis is not included in the scope of this definition.
-
-2.11   DOMICILIARY HOSPITALIZATION:
-
- Domiciliary Hospitalization means medical treatment for an illness/disease/injury which in the   normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances:
-
-c)  The condition of the patient is such that he/she is not in a condition to be removed to a hospital or
-
-d) The patient takes treatment at home on account of non-availability of room in a hospital.
-
-2.12 DOMICILIARY TREATMENT
-
-  Treatment taken for specified diseases which may or may not require hospitalization as mentioned in the Scheme under clause Number 3.1
-
- 2.13   HOSPITAL / NURSING HOME:
-
-A Hospital means any institution established for in-patient care and day care treatment of illness and/or injuries and which has been registered as a Hospital with the local authorities under the Clinical establishments (Registration and Regulation) Act, 2010 or under the enactments specified under the Schedule of Section 56(1) of the said Act OR complies with all minimum criteria as under
-
-– Has qualified nursing staff under its employment round the clock.
-
-– Has at least 10 in-patient beds in towns having a population of less than 10 lacs and at least 15 in-patient beds in all other places;
-
-– Has qualified medical practitioner(s) in charge round the clock;
-
-– Has a fully equipped Operation Theatre of its own where surgical procedures are carried out;
-
-– Maintains daily records of patients and makes these accessible to the insurance company’s authorized personnel.
-
-The term ‘ Hospital / Nursing Home ‘ shall not include an establishment which is a place of rest,     a place for the aged, a place for drug-addicts or place for alcoholics, a hotel or a similar place.
-
-This clause will however be relaxed in areas where it is difficult to find such hospitals. 
-
-2.14   HOSPITALIZATION:
-
- Hospitalization means admission in a Hospital/Nursing Home for a minimum period of 24 consecutive hours of inpatient care except for specified procedures/treatments, where such admission could be for a period of less than a day, as mentioned in clauses 2.9 and 2.10 
-
-2.15   ID CARD: 
-
- ID Card means the identity card issued to the insured person by the THIRD PARTY ADMINISTRATOR to avail cashless facility in network hospitals.
-
-2.16   ILLNESS: 
-
- Illness means a sickness or a disease or pathological condition leading to the impairment of normal physiological function which manifests itself during the policy period and requires medical treatment.
-
-2.17   INJURY:
-
-Injury means accidental physical bodily harm excluding illness or disease which is verified and certified by a medical practitioner.
-
-However all types of Hospitalization is covered under the Scheme.
-
-2.18   IN PATIENT CARE: 
-
-In Patient Care means treatment for which the insured person has to stay in a hospital for more than a day for a covered event.                    
-
-2.19   INTENSIVE CARE UNIT:
-
-Intensive Care Unit means an identified section, ward or wing of a Hospital which is under the constant supervision of a dedicated medical practitioner(s) and which is specially equipped for the continuous monitoring and treatment of patients who are in a critical condition, or require life support facilities and where the level of care and supervision is considerably more sophisticated and intensive than in the ordinary and other wards.
-
-2.20 MATERNITY EXPENSES: 
-
-  Maternity expenses/treatment shall include:
-
-a) Medical treatment expenses traceable to childbirth (including complicated deliveries and   caesarean sections incurred during hospitalization).
-
-b) Expenses towards medical termination of pregnancy during the policy period.       
-
-C) Complications on Maternity would be covered up to the Sum Insured plus the Corporate Buffer. 
-
-2.21 MEDICAL ADVICE: 
-
- Any consultation or advice from a medical practitioner/doctor including the issue of any prescription or repeat prescription.
-
-2.22 MEDICAL EXPENSES:
-
- Medical Expenses means those expenses that an insured person has necessarily and actually incurred for medical treatment on account of illness or accident on the advice of a medical practitioner, as long as these are no more than would have been payable if the insured person had not been insured. 
-
-2.23 MEDICALLY NECESSARY:  Medically necessary treatment is defined as any treatment, test, medication or stay in hospital or part of a stay in a hospital which 
-
-– is required for the medical management of the illness or injury suffered by the insured;
-
-– must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity;
-
-– must have been prescribed by a medical practitioner;
-
-– must confirm to the  professional standards widely accepted in  international medical practice or by the medical community in India.
-
-2.24   MEDICAL PRACTITIONER: 
-
- Medical Practitioner is a person who holds a valid registration from the Medical Council of any State or Medical Council of India or Council for Indian Medicine or the homeopathy set up by the Government of India or a State Government and is thereby entitled to practice medicine within its jurisdiction; and is acting within the scope and jurisdiction of his license. The term medical practitioner would include physician, specialist and surgeon.
-
-(The Registered practitioner should not be the insured or close family members such as parents, parentsin-law, spouse and children.)
-
-2.25  NETWORK PROVIDER:  
-
- Network Provider means hospitals or health care providers enlisted by an insurer or by a Third Party Administrator and insurer together to provide medical services to an insured on payment by a cashless facility. 
-
-The list of network hospitals is maintained by and available with the THIRD PARTY ADMINISTRATOR and the same is subject to amendment from time to time.
-
-2.26 NEW BORN BABY:   
-
-A new born baby means baby born during the Policy Period aged between one day and 90 days, both days inclusive.
-
-2.27 NON NETWORK : 
-
- Any hospital, day care Centre or other provider that is not part of the network.
-
-2.28 NOTIFICATION OF CLAIM
-
-Notification of claim is the process of notifying a claim to the Bank, insurer or Third Party Administrator as well as the address/telephone number to which it should be notified.
-
-2.29 OPD TREATMENT:    OPD Treatment is one in which the insured visits a clinic/hospital or associated facility like a consultation room for diagnosis and treatment based on the advice of medical a practitioner. The insured is not admitted as a day care or in-patient. 
-
-2.30 PRE-EXISTING DISEASE: 
-
- Pre Existing Disease is any condition, ailment or injury or related condition(s) for which you had signs or symptoms, and/or were diagnosed, and/or received medical advice/treatment, prior to the first policy issued by the insurer.  
-
-2.31 PRE – HOSPITALISATION MEDICAL EXPENSES:
-
-Medical expenses incurred immediately 30 days before the insured person is hospitalized will be considered as part of a claim as mentioned under Item 1.2 above provided that;
-
-i. such medical expenses are incurred for the same condition for which the insured person’s hospitalization was required and 
-
-ii. the inpatient hospitalization claim for such hospitalization is admissible by the insurance company.
-
-2.32 POST HOSPITALISATION MEDICAL EXPENSES:
-
-Relevant medical expenses incurred immediately 90 days after the Insured person is discharged from the hospital provided that;
-
-a. Such Medical expenses are incurred for the same condition for which the Insured Person’s Hospitalization was required; and
-
-b. The In-patient Hospitalization claim for such Hospitalization is admissible by the Insurance Company.
-
-2.33 QUALIFIED NURSE: 
-
-Qualified Nurse is a person who holds a valid registration from the Nursing Council of India or the Nursing Council of any state in India and/or who is employed on recommendation of the attending medical practitioner.
-
-2.34 REASONABLE AND CUSTOMARY CHARGES:
-
-Reasonable Charges means the charges for services or supplies, which are the standard charges for the specific provider and consistent with the prevailing charges in the geographical area for identical or similar services, taking into account the nature of the illness/injury involved.
-
-2.35 ROOM RENT:
-
-Room Rent shall mean the amount charged by the hospital for the occupancy of a bed on per day basis.  
-
-2.36   SUBROGATION:  Subrogation shall mean the right of the insurer to assume the rights of the insured person to   recover expenses paid out under the policy that may be recovered from any other source. It shall exclude the medical / accident policies obtained by the insured person separately. 
-
-2.37     SURGERY: 
-
-Surgery or surgical procedure means manual and/or operative procedure(s) required for treatment of an illness or injury, correction of deformities and defects, diagnosis and cure of diseases, relief of suffering or prolongation of life, performed in a hospital or day care Centre by a medical practitioner.
-
-2.38   Third Party Administrator
-
-Third Party Administrator means a Third Party Administrator who holds a valid License from Insurance Regulatory and Development Authority to act as a THIRD PARTY ADMINISTRATOR    and is engaged by the Company for the provision of health services as specified in the agreement between the Company and Third Party Administrator. 
-
-2.39 UNPROVEN/EXPERIMENTAL TREATMENT:  
-
-         Unproven/Experimental treatment is treatment, including drug Experimental therapy, which is not based on established medical practice in India. 
-
-3.  COVERAGES:
-
-3.1   Domiciliary Hospitalization / Domiciliary Treatment : Medical expenses incurred in case of the following diseases which need Domiciliary Hospitalization /domiciliary treatment as may be certified by the attending medical practitioner and / or bank’s ’medical officer shall be deemed as hospitalization expenses and reimbursed to the extent of 100%  
-
-Cancer , Leukemia, Thalassemia, Tuberculosis, Paralysis, Cardiac Ailments , Pleurisy , Leprosy, Kidney Ailment , All Seizure disorders, Parkinson’s diseases, Psychiatric disorder including schizophrenia and psychotherapy , Diabetes and its complications, hypertension, Hepatitis –B , Hepatitis – C, Hemophilia, Myasthenia gravis, Wilson’s disease, Ulcerative Colitis , Epidermolysis bullosa, Venous Thrombosis(not caused by smoking) Aplastic Anaemia, Psoriasis, Third Degree burns, Arthritis , Hypothyroidism , Hyperthyroidism expenses incurred on radiotherapy and chemotherapy in the treatment of cancer and leukemia, Glaucoma, Tumor, Diptheria, Malaria,  Non-Alcoholic Cirrhosis of Liver, Purpura, Typhoid, Accidents of Serious Nature , Cerebral Palsy, , Polio, All Strokes Leading to Paralysis, Haemorrhages caused by accidents, All animal/reptile/insect bite or sting , chronic pancreatitis, Immuno suppressants, multiple sclerosis / motorneuron disease, status asthamaticus,  sequalea of meningitis, osteoporosis, muscular dystrophies, sleep apnea  syndrome(not related to obesity), any organ related (chronic) condition, sickle cell disease, systemic lupus erythematous (SLE),  any connective  tissue  disorder,  varicose  veins,   thrombo  embolism venous thrombosis/venous thrombo embolism (VTE)],  growth disorders, Graves’ disease, Chronic obstructive Pulmonary Disease, Chronic Bronchitis, Asthma, Physiotherapy and swine flu shall be considered for reimbursement under domiciliary treatment. 
-
-Addition in Domiciliary Scheme coverage:
-
-The following treatments/ diseases have also been included under Domiciliary treatment coverage w.e.f. 1/10/2019.
-
-Type 1 Diabetes
-Rheumatoid Arthritis
-Psoriasis/Psoriatic Arthritis
-System lupus Erythematous
-Inflammatory Bowel Diseases
-Additions Diseases
-Sjogren’s Diseases
-Hashimoyos Thyroiditis
-Auto immune vacuities
-Pernicious Anemia
-Celiac disease
-Auto immune myositis
-The cost of Medicines, Investigations, and consultations, etc.in respect of domiciliary treatment shall be reimbursed for the period stated by the specialist and / or the attending doctor and / or the bank’s medical officer, in Prescription. If no period stated, the prescription for the purpose of reimbursement shall be valid for a period not exceeding 90 days. 
-
-3.2 Critical Illness :  To be provided to the employee only subject to a sum insured of Rs. 1,00,000/- . Cover starts on inception of the policy. In case an employee contracts a Critical Illness as listed below, the total sum insured of Rs.1,00,000/- is paid, as a benefit. This benefit is provided on first detection/diagnosis of the Critical Illness. 
-
-• Cancer  including  Leukemia
-
-• Stroke  
-
-• Paralysis 
-
-• By Pass Surgery
-
-• Major Organ Transplant
-
-• End Stage Liver Disease
-
-• Heart Attack   
-
-• Kidney Failure
-
-• Heart Valve Replacement Surgery
-
-Hospitalization is not required to claim this benefit. Further the Employee can claim the cost of hospitalization on the same from the Group Mediclaim Policy as cashless / reimbursement of expenses for the treatment taken by him. 
-
-3.3  Expenses on Hospitalization for minimum period of a day are admissible.  However, this time limit is not applied to specific treatments, such as
-
-Adenoidectomy 
-Haemo dialysis
-Appendectomy
-Fissurectomy / Fistulectomy 
-Ascitic / Plueral tapping 
-Mastoidectomy 
-Auroplasty  not Cosmetic in nature 
-Hydrocele
-Coronary angiography /Renal
-Hysterectomy
-Coronary angioplasty
-Inguinal/ ventral/ umbilica/ femoral hernia
-Dental surgery
-Parenteral chemotherapy
-D&C
-Polypectomy
-Excision of cyst/ granuloma/lump/tumor
-Eye surgery
-Septoplasty
- Fracture including hairline fracture /dislocation
-Piles/ fistula
-Radiotherapy
-Prostate surgeries
-Chemotherapy including parental chemotherapy
-Sinusitis surgeries
-Lithotripsy
-Tonsillectomy
-Incision and drainage of abscess
-Liver aspiration
-Varicocelectomy
-Sclerotherapy
-Wound suturing
-Varicose Vein Ligation
-FESS 
-All scopies along with biopsies
-Operations/Micro surgical operations on the nose, middle ear/internal ear, tongue, mouth, face, tonsils & adenoids, salivary glands & salivary ducts, breast, skin & subcutaneous tissues, digestive tract, female/male sexual organs.
- Lumbar puncture 
-This condition will also not apply in case of stay in hospital of less than a day provided –
-
- a. The treatment is undertaken under General or Local Anesthesia in a hospital / day care Centre in less than a day because of technological advancement and 
-
-b.   Which would have otherwise required hospitalization of more than a day. 
-
-3.4    Alternative Therapy :  Reimbursement of Expenses for hospitalization or domiciliary treatment (under clause 3.1) under the recognized system of medicines , viz, Ayurvedic ,Unani, Sidha, Homeopathy ,Naturopathy , if such treatment is taken in a clinic /hospital registered, by the central and state government . 
-
-3.5       MATERNITY EXPENSES BENEFIT EXTENSION 
-
-The hospitalization expenses in respect of the new born child can be covered within the Mother’s Maternity expenses. The maximum benefit allowable under this clause will be up to Rs. 50000/- for Normal Delivery and Rs. 75,000/- for Caesarean Section. 
-
-Special conditions applicable to Maternity expenses Benefit Extension:
-
-I. 9 months waiting period under maternity benefit will be waived from the policy.
-
-II. Pre-natal & post natal charges in respect of maternity benefit are covered under the policy up to 30 days and 60 days only, unless the same requires hospitalization. 
-
-III. Missed Abortions , Miscarriage or abortions induced by accidents are covered under the limit of Maternity IV. Complications in Maternity including operations for extra uterine pregnancy ectopic pregnancy would be covered in the up to the Sum Insured + Corporate Buffer V. Expenses incurred for Medical Termination of Pregnancy VI. Claim in respect of delivery to be given irrespective of the number of children  
-
-3.6 Baby Day one Cover: New born baby is covered from day one. All expenses incurred on the new born baby during maternity will be covered in addition to the maternity limit up to Rs, 20000/-.  However if the baby contacts any illness the same shall be considered in the Sum Insured + Corporate buffer. Baby to be taken as an additional member within the normal family floater. 
-
-3.7 Ambulance Charges: Ambulance charges are payable up to Rs 2500/- per trip to hospital and / or transfer to another hospital or transfer from hospital to home if medically advised. Taxi and Auto expenses in actual maximum up to Rs750/- per trip. Ambulance charges actually incurred on transfer from one center to another center due to Non availability of medical services/ medical complication shall be payable in full.  
-
-3.8 Pre- Existing Diseases / Ailments: Pre-existing diseases are covered under the scheme.  
-
-3.9 Congenital Anomalies: Expenses for Treatment of Congenital Internal / External diseases, defects anomalies are covered under the policy 
-
-3.10  Psychiatric diseases: Expenses for treatment of psychiatric and psychosomatic diseases be payable with or without hospitalization. 
-
-3.11 Advanced Medical Treatment: All new kinds of approved advanced medical procedures for e.g. laser surgery, stem cell therapy for treatment of a disease is payable on hospitalization /day care surgery. 
-
-3.12 Treatment taken for Accidents can be payable even on OPD basis in Hospital up to Sum Insured.  
-
-3.13 Taxes and other Charges : All Taxes , Surcharges , Service Charges , Registration charges , Admission Charges , Nursing ,  and Administration charges to be payable.
-
-Charges for diapers and sanitary pads are payable if necessary as part of the treatment  Charges for Hiring a nurse / attendant during hospitalization will be payable only in case of recommendation from the treating doctor in case ICU / CCU, Neo natal nursing care or any other case where the patient is critical and requiring special care. 
-
-3.14 Treatment for Genetic Disorder and stem cell therapy is covered under the scheme. 
-
-3.15  Treatment for Age related Macular Degeneration (ARMD), treatment such as Rotational Field Quantum magnetic Resonance (RFQMR), Enhanced External Counter Pulsation (EECP), etc. are covered under the scheme. Treatment for all neurological/ macular degenerative disorders shall be covered under the scheme.  
-
-3.16  Rental Charges for External and or durable Medical equipment of any kind used for diagnosis and or treatment including CPAP, CAPD, Bi-PAP, Infusion pump etc. will be covered under the scheme. However purchase of the above equipment to be subsequently used at home in exceptional cases on medical advice shall be covered. 
-
-3.17  Ambulatory devices i.e., walker, crutches, Belts, Collars, Caps, Splints, Slings, Braces, Stockings, elastocrepe bandages, external orthopaedic pads, sub cutaneous insulin pump,  Diabetic foot wear, Glucometer (including Glucose Test Strips)/ Nebulizer/ prosthetic devise/  Thermometer, alpha / water bed and similar related items etc., will be covered under the scheme. 
-
-3.18 Physiotherapy charges: Physiotherapy charges shall be covered for the period specified by the Medical Practitioner even if taken at home. 
-
-All claims admitted in respect of any/all insured person/s during the period of insurance shall not exceed the Sum Insured stated in the schedule and Corporate Buffer if allocated.
-
-4.  EXCLUSIONS: 
-
-The company shall not be liable to make any payment under this policy in respect of any expenses whatsoever incurred by any Insured Person in connection with or in respect of:
-
-4.1 Injury / disease directly or indirectly caused by or arising from or attributable to War, invasion, Act of Foreign enemy, War like operations (whether war be declared or not).
-
-4.2   a. Circumcision unless necessary for treatment of a disease not excluded hereunder or as may be necessitated due to an accident. 
-
-b. Vaccination or inoculation.
-
- c. Change of life or cosmetic or aesthetic treatment of any description is not covered.
-
-d. Plastic surgery other than as may be necessitated due to an accident or as part of any   illness.
-
-4.3 Cost of spectacles and contact lenses, hearing aids. Other than Intra-Ocular Lenses and Cochlear Implant. 
-
-4.4         Dental treatment or surgery of any kind which are done in a dental clinic and those that are cosmetic in nature. 
-
-4.5     Convalescence, rest cure, Obesity treatment and its complications including morbid obesity, treatment relating disorders, Venereal disease, intentional self-injury and use of intoxication drugs / alcohol.
-
-4.6 All expenses arising out of any condition directly or indirectly caused to or associated with Human TCell Lymphotropic Virus Type III (HTLB – III) or lymphadinopathy Associated Virus (LAV) or the Mutants Derivative or Variation Deficiency Syndrome or any syndrome or condition of a similar kind commonly referred to as AIDS. 
-
-4.7 Charges incurred at Hospital or Nursing Home primarily for diagnosis x-ray or Laboratory examinations or other diagnostic studies not consistent with or incidental to the diagnosis and treatment of positive existence of presence of any ailment, sickness or injury, for which confinement is required at a Hospital / Nursing Home, unless recommended by the attending doctor. 
-
-4.8 Expenses on vitamins and tonics unless forming part of treatment for injury or diseases as certified by the attending physician  
-
-4.9 Injury or Disease directly or indirectly caused by or contributed to by nuclear weapon / materials.
-
-4.10    All non-medical expenses including convenience items for personal comfort such as charges for telephone, television, /barber or beauty services, died t  charges, baby food, cosmetics, tissue paper, diapers, sanitary pads, toiletry items and similar incidental expenses, unless and otherwise they are necessitated during the course of treatment.  
-
-5. CONDITIONS:
-
-5.1  Contract: the proposal form, declaration, and the policy issued shall constitute the complete contract of insurance.
-
-5.2 Every notice or communication regarding hospitalization or claim to be given or made under this Policy shall be communicated to the office of the Bank, dealing with Medical Claims, and/or the THIRD PARTY ADMINISTRATOR office as shown in the Schedule. Other matters relating to the policy may be communicated to the policy issuing office.
-
-5.3 The premium payable under this Policy shall be paid in advance.  No receipt for Premium shall be valid except on the official form of the company signed by a duly authorized official of the company.  The due payment of premium and the observance and fulfillment of the terms, provisions, conditions and endorsements of this Policy by the Insured Person in so far as they relate to anything to be done or complied with by the Insured Person shall be a condition precedent to any liability of the Company to make any payment under this Policy.  No waiver of any terms, provisions, conditions and endorsements of this policy shall be valid unless made in writing and signed by an authorised official of the Company.
-
-5.4 Notice of Communication: Upon the happening of any event which may give rise to a claim under this Policy notice with full particulars shall be sent to the Bank or  Regional Office or THIRD PARTY ADMINISTRATOR named in the schedule at the earliest in case of emergency hospitalization within 7 days from the time of Hospitalisation/Domiciliary Hospitalisation . 
-
-5.5 All supporting documents relating to the claim must be filed with the office of the Bank dealing with the claims or THIRD PARTY ADMINISTRATOR within 30 days from the date of discharge from the hospital.  In case of post-hospitalisation, treatment (limited to 90 days), (as mentioned in para 2.32) all claim documents should be submitted within 30 days after completion of such treatment.
-
-Note:     Waiver of these Conditions 5.4 and 5.5 may be considered in extreme cases of hardship where it is proved to the satisfaction of the Bank that under the circumstances in which the insured was placed it was not possible for him or any other person to give such notice or deliberate or file claim within the prescribed time-limit. The same would be waived by the TPA without reference to the Insurance Company.
-
-5.5.1 The Insured Person shall obtain and furnish to the office of the Bank dealing with the claims    /  THIRD PARTY ADMINISTRATOR with all original bills, receipts and other documents upon which a claim is based and shall also give such additional information and assistance as the Bank through the THIRD PARTY ADMINISTRATOR/Company may require in dealing with the claim.
-
-5.5.2  Any medical practitioner authorised by the Bank / Third Party Administrator / shall be allowed to examine the Insured Person in case of any alleged injury or disease leading to Hospitalisation, if so required.
-
-5.6 The Company shall not be liable to make any payment under this policy in respect of any claim if such claim be in any manner fraudulent or supported by any fraudulent means or device whether by the Insured Person or by any other person acting on his behalf.
-
-5.7  DISCLOSURE TO INFORMATION NORM
-
- The claim shall rejected in the event of misrepresentation, mis-description or non-disclosure of any material fact.
-
-5.8 Claims will be managed through the same Office of the Bank from where it is managed at present. The Insurance Companies third party administrator will be setting up a help desk at that office and supporting the bank in clearing all the claims on real time basis. 
-
-5.9   In case of rejection of claims it would go through a Committee set up of the Bank, Third Party Administrator and United India Insurance Co Ltd. unless rejected by the committee in real time the claim should not be rejected.
-
-5.10  There would be a continuity of this Scheme / benefits to the Retiring Officers / employees and their family and also to the Retired Officers / employees and their family.''',
-      false),
-  ListItem(
-      'LEAVE FARE CONCESSION – CLERK',
-      '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
-
-CLERK:
-
-Once in 2 years – 2200 KM
-
-Once in 4 years – 4400 KM
-
-ELIGIBILITY
-
-AC II Tier for the journey by mail/express train.
-
-By Steamer – I Class Cabin
-
-Note: The above mentioned distance limit is only for one way travel and reimbursement will be for both onward and return journey.
-
-Road Milege charges Rs.8/- per Km.
-
-• Permanent employees with 11 months service eligible for LFC.
-
-• Employees have to give their option to avail LFC either in 2 year block or 4 year block
-
-• Clerical employees can undertake travel by air ; reimbursement will be restricted to the entitled train fare as per the admissible distance.
-
-• Employees can undertake the travel by any means of surface transport including taxi or own car within the eligible entitled fare.
-
-• By giving option, employees can encash the LFC and cash will be paid upto 100% of the entitled train fare of that block.
-
-• While encashing LFC, no leave need to be taken
-
-• While availing LFC/encashing LFC, employees under 2 year block can encash Privilege leave upto either 15 days in each block or 30 days in one block. Employees under 4 year block can encash upto 30 days.
-
-For the purpose of LFC / Medical facilities)
-
-1. Spouse
-
-2. Wholly dependent unmarried children (including step children and legally adopted children)
-
-3. Parents ordinarily residing with and wholly dependent on the employee.
-
-4. A married female employee may include her natural parents or parents-in-law under the definition of family (but not both) provided that the parents/parents-in-law are ordinarily residing with and wholly dependent on her. 
-
-Provided however, in the case of non-subordinate staff, they will be reimbursed the fare for travel by Rajdhani/Shatabdi trains if the travel has been actually undertaken by such trains.
-
-Provided further that where the non-subordinate employee and / or dependent members of his family undertake travel by air either to his place of domicile or to any other place for rest and recuperation within India, he shall be entitled to be reimbursed the actual air fare so incurred or the II AC class fare by train by a direct route in case of travel to place of domicile or to the extent of the maximum admissible distance in case of travel to any other place for rest and recuperation, during the two year/four year block respectively, whichever is less.
-
-Provided further that in addition to train fare, charges incurred on account of local sight-seeing during availment of LFC may also be reimbursed subject to total claim not exceeding the amount equivalent to eligible train fare as per respective entitlement.
-
-Note: GST Charges levied on Train Fare shall be over and above the entitlement. In view of prevailing dynamic fare system, the cost of train tickets charged on the date of booking will be reimbursed.
-
-For employees working in North East States, LFC will begin from Guwahati and the eligible train fare from their place of work to Guwahati will be additionally paid. Similarly, eligible fare for Andaman & Nicobar islands to Chennai/Kolkata, Lakshadweep to Kochi, far-flung area branches in Himachal Pradesh, Uttarakhand, Sikkim, Jammu & Kashmir or any other areas which are not directly connected by train shall be additionally reimbursed under LFC in addition to normal entitlement for the employees working in these areas to the nearest major Railway Station.
-
-An employee and/or members of his family, when availing leave fare concession may undertake travel by any mode of surface transport between places and the employee will be eligible to claim in respect of such journey his actual expenditure or the notional train fare by the entitled class for the admissible and entitled distance, whichever is less, within his overall entitlement.
-
-For the purpose of this sub-clause, travel by any approved mode of surface transport would mean such travel undertaken through any public transport or transport (including taxi) operated by agencies / tour operators approved by appropriate Government authorities or motorcar owned by the employee/spouse.
-
-(iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
-(iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
-(v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
-(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
-      false),
-  ListItem(
-      'LEAVE FARE CONCESSION – SUBSTAFF',
-      '''Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
-
-SUBSTAFF
-
-Once in 2 years – 2600 KM
-
-Once in 4 years – 5200 KM
-
-ELIGIBILITY – AC III Tier for the journey by mail/express train. By Steamer – II Class Cabin
-
-Note: The above mentioned distance limit is only for one way travel and reimbursement will be for both onward and return journey.
-
-Road Milege charges Rs.8/- per Km.
-
-• Permanent employees with 11 months service eligible for LFC.
-
-• Employees have to give their option to avail LFC either in 2 year block or 4 year block
-
-• Clerical employees can undertake travel by air ; reimbursement will be restricted to the entitled train fare as per the admissible distance.
-
-• Employees can undertake the travel by any means of surface transport including taxi or own car within the eligible entitled fare.
-
-• By giving option, employees can encash the LFC and cash will be paid upto 100% of the entitled train fare of that block.
-
-• While encashing LFC, no leave need to be taken
-
-• While availing LFC/encashing LFC, employees under 2 year block can encash Privilege leave upto either 15 days in each block or 30 days in one block. Employees under 4 year block can encash upto 30 days.
-
-• Employees can avail LFC with their family
-
-• Employee and family can travel together or avail LFC by separate travel within the block
-
-• Employees can travel by steamer while on LFC and for clerks entitled class would be I Class Cabin and for substaff II class cabin
-
-For the purpose of LFC / Medical facilities)
-
-1. Spouse
-
-2. Wholly dependent unmarried children (including step children and legally adopted children)
-
-3. Parents ordinarily residing with and wholly dependent on the employee.
-
-4. A married female employee may include her natural parents or parents-in-law under the definition of family (but not both) provided that the parents/parents-in-law are ordinarily residing with and wholly dependent on her. 
-
-Provided however, in the case of non-subordinate staff, they will be reimbursed the fare for travel by Rajdhani/Shatabdi trains if the travel has been actually undertaken by such trains.
-
-Provided further that where the non-subordinate employee and / or dependent members of his family undertake travel by air either to his place of domicile or to any other place for rest and recuperation within India, he shall be entitled to be reimbursed the actual air fare so incurred or the II AC class fare by train by a direct route in case of travel to place of domicile or to the extent of the maximum admissible distance in case of travel to any other place for rest and recuperation, during the two year/four year block respectively, whichever is less.
-
-Provided further that in addition to train fare, charges incurred on account of local sight-seeing during availment of LFC may also be reimbursed subject to total claim not exceeding the amount equivalent to eligible train fare as per respective entitlement.
-
-Note: GST Charges levied on Train Fare shall be over and above the entitlement. In view of prevailing dynamic fare system, the cost of train tickets charged on the date of booking will be reimbursed.
-
-For employees working in North East States, LFC will begin from Guwahati and the eligible train fare from their place of work to Guwahati will be additionally paid. Similarly, eligible fare for Andaman & Nicobar islands to Chennai/Kolkata, Lakshadweep to Kochi, far-flung area branches in Himachal Pradesh, Uttarakhand, Sikkim, Jammu & Kashmir or any other areas which are not directly connected by train shall be additionally reimbursed under LFC in addition to normal entitlement for the employees working in these areas to the nearest major Railway Station.
-
-An employee and/or members of his family, when availing leave fare concession may undertake travel by any mode of surface transport between places and the employee will be eligible to claim in respect of such journey his actual expenditure or the notional train fare by the entitled class for the admissible and entitled distance, whichever is less, within his overall entitlement.
-
-For the purpose of this sub-clause, travel by any approved mode of surface transport would mean such travel undertaken through any public transport or transport (including taxi) operated by agencies / tour operators approved by appropriate Government authorities or motorcar owned by the employee/spouse.
-
-(iii)  By exercising an option anytime during a block of 2 years or 4 years, as the case may be, an employee can either undertake travel availing of leave fare concession and claim reimbursement upto his entitlement or to encash the facility for the concerned block. The option so exercised shall be irrevocable for the block concerned. On opting to encash the facility, he will be entitled to receive a lump sum equivalent to notional train fare for the admissible distance (depending on a 2 year or 4 year block) by the entitled class, subject to deduction of admissible tax at source. Leave Fare Concession for travel to place of domicile is not encashable. The facility of encashing of Leave Fare Concession may be allowed to employees without the requirement of availing leave for this purpose. An employee opting to encash his LFC shall prefer the claim for himself and his family members only once during the block / term in which such encashment is availed of. The facility of encashment of privilege leave while availing of Leave Fare Concession is also available while encashing the facility of LFC.
-(iv)  Provisions under Clause 10.13 (iii) of Bipartite Settlement dated 19th October, 1966 regarding restrictions on entitlement to LFC where both husband and wife are working in the same Bank shall stand deleted. Accordingly, henceforth LFC can be availed independently where both husband and wife are working in the same bank.
-(v)  All employees will be given an opportunity to exercise an option within 90 days from the date of this Settlement to avail LFC under two years/four years block as the case may be. If no option is exercised within the stipulated period, the earlier option will continue to be operative.
-(vi)  Dolly/Pony charges as per Government Rates shall be reimbursed within the overall entitlement.''',
-      false),
-  ListItem(
-      'Definition of Family',
-      '''In partial modification of Clause 18 of the Bipartite Settlement dated 25th May, 2015, for the purpose of medical facilities and for the purpose of leave fare concession, the expression ‘family’ of an employee shall mean –
-
-(i) the employee’s spouse, wholly dependent unmarried children (including step children and legally adopted children) wholly dependent physically and mentally challenged brothers/ sisters with 40% or more disability, widowed daughters and dependent divorced/ separated daughters, sisters including unmarried/ divorced/ abandoned or separated from husband/ widowed sisters, as also parents wholly dependent on the employee.
-
-Provided that in the case of physically and mentally challenged children, they shall be construed as dependents even after their marriage including spouse and children subject to fulfilling the income criteria.
-
-(ii) The term wholly dependent family member shall mean such member of the family having a monthly income not exceeding Rs.12,000/- p.m. If the income of one of the parents exceeds Rs.12,000/- p.m. or the aggregate income of both the parents exceeds Rs.12,000/- p.m., both the parents shall not be considered as wholly dependent on the employee.
-
-(iii) A married female employee may include her natural / legal parents or parents-in-law under the definition of family, but not both, provided that the parents/parents-in-law are wholly dependent on her.
-
-Note: For the purpose of medical expenses reimbursement scheme, for all employees, Leave Fare Concession etc. any two of either of the dependent parents/ parents-in-law shall be covered.''',
-      false),
-  ListItem(
-      'OFFICIATING ALLOWANCE',
-      '''ABH:
-15% of the Basic Pay divided by No of Days of that Month gives Officiating pay for a day
-
-Head Cashier II:
-Special Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day''',
-      false),
+      'Service conditions as per 12th Bipartite',
+      'https://drive.google.com/uc?export=download&id=1Zsue9kNYLa_4pwcj-nrx4Uw8e0tjMpS6',
+      true),
   ListItem(
       'CASUAL LEAVE',
       '''12 days per year

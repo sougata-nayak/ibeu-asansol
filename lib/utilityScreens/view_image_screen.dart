@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 
 class ViewImageScreen extends StatefulWidget {
@@ -13,10 +14,10 @@ class _ViewImageScreenState extends State<ViewImageScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Committee',
-          style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.red.shade500,
+          style: TextStyle(color: textColor),),
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: tertiaryColor, //change your color here
         ),
       ),
       body: Center(

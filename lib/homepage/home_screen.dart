@@ -24,6 +24,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
 
+  List<ListItem> cooperativeItems = [
+    ListItem('ABECCSL', '' , false),
+    ListItem('IBCCSL', '' , false)
+  ];
+
   List<ListItem> bipartiteItems = [
     ListItem(
         '12th Bipartite settlement',
@@ -85,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        backgroundColor: Colors.white,
+        backgroundColor: tertiaryColor,
         width: MediaQuery.of(context).size.width * 0.75,
         child: SingleChildScrollView(
           child: Column(
@@ -187,6 +192,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                   ListTile(
+                    leading: const Icon(Icons.account_tree_outlined),
+                    title: const Text('Co-operative'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => IndexListScreen(
+                              name: 'Co-operative',
+                              data: cooperativeItems),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
                     leading: const Icon(Icons.newspaper_outlined),
                     title: const Text('BEFI news'),
                     onTap: () {
@@ -226,11 +245,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text(
           'BEFI - IBEU',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: textColor),
         ),
-        backgroundColor: Colors.red.shade500,
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
-          color: Colors.white, //change your color here
+          color: tertiaryColor, //change your color here
         ),
       ),
       body: screens[currentIndex],
@@ -238,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           decoration: const BoxDecoration(
-            color: Colors.red,
+            color: secondaryColor,
             borderRadius: BorderRadius.all(Radius.circular(25)),
           ),
           child: Padding(
@@ -246,9 +265,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: GNav(
               padding: const EdgeInsets.symmetric(vertical: 15),
               gap: 5,
-              backgroundColor: Colors.red.shade500,
-              color: Colors.white,
-              activeColor: Colors.white,
+              backgroundColor: secondaryColor,
+              color: tertiaryColor,
+              activeColor: tertiaryColor,
               onTabChange: (int index) => setState(() {
                 currentIndex = index;
               }),

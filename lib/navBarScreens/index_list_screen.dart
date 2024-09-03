@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:befi_ibeu/classes/list_item.dart';
 import 'package:befi_ibeu/utilityScreens/display_info_screen.dart';
@@ -14,7 +15,7 @@ class IndexListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(name,
           style: const TextStyle(color: Colors.white),),
-        backgroundColor: Colors.red.shade500,
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),

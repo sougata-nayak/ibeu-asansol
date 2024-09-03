@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:befi_ibeu/classes/list_item.dart';
 import 'package:internet_file/internet_file.dart';
@@ -32,7 +33,7 @@ class _DisplayPdfScreenState extends State<DisplayPdfScreen> {
           widget.item.name,
           style: const TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.red.shade500,
+        backgroundColor: primaryColor,
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
@@ -40,7 +41,7 @@ class _DisplayPdfScreenState extends State<DisplayPdfScreen> {
       body: loading
           ? const Center(
               child: CircularProgressIndicator(
-                color: Colors.red,
+                color: secondaryColor,
               ),
             )
           : PdfViewPinch(

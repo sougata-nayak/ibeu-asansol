@@ -1,3 +1,4 @@
+import 'package:befi_ibeu/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:photo_view/photo_view.dart';
@@ -26,7 +27,7 @@ class _ViewGalleryImageScreenState extends State<ViewGalleryImageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red.shade500,
+          backgroundColor: primaryColor,
           iconTheme: const IconThemeData(
             color: Colors.white, //change your color here
           ),
